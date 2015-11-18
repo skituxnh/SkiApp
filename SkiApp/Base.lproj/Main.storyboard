@@ -29,6 +29,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="KKg-6I-ltq" secondAttribute="height" multiplier="1:1" id="3j6-iW-3u0"/>
+                                                </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PoX-Tb-BIT">
                                                 <rect key="frame" x="69" y="0.0" width="60" height="65"/>
@@ -59,6 +62,9 @@
                                             </stackView>
                                         </subviews>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstItem="KKg-6I-ltq" firstAttribute="height" secondItem="PoX-Tb-BIT" secondAttribute="height" id="j5w-gE-9nS"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-i3-GMz">
                                         <rect key="frame" x="166" y="0.0" width="129" height="65"/>
@@ -67,6 +73,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Of2-vn-Xcr" secondAttribute="height" multiplier="1:1" id="dJl-S2-5T8"/>
+                                                </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4DG-Gy-hNI">
                                                 <rect key="frame" x="69" y="0.0" width="60" height="65"/>
@@ -98,6 +107,9 @@
                                             </stackView>
                                         </subviews>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstItem="Of2-vn-Xcr" firstAttribute="height" secondItem="4DG-Gy-hNI" secondAttribute="height" id="uMF-zN-Qdm"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <animations/>
