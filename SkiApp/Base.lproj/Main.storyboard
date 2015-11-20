@@ -425,7 +425,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.0" green="0.4941176471" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="8bu-lJ-qEI" kind="relationship" relationship="viewControllers" id="Fqf-6o-lM4"/>
@@ -487,8 +493,8 @@
         <image name="Snowflake" width="65" height="65"/>
         <image name="Sun" width="65" height="65"/>
         <image name="TrailMap" width="594" height="364"/>
-        <image name="homeTabIcon" width="30" height="30"/>
+        <image name="homeTabIcon" width="75" height="75"/>
         <image name="liftBackground" width="320" height="768"/>
-        <image name="liftTabIcon" width="30" height="30"/>
+        <image name="liftTabIcon" width="75" height="75"/>
     </resources>
 </document>
