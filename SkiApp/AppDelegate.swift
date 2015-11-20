@@ -15,6 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+
+
+        let navigationBarAppearace = UINavigationBar.appearance()
+//        navigationBarAppearace.tintColor = UIColor.whiteColor()
+        navigationBarAppearace.barTintColor = UIColor(red: 110, green: 180, blue: 63)
+
+//        if let font = UIFont(name: "AvenirNext-DemiBold", size: 15) {
+//            UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: font,NSForegroundColorAttributeName:TOOLBAR_TITLE_COLOR], forState: UIControlState.Normal)
+//            
+//        }
+
         // Override point for customization after application launch.
         return true
     }
@@ -43,4 +55,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int)
+    {
+        let newRed = CGFloat(red)/255
+        let newGreen = CGFloat(green)/255
+        let newBlue = CGFloat(blue)/255
+
+        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
+    }
+}
+
 

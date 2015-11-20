@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--conditions-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SkiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -358,9 +358,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="uvF-dZ-yqk" secondAttribute="trailing" id="xUf-7n-f1X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="z6r-fA-C0G">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="BKa-kD-nQO"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="conditions" id="z6r-fA-C0G"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -376,9 +374,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liftBackground" id="bmy-mP-Eru">
+                            <rect key="frame" x="0.0" y="64" width="320" height="768"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="liftTrailCell" editingAccessoryType="disclosureIndicator" rowHeight="55" id="1l0-CG-d99">
-                                <rect key="frame" x="0.0" y="92" width="320" height="55"/>
+                                <rect key="frame" x="0.0" y="860" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1l0-CG-d99" id="ctq-y5-gDP">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
@@ -422,6 +425,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.4941176471" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="8bu-lJ-qEI" kind="relationship" relationship="viewControllers" id="Fqf-6o-lM4"/>
@@ -453,11 +457,11 @@
             </objects>
             <point key="canvasLocation" x="799" y="1004"/>
         </scene>
-        <!--home-->
+        <!--base-->
         <scene sceneID="1cv-33-3to">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8bu-lJ-qEI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="home" image="homeTabIcon" id="DYy-Sp-iAc"/>
+                    <tabBarItem key="tabBarItem" title="base" image="homeTabIcon" id="DYy-Sp-iAc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bou-me-jdg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -465,6 +469,11 @@
                         <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bcT-I9-d4q">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OBn-Dh-dhV"/>
                     </connections>
@@ -479,6 +488,7 @@
         <image name="Sun" width="65" height="65"/>
         <image name="TrailMap" width="594" height="364"/>
         <image name="homeTabIcon" width="30" height="30"/>
+        <image name="liftBackground" width="320" height="768"/>
         <image name="liftTabIcon" width="30" height="30"/>
     </resources>
 </document>
