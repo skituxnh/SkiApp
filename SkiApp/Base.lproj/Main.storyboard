@@ -374,14 +374,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <imageView key="tableHeaderView" userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liftBackground" id="bmy-mP-Eru">
-                            <rect key="frame" x="0.0" y="64" width="320" height="768"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="liftTrailCell" editingAccessoryType="disclosureIndicator" rowHeight="55" id="1l0-CG-d99">
-                                <rect key="frame" x="0.0" y="860" width="320" height="55"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1l0-CG-d99" id="ctq-y5-gDP">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
@@ -494,7 +489,6 @@
         <image name="Sun" width="65" height="65"/>
         <image name="TrailMap" width="594" height="364"/>
         <image name="homeTabIcon" width="75" height="75"/>
-        <image name="liftBackground" width="320" height="768"/>
         <image name="liftTabIcon" width="75" height="75"/>
     </resources>
 </document>

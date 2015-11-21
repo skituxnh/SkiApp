@@ -13,6 +13,9 @@
 		29C14F8F1BFBCFE500493D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F8E1BFBCFE500493D04 /* Assets.xcassets */; };
 		29C14F921BFBCFE500493D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */; };
 		29C14F9A1BFBEE7E00493D04 /* LiftTrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */; };
+		29DCF8661BFFE7CF002FF103 /* Trails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8651BFFE7CF002FF103 /* Trails.swift */; };
+		29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8671BFFEA8C002FF103 /* NetworkController.swift */; };
+		29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8691BFFEC83002FF103 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		29C14F911BFBCFE500493D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29C14F931BFBCFE500493D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftTrailTableViewController.swift; sourceTree = "<group>"; };
+		29DCF8651BFFE7CF002FF103 /* Trails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trails.swift; path = ../Trails.swift; sourceTree = "<group>"; };
+		29DCF8671BFFEA8C002FF103 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
+		29DCF8691BFFEC83002FF103 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		29C14F861BFBCFE500493D04 /* SkiApp */ = {
 			isa = PBXGroup;
 			children = (
+				29DCF8691BFFEC83002FF103 /* Weather.swift */,
+				29DCF8671BFFEA8C002FF103 /* NetworkController.swift */,
+				29DCF8651BFFE7CF002FF103 /* Trails.swift */,
 				29C14F871BFBCFE500493D04 /* AppDelegate.swift */,
 				29C14F891BFBCFE500493D04 /* ViewController.swift */,
 				29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */,
 				29C14F9A1BFBEE7E00493D04 /* LiftTrailTableViewController.swift in Sources */,
 				29C14F8A1BFBCFE500493D04 /* ViewController.swift in Sources */,
+				29DCF8661BFFE7CF002FF103 /* Trails.swift in Sources */,
+				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
 				29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

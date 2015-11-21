@@ -10,9 +10,28 @@ import UIKit
 
 class LiftTrailTableViewController: UITableViewController {
 
+    var liftBabyThunder = ["Alice Avenue", "Bluebell", "Easy Street", "Figure 8 Gully", "Lazy Susan", "Lower Mini Miners' Camp", "Thunder Alley", "Tiny Tiger", "To Bady Thunder Chair"]
+    var liftBaldy = []
+    var liftBlackjack = []
+    var liftChickadee = []
+    var liftCirqueTraverse = []
+    var liftGadTwo = []
+    var liftGadValley = []
+    var liftLittleCloud = []
+    var liftMineralBasin = []
+    var liftPeruvianGulch = []
+    var liftPowderParadise = []
+    var liftTheSundays = []
+    var liftThunderBowl = []
+    var liftTigerTail = []
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
+        tableView.backgroundView?.alpha = 0.15
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
