@@ -13,17 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-//Add colors & fonts to carry throughout the NavBar and TabBar Controllers
+//Add backgournd colors to carry throughout the NavBar and TabBar Controllers
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.barTintColor = UIColor(red: 110, green: 180, blue: 63)
-//        navigationBarAppearace.tintColor = UIColor.whiteColor()
-
-//        if let font = UIFont(name: "AvenirNext-DemiBold", size: 15) {
-//            UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: font,NSForegroundColorAttributeName:TOOLBAR_TITLE_COLOR], forState: UIControlState.Normal)
-//            
-//        }
 
         // Override point for customization after application launch.
         return true
