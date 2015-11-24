@@ -13,17 +13,34 @@ class WeatherController {
 
     static let sharedInstance = WeatherController()
     var temperatureDicitonary: [String:AnyObject] = [:]
+    var windDicitonary: [String:AnyObject] = [:]
 
-    func 
+    func loadCurrentWeather(string: String, completion: (success: Bool, weather: Weather?) -> Void) {
 
-    do {
-    let tempAnyObject = try NSJSONObjectWithData(data, options: .AllowFragments)
-        if let
+        let url = NetworkController.loadWeather(weatherURL)
 
+        NetworkController.dataAtURL(url) { (resultData) -> Void in
 
-    } catch {
+            guard let resultData = resultData
+                else {
+                    print("no data returned")
+                    completion(result: nil)
+                    return
+            }
 
+            do {
+                let weatherAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
+
+                var weatherModelObject: Weather?
+
+                if let weatherDictionary = weatherAnyObject as? [String: AnyObject] {
+                    weatherModelObject = Weather(jsonDictionary: weatherDictionary)
+                }
+                completion(result: weatherModelObject)
+            } catch {
+                completion(result: nil)
+            }
+        }
     }
-
-
 }
+

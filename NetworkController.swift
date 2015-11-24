@@ -11,14 +11,14 @@ import Foundation
 class NetworkController {
 
     //Weather
-    let api = "&appid=07ac20177d4ea1e111c43b4694a8c950"
+    let baseWeatherURL = "http://api.openweathermap.org/data/2.5/weather?"
     let zipCode = "zip=84092"
-    let baseWeatherURLString = "http://api.openweathermap.org/data/2.5/weather?"
+    let api = "&appid=07ac20177d4ea1e111c43b4694a8c950"
 
     //NSURL
-    func loadWeather(string: String) -> NSURL {
+    func loadWeather(weatherURL: String) -> NSURL {
 
-        let currentWeatherURL = baseWeatherURLString + zipCode + api
+        let currentWeatherURL = "\(baseWeatherURL) + \(zipCode) + \(api)"
         return NSURL(string: currentWeatherURL)!
     }
     //Session
