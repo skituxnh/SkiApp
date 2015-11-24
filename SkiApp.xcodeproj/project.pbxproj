@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2965AF991C03AF56006C913D /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965AF981C03AF56006C913D /* WeatherController.swift */; };
 		29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F871BFBCFE500493D04 /* AppDelegate.swift */; };
 		29C14F8A1BFBCFE500493D04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F891BFBCFE500493D04 /* ViewController.swift */; };
 		29C14F8D1BFBCFE500493D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F8B1BFBCFE500493D04 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2965AF981C03AF56006C913D /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		29C14F841BFBCFE500493D04 /* SkiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C14F871BFBCFE500493D04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29C14F891BFBCFE500493D04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				29DCF8691BFFEC83002FF103 /* Weather.swift */,
 				29DCF8671BFFEA8C002FF103 /* NetworkController.swift */,
+				2965AF981C03AF56006C913D /* WeatherController.swift */,
 				29DCF8651BFFE7CF002FF103 /* Trails.swift */,
 				29C14F871BFBCFE500493D04 /* AppDelegate.swift */,
 				29C14F891BFBCFE500493D04 /* ViewController.swift */,
@@ -152,6 +155,7 @@
 				29C14F8A1BFBCFE500493D04 /* ViewController.swift in Sources */,
 				29DCF8661BFFE7CF002FF103 /* Trails.swift in Sources */,
 				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
+				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,
 				29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

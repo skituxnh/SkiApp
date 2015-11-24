@@ -10,28 +10,31 @@ import Foundation
 
 class NetworkController {
 
-    static let apiKey = "07ac20177d4ea1e111c43b4694a8c950"
-    static let snowbirdLocation = "zip=84092"
-    static let baseWeatherURL = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?")
+    //Weather
+    let api = "&appid=07ac20177d4ea1e111c43b4694a8c950"
+    let zipCode = "zip=84092"
+    let baseWeatherURLString = "http://api.openweathermap.org/data/2.5/weather?"
 
     //NSURL
+    func loadWeather(string: String) -> NSURL {
 
-    let snowbirdCurrentWeather = NSURL(string: "\(baseWeatherURL) + \(snowbirdLocation) + &appid=\(apiKey)")
-
+        let currentWeatherURL = baseWeatherURLString + zipCode + api
+        return NSURL(string: currentWeatherURL)!
+    }
     //Session
-
     static func dataAtURL(url: NSURL, completion: (resultData: NSData?) -> Void) {
-        let session = NSURLSession.sharedSession()
+            let session = NSURLSession.sharedSession()
 
-        //DataTask
-
-        let dataTask = session.dataTaskWithURL(url) { (data, _, error) -> Void in
+    //DataTask
+    let dataTask = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+        print(data)
 
         if let error = error {
-        print(error.localizedDescription)
+            print(error.localizedDescription)
         }
-        completion(resultData: data)
-        }
-        dataTask.resume()
+       completion(resultData: data)
+    }
+    dataTask.resume()
     }
 }
+
