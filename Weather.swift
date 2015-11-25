@@ -36,13 +36,15 @@ class Weather {
 //    var iconString = ""
 //    var iconImage: UIImage?
     var temperatureF: Double? {
-            if let tempK = temperatureK {
-                return ((tempK - 273.15)*1.800 + 32.00)
+
+        get {
+            if let temperatureK = temperatureK {
+                return temperatureK - 273.15
             } else {
                 return nil
             }
         }
-
+    }
     init(jsonDictionary: [String:AnyObject]) {
 
         if let weatherKeyArray = jsonDictionary[Weather.weatherKey] as? [[String:AnyObject]] {
@@ -51,8 +53,8 @@ class Weather {
             }
         }
         if let main = jsonDictionary[Weather.mainKey] as? [String:AnyObject] {
-            if let temperatureF = main[Weather.tempKey] as? Double {
-                self.temperature = temperatureF
+            if let temperatureC = main[Weather.tempKey] as? Double {
+                self.temperatureK = Double(temperatureC)
             }
         }
         if let wind = jsonDictionary[Weather.windKey] as? [String:AnyObject] {

@@ -15,16 +15,16 @@ class WeatherController {
     var temperatureDicitonary: [String:AnyObject] = [:]
     var windDicitonary: [String:AnyObject] = [:]
 
-    func loadCurrentWeather(string: String, completion: (success: Bool, weather: Weather?) -> Void) {
+    func getCurrentWeather(string: String, completion: (weather: Weather?) -> Void) {
 
-        let url = NetworkController.loadWeather(currentWeatherURL)
+        let url = NetworkController.snowbirdWeatherURL()
 
         NetworkController.dataAtURL(url) { (resultData) -> Void in
 
             guard let resultData = resultData
                 else {
                     print("no data returned")
-                    completion(result: nil)
+                    completion(weather: nil)
                     return
             }
 
@@ -36,9 +36,9 @@ class WeatherController {
                 if let weatherDictionary = weatherAnyObject as? [String: AnyObject] {
                     weatherModelObject = Weather(jsonDictionary: weatherDictionary)
                 }
-                completion(result: weatherModelObject)
+                completion(weather: weatherModelObject)
             } catch {
-                completion(result: nil)
+                completion(weather: nil)
             }
         }
     }
