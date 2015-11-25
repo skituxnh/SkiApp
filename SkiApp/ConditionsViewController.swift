@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ConditionsViewController: UIViewController {
 
+    @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var currentWindSpeedLabel: UILabel!
+    @IBOutlet weak var currentHighTemperatureLabel: UILabel!
+    @IBOutlet weak var currentLowTemperatureLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

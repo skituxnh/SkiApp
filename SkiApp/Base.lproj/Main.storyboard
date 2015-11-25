@@ -9,7 +9,7 @@
         <!--conditions-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SkiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConditionsViewController" customModule="SkiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -344,6 +344,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="conditions" id="z6r-fA-C0G"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="currentHighTemperatureLabel" destination="fyh-XT-GX2" id="crC-kD-L8P"/>
+                        <outlet property="currentLowTemperatureLabel" destination="ZQ2-RC-lcq" id="6Li-iZ-qFF"/>
+                        <outlet property="currentTemperatureLabel" destination="0DR-Se-H6U" id="gyk-IW-mf1"/>
+                        <outlet property="currentWindSpeedLabel" destination="p2Q-Zm-hOO" id="kS2-V3-Ymv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

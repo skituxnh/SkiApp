@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2965AF991C03AF56006C913D /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965AF981C03AF56006C913D /* WeatherController.swift */; };
-		2965AF9C1C064F0D006C913D /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965AF9B1C064F0D006C913D /* CurrentWeatherViewController.swift */; };
 		29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F871BFBCFE500493D04 /* AppDelegate.swift */; };
-		29C14F8A1BFBCFE500493D04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F891BFBCFE500493D04 /* ViewController.swift */; };
+		29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */; };
 		29C14F8D1BFBCFE500493D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F8B1BFBCFE500493D04 /* Main.storyboard */; };
 		29C14F8F1BFBCFE500493D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F8E1BFBCFE500493D04 /* Assets.xcassets */; };
 		29C14F921BFBCFE500493D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */; };
@@ -23,10 +22,9 @@
 /* Begin PBXFileReference section */
 		2965AF981C03AF56006C913D /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		2965AF9A1C063CB4006C913D /* testing code.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "testing code.playground"; path = "SkiApp/testing code.playground"; sourceTree = "<group>"; };
-		2965AF9B1C064F0D006C913D /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		29C14F841BFBCFE500493D04 /* SkiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C14F871BFBCFE500493D04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29C14F891BFBCFE500493D04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsViewController.swift; sourceTree = "<group>"; };
 		29C14F8C1BFBCFE500493D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29C14F8E1BFBCFE500493D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29C14F911BFBCFE500493D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,10 +69,9 @@
 				29DCF8691BFFEC83002FF103 /* Weather.swift */,
 				29DCF8671BFFEA8C002FF103 /* NetworkController.swift */,
 				2965AF981C03AF56006C913D /* WeatherController.swift */,
-				2965AF9B1C064F0D006C913D /* CurrentWeatherViewController.swift */,
 				29DCF8651BFFE7CF002FF103 /* Trails.swift */,
 				29C14F871BFBCFE500493D04 /* AppDelegate.swift */,
-				29C14F891BFBCFE500493D04 /* ViewController.swift */,
+				29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */,
 				29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */,
 				29C14F8B1BFBCFE500493D04 /* Main.storyboard */,
 				29C14F8E1BFBCFE500493D04 /* Assets.xcassets */,
@@ -157,8 +154,7 @@
 			files = (
 				29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */,
 				29C14F9A1BFBEE7E00493D04 /* LiftTrailTableViewController.swift in Sources */,
-				29C14F8A1BFBCFE500493D04 /* ViewController.swift in Sources */,
-				2965AF9C1C064F0D006C913D /* CurrentWeatherViewController.swift in Sources */,
+				29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */,
 				29DCF8661BFFE7CF002FF103 /* Trails.swift in Sources */,
 				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
 				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,
