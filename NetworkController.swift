@@ -16,7 +16,7 @@ class NetworkController {
     let api = "&appid=07ac20177d4ea1e111c43b4694a8c950"
 
     //NSURL
-    func loadWeather(weatherURL: String) -> NSURL {
+    func loadWeather(currentWeatherURL: String) -> NSURL {
 
         let currentWeatherURL = "\(baseWeatherURL) + \(zipCode) + \(api)"
         return NSURL(string: currentWeatherURL)!

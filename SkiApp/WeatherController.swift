@@ -17,7 +17,7 @@ class WeatherController {
 
     func loadCurrentWeather(string: String, completion: (success: Bool, weather: Weather?) -> Void) {
 
-        let url = NetworkController.loadWeather(weatherURL)
+        let url = NetworkController.loadWeather(currentWeatherURL)
 
         NetworkController.dataAtURL(url) { (resultData) -> Void in
 

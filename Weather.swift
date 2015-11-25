@@ -29,13 +29,13 @@ class Weather {
     static let minTempKey = "temp_min"
 
     var main = ""
-    var temperatureK: Float?
-    var highTemperatureK: Float?
-    var lowTemperatureK: Float?
-    var speed: Float?
+    var temperatureK: Double?
+    var highTemperatureK: Double?
+    var lowTemperatureK: Double?
+    var speed: Double?
 //    var iconString = ""
 //    var iconImage: UIImage?
-    var temperatureF: Float? {
+    var temperatureF: Double? {
             if let tempK = temperatureK {
                 return ((tempK - 273.15)*1.800 + 32.00)
             } else {
@@ -51,12 +51,12 @@ class Weather {
             }
         }
         if let main = jsonDictionary[Weather.mainKey] as? [String:AnyObject] {
-            if let temperatureF = main[Weather.tempKey] as? Float {
+            if let temperatureF = main[Weather.tempKey] as? Double {
                 self.temperature = temperatureF
             }
         }
         if let wind = jsonDictionary[Weather.windKey] as? [String:AnyObject] {
-            if let windSpeed = wind[Weather.windKey] as? Float {
+            if let windSpeed = wind[Weather.windKey] as? Double {
                 self.speed = windSpeed
             }
         }
