@@ -14,17 +14,20 @@ class ConditionsViewController: UIViewController {
     @IBOutlet weak var currentWindSpeedLabel: UILabel!
     @IBOutlet weak var currentHighTemperatureLabel: UILabel!
     @IBOutlet weak var currentLowTemperatureLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-               }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        WeatherController.sharedInstance.getCurrentWeather() { (weather) -> Void in
+            if let weather = weather {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+
+                    self.currentTemperatureLabel.text = String(weather.temperatureK)
+//                    self.currentWindSpeedLabel.text = weather.windSpeed
+                })
+            }
+        }
+
     }
-
-
 }
 

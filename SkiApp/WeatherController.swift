@@ -15,7 +15,7 @@ class WeatherController {
     var temperatureDicitonary: [String:AnyObject] = [:]
     var windDicitonary: [String:AnyObject] = [:]
 
-    func getCurrentWeather(string: String, completion: (weather: Weather?) -> Void) {
+    func getCurrentWeather(completion: (weather: Weather?) -> Void) {
 
         let url = NetworkController.snowbirdWeatherURL()
 
