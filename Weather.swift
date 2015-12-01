@@ -23,21 +23,21 @@ class Weather {
 
 
     var main = ""
+    var iconString = ""
+    var iconImage: UIImage?
     var temperatureK: Float?
     var highTemperatureK: Float?
     var lowTemperatureK: Float?
     var speed: Float?
-    var iconString = ""
-    var iconImage: UIImage?
-//    var temperatureF: Float? {
-//        get {
-//            if let temperatureK = temperatureK {
-//                return (temperatureK - 273.15)*1.800 + 32.00
-//            } else {
-//                return nil
-//            }
-//        }
-//    }
+    var temperatureF: Float? {
+        get {
+            if let temperatureK = temperatureK {
+                return (temperatureK - 273.15)*1.800 + 32.00
+            } else {
+                return nil
+            }
+        }
+    }
     init(jsonDictionary:[String:AnyObject]) {
         if let arrayUsingWeatherKey = jsonDictionary[Weather.weatherKey] as? [[String:AnyObject]] {
             if let main = arrayUsingWeatherKey[0][Weather.mainKey] as? String {

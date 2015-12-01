@@ -11,7 +11,7 @@ import UIKit
 
 class WeatherController {
 
-//    static let sharedInstance = WeatherController()
+    static let sharedInstance = WeatherController()
 
     func getCurrentWeather(completion: (weather: Weather?) -> Void) {
 
@@ -37,5 +37,18 @@ class WeatherController {
             }
         }
     }
+//    static func weatherIconForCode(iconCode: String, completion:(image: UIImage?) -> Void) {
+//
+//        let url = NetworkController.urlForIcon
+//        NetworkController.dataAtURL(url) { (resultData) -> Void in
+//            guard let resultData = resultData
+//                else {
+//                    print("no data returned")
+//                    completion(image: nil)
+//                    return
+//            }
+//            completion(image: UIImage(data: resultData))
+//        }
+//    }
 }
 

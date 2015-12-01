@@ -21,9 +21,9 @@ class NetworkController {
 
             return NSURL(string: "\(baseURL)\(zipCode)\(apiKey)")!
         }
-//    func urlForIcon(iconString: String) -> NSURL {
-//            return NSURL(string: "ttp://openweathermap.org/img/w/\(iconString).png")!
-//        }
+    func urlForIcon(iconString: String) -> NSURL {
+            return NSURL(string: "ttp://openweathermap.org/img/w/\(iconString).png")!
+        }
 
     //Lifts
     static func snowbirdLiftsURL() -> NSURL {
