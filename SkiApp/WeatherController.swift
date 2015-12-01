@@ -12,13 +12,12 @@ import UIKit
 class WeatherController {
 
     static let sharedInstance = WeatherController()
-    var temperatureDicitonary: [String:AnyObject] = [:]
-    var windDicitonary: [String:AnyObject] = [:]
+//    var temperatureDicitonary: [String:AnyObject] = [:]
+//    var windDicitonary: [String:AnyObject] = [:]
 
     func getCurrentWeather(completion: (weather: Weather?) -> Void) {
 
         let url = NetworkController.snowbirdWeatherURL()
-
         NetworkController.dataAtURL(url) { (resultData) -> Void in
 
             guard let resultData = resultData
@@ -27,10 +26,8 @@ class WeatherController {
                     completion(weather: nil)
                     return
             }
-
             do {
                 let weatherAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
-
                 var weatherModelObject: Weather?
 
                 if let weatherDictionary = weatherAnyObject as? [String: AnyObject] {

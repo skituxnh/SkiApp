@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2965AF991C03AF56006C913D /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965AF981C03AF56006C913D /* WeatherController.swift */; };
+		298183E01C0D1624006D2D33 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298183DF1C0D1624006D2D33 /* WeatherViewController.swift */; };
 		29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F871BFBCFE500493D04 /* AppDelegate.swift */; };
 		29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */; };
 		29C14F8D1BFBCFE500493D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F8B1BFBCFE500493D04 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		2965AF981C03AF56006C913D /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		2965AF9A1C063CB4006C913D /* testing code.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "testing code.playground"; path = "SkiApp/testing code.playground"; sourceTree = "<group>"; };
+		298183DF1C0D1624006D2D33 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		29C14F841BFBCFE500493D04 /* SkiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C14F871BFBCFE500493D04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */,
 				29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */,
 				29C14F8B1BFBCFE500493D04 /* Main.storyboard */,
+				298183DF1C0D1624006D2D33 /* WeatherViewController.swift */,
 				29C14F8E1BFBCFE500493D04 /* Assets.xcassets */,
 				29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */,
 				29C14F931BFBCFE500493D04 /* Info.plist */,
@@ -157,6 +160,7 @@
 				29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */,
 				29DCF8661BFFE7CF002FF103 /* Trails.swift in Sources */,
 				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
+				298183E01C0D1624006D2D33 /* WeatherViewController.swift in Sources */,
 				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,
 				29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */,
 			);

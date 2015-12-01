@@ -6,9 +6,10 @@
 
 import Foundation
 
-
 class NetworkController {
 
+    //Change plist to include App Transport to YES...This creates a security issue. Need to add domian exceptions to prevent major issues
+    
     //NSURL
 
     //Weather
