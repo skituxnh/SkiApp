@@ -30,14 +30,13 @@ class Weather {
     var lowTemperatureK: Float?
     var speed: Float?
     var temperatureF: Float? {
-        get {
             if let temperatureK = temperatureK {
-                return (temperatureK - 273.15)*1.800 + 32.00
+                return (temperatureK * 9/5 - 459.67)
             } else {
                 return nil
             }
         }
-    }
+    
     init(jsonDictionary:[String:AnyObject]) {
         if let arrayUsingWeatherKey = jsonDictionary[Weather.weatherKey] as? [[String:AnyObject]] {
             if let main = arrayUsingWeatherKey[0][Weather.mainKey] as? String {

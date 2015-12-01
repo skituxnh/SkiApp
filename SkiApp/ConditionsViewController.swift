@@ -24,8 +24,8 @@ class ConditionsViewController: UIViewController {
 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
 
-                    if let temp = weather.temperatureK {
-                        self.currentTemperatureLabel.text = String(Int(temp))
+                    if let tempK = weather.temperatureK {
+                        self.currentTemperatureLabel.text = String(Int(tempK * 9/5 - 459.67))
                     } else {
                         self.currentHighTemperatureLabel.text = "No Data available"
                     }
@@ -34,13 +34,13 @@ class ConditionsViewController: UIViewController {
                     } else {
                         self.currentWindSpeedLabel.text = "No Data available"
                     }
-                    if let maxTemp = weather.highTemperatureK {
-                        self.currentHighTemperatureLabel.text = String(Int(maxTemp))
+                    if let maxTempK = weather.highTemperatureK {
+                        self.currentHighTemperatureLabel.text = String(Int(maxTempK * 9/5 - 459.67))
                     } else {
                         self.currentHighTemperatureLabel.text = "No Data available"
                     }
-                    if let minTemp = weather.lowTemperatureK {
-                        self.currentLowTemperatureLabel.text = String(Int(minTemp))
+                    if let minTempK = weather.lowTemperatureK {
+                        self.currentLowTemperatureLabel.text = String(Int(minTempK * 9/5 - 459.67))
                     } else {
                         self.currentLowTemperatureLabel.text = "No Data available"
                     }
