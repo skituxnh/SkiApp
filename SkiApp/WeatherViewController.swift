@@ -17,8 +17,6 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var lowTempLabel: UILabel!
 
     func displaySnowbirdWeather() {
-
-//        dispatch_async(dispatch_get_main_queue()) { () -> Void in
             WeatherController.sharedInstance.getCurrentWeather({ (weather) -> Void in
                 guard let weatherResult = weather else { return }
 
@@ -26,7 +24,22 @@ class WeatherViewController: UIViewController {
                     if let temperatureK = weatherResult.temperatureK {
                         self.currentTempLabel.text = String(temperatureK) + " ºC"
                     } else {
-                        self.currentTempLabel.text = "No temperature available"
+                        self.currentTempLabel.text = "No data available"
+                    }
+                    if let speed = weatherResult.speed {
+                        self.windSpeedLabel.text = String(speed)
+                    } else {
+                        self.windSpeedLabel.text = "No data available"
+                    }
+                    if let maxTemp = weatherResult.highTemperatureK {
+                        self.highTempLabel.text = String(maxTemp)
+                    } else {
+                        self.highTempLabel.text = "No data available"
+                    }
+                    if let minTemp = weatherResult.lowTemperatureK {
+                        self.lowTempLabel.text = String(minTemp)
+                    } else {
+                        self.lowTempLabel.text = "No data available"
                     }
                 })
 

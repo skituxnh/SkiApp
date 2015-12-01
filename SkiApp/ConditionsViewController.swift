@@ -22,9 +22,11 @@ class ConditionsViewController: UIViewController {
             if let weather = weather {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
 
-                    self.currentTemperatureLabel.text = String(weather.temperatureK)
+                    if let weather = weather.temperatureK{
+                    self.currentTemperatureLabel.text = String(weather)
 //                    self.currentWindSpeedLabel.text = weather.windSpeed
-                })
+                    }
+                    })
             }
         }
 
