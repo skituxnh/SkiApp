@@ -19,8 +19,12 @@ class NetworkController {
         let zipCode = "zip=84092"
         let apiKey = "&appid=07ac20177d4ea1e111c43b4694a8c950"
 
-        return NSURL(string:"\(baseURL)\(zipCode)\(apiKey)")!
-    }
+            return NSURL(string: "\(baseURL)\(zipCode)\(apiKey)")!
+        }
+//    func urlForIcon(iconString: String) -> NSURL {
+//            return NSURL(string: "ttp://openweathermap.org/img/w/\(iconString).png")!
+//        }
+
     //Lifts
     static func snowbirdLiftsURL() -> NSURL {
         let liftAPI = "http://liftie.info/api/resort/snowbird"
@@ -32,12 +36,13 @@ class NetworkController {
     static func dataAtURL(url: NSURL, completion: (resultData: NSData?) -> Void) {
         let session = NSURLSession.sharedSession()
 
-        //DataTask
+    //DataTask
         let dataTask = session.dataTaskWithURL(url) { (data, response, error) -> Void in
             print(data)
 
             guard let data = data else {
                 print(error?.localizedDescription)
+                completion(resultData: nil)
                 return
             }
             completion(resultData: data)

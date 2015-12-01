@@ -11,9 +11,7 @@ import UIKit
 
 class WeatherController {
 
-    static let sharedInstance = WeatherController()
-//    var temperatureDicitonary: [String:AnyObject] = [:]
-//    var windDicitonary: [String:AnyObject] = [:]
+//    static let sharedInstance = WeatherController()
 
     func getCurrentWeather(completion: (weather: Weather?) -> Void) {
 
