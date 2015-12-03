@@ -6,14 +6,13 @@
 //  Copyright © 2015 Josh Burt. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class WeatherController {
 
     static let sharedInstance = WeatherController()
 
-    func getCurrentWeather(completion: (weather: Weather?) -> Void) {
+     func getCurrentWeather(completion: (weather: Weather?) -> Void) {
 
         let url = NetworkController.snowbirdWeatherURL()
         NetworkController.dataAtURL(url) { (resultData) -> Void in
@@ -50,5 +49,6 @@ class WeatherController {
 //            completion(image: UIImage(data: resultData))
 //        }
 //    }
+
 }
 

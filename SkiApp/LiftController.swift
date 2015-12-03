@@ -5,11 +5,12 @@
 //  Created by JB on 12/2/15.
 //  Copyright © 2015 Josh Burt. All rights reserved.
 //
+
+import Foundation
+
 class LiftController {
-
-    static let sharedInstance = LiftController()
-
-    func getCurrentLifts(completion: (lift: Lifts?) -> Void) {
+    
+    static func getCurrentLifts(completion: (lift: Lifts?) -> Void) {
 
         let url = NetworkController.snowbirdLiftsURL()
         NetworkController.dataAtURL(url) { (resultData) -> Void in
@@ -21,6 +22,7 @@ class LiftController {
                     return
             }
             do {
+
                 let liftsAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
                 var liftsModelObject: Lifts?
 
@@ -33,4 +35,5 @@ class LiftController {
             }
         }
     }
-}
+
+    }

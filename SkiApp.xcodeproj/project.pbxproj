@@ -54,10 +54,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		294CEF811C10ECF50003771B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				29DCF8691BFFEC83002FF103 /* Weather.swift */,
+				294CEF591C0F8DB00003771B /* Lifts.swift */,
+				294CEF5B1C0F8DBF0003771B /* Road.swift */,
+				29DCF8651BFFE7CF002FF103 /* Trails.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		294CEF821C10ED140003771B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				29DCF8671BFFEA8C002FF103 /* NetworkController.swift */,
+				2965AF981C03AF56006C913D /* WeatherController.swift */,
+				294CEF551C0F8D650003771B /* RoadController.swift */,
+				294CEF571C0F8D7E0003771B /* LiftController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		294CEF831C10ED2A0003771B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */,
+				29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		294CEF841C10ED690003771B /* System Files */ = {
+			isa = PBXGroup;
+			children = (
+				29C14F871BFBCFE500493D04 /* AppDelegate.swift */,
+				29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */,
+				29C14F931BFBCFE500493D04 /* Info.plist */,
+			);
+			name = "System Files";
+			path = SkiApp;
+			sourceTree = "<group>";
+		};
 		29C14F7B1BFBCFE500493D04 = {
 			isa = PBXGroup;
 			children = (
 				2965AF9A1C063CB4006C913D /* testing code.playground */,
+				294CEF841C10ED690003771B /* System Files */,
 				29C14F861BFBCFE500493D04 /* SkiApp */,
 				29C14F851BFBCFE500493D04 /* Products */,
 			);
@@ -74,21 +117,11 @@
 		29C14F861BFBCFE500493D04 /* SkiApp */ = {
 			isa = PBXGroup;
 			children = (
-				29DCF8691BFFEC83002FF103 /* Weather.swift */,
-				294CEF591C0F8DB00003771B /* Lifts.swift */,
-				294CEF5B1C0F8DBF0003771B /* Road.swift */,
-				29DCF8671BFFEA8C002FF103 /* NetworkController.swift */,
-				2965AF981C03AF56006C913D /* WeatherController.swift */,
-				29DCF8651BFFE7CF002FF103 /* Trails.swift */,
-				29C14F871BFBCFE500493D04 /* AppDelegate.swift */,
-				29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */,
-				29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */,
-				294CEF551C0F8D650003771B /* RoadController.swift */,
-				294CEF571C0F8D7E0003771B /* LiftController.swift */,
+				294CEF811C10ECF50003771B /* Models */,
+				294CEF821C10ED140003771B /* Controllers */,
+				294CEF831C10ED2A0003771B /* View Controllers */,
 				29C14F8B1BFBCFE500493D04 /* Main.storyboard */,
 				29C14F8E1BFBCFE500493D04 /* Assets.xcassets */,
-				29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */,
-				29C14F931BFBCFE500493D04 /* Info.plist */,
 			);
 			path = SkiApp;
 			sourceTree = "<group>";

@@ -26,18 +26,17 @@ class Lifts {
     static let peruvianKey = "Peruvian"
     static let wilbereKey = "Wilbere"
 
-    var name: String
-    var open: String?
+    var name: String = ""
+    var status: String = ""
     var difficulty: Int?  //(0=Green, 1=Blue, 2=Black, 3=DoubleBlack)
     var trails: String?
 
     init(jsonDictionary:[String:AnyObject]) {
+
         if let lift = jsonDictionary[Lifts.liftsKey] as? [String:AnyObject] {
-            if let status = jsonDictionary[Lifts.statusKey] as? [String:AnyObject] {
-                if let liftName = lift[Lifts.aerialTramKey] as? String {
-                    return
+            if let liftStatus = lift[Lifts.statusKey] as? String {
+                self.status = liftStatus
                 }
             }
         }
     }
-}
