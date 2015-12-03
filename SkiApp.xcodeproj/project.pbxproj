@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		294CEF561C0F8D650003771B /* RoadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF551C0F8D650003771B /* RoadController.swift */; };
+		294CEF581C0F8D7E0003771B /* LiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF571C0F8D7E0003771B /* LiftController.swift */; };
+		294CEF5A1C0F8DB00003771B /* Lifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF591C0F8DB00003771B /* Lifts.swift */; };
+		294CEF5C1C0F8DBF0003771B /* Road.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF5B1C0F8DBF0003771B /* Road.swift */; };
 		2965AF991C03AF56006C913D /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965AF981C03AF56006C913D /* WeatherController.swift */; };
 		29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F871BFBCFE500493D04 /* AppDelegate.swift */; };
 		29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		294CEF551C0F8D650003771B /* RoadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadController.swift; sourceTree = "<group>"; };
+		294CEF571C0F8D7E0003771B /* LiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftController.swift; sourceTree = "<group>"; };
+		294CEF591C0F8DB00003771B /* Lifts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lifts.swift; sourceTree = "<group>"; };
+		294CEF5B1C0F8DBF0003771B /* Road.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Road.swift; sourceTree = "<group>"; };
 		2965AF981C03AF56006C913D /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		2965AF9A1C063CB4006C913D /* testing code.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "testing code.playground"; path = "SkiApp/testing code.playground"; sourceTree = "<group>"; };
 		29C14F841BFBCFE500493D04 /* SkiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,12 +75,16 @@
 			isa = PBXGroup;
 			children = (
 				29DCF8691BFFEC83002FF103 /* Weather.swift */,
+				294CEF591C0F8DB00003771B /* Lifts.swift */,
+				294CEF5B1C0F8DBF0003771B /* Road.swift */,
 				29DCF8671BFFEA8C002FF103 /* NetworkController.swift */,
 				2965AF981C03AF56006C913D /* WeatherController.swift */,
 				29DCF8651BFFE7CF002FF103 /* Trails.swift */,
 				29C14F871BFBCFE500493D04 /* AppDelegate.swift */,
 				29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */,
 				29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */,
+				294CEF551C0F8D650003771B /* RoadController.swift */,
+				294CEF571C0F8D7E0003771B /* LiftController.swift */,
 				29C14F8B1BFBCFE500493D04 /* Main.storyboard */,
 				29C14F8E1BFBCFE500493D04 /* Assets.xcassets */,
 				29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */,
@@ -113,6 +125,7 @@
 				TargetAttributes = {
 					29C14F831BFBCFE500493D04 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = FHT9A47FG6;
 					};
 				};
 			};
@@ -153,9 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */,
+				294CEF561C0F8D650003771B /* RoadController.swift in Sources */,
 				29C14F9A1BFBEE7E00493D04 /* LiftTrailTableViewController.swift in Sources */,
 				29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */,
+				294CEF581C0F8D7E0003771B /* LiftController.swift in Sources */,
+				294CEF5C1C0F8DBF0003771B /* Road.swift in Sources */,
 				29DCF8661BFFE7CF002FF103 /* Trails.swift in Sources */,
+				294CEF5A1C0F8DB00003771B /* Lifts.swift in Sources */,
 				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
 				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,
 				29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */,
@@ -271,10 +288,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SkiApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JB.SkiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -282,10 +303,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SkiApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JB.SkiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

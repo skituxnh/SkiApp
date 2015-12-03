@@ -16,6 +16,7 @@ class ConditionsViewController: UIViewController {
     @IBOutlet weak var currentHighTemperatureLabel: UILabel!
     @IBOutlet weak var currentLowTemperatureLabel: UILabel!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

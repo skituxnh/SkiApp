@@ -8,11 +8,9 @@ import Foundation
 
 class NetworkController {
 
-    //Change plist to include App Transport to YES...This creates a security issue. Need to add domian exceptions to prevent major issues
-    
-    //NSURL
+//Change plist to include App Transport to YES...This creates a security issue. Need to add domian exceptions to prevent major issues
 
-    //Weather
+//WeatherURL
     static func snowbirdWeatherURL() -> NSURL {
 
         let baseURL = "http://api.openweathermap.org/data/2.5/weather?"
@@ -25,18 +23,27 @@ class NetworkController {
             return NSURL(string: "ttp://openweathermap.org/img/w/\(iconString).png")!
         }
 
-    //Lifts
+//LiftsURL
     static func snowbirdLiftsURL() -> NSURL {
         let liftAPI = "http://liftie.info/api/resort/snowbird"
 
         return NSURL(string: "\(liftAPI)")!
     }
 
-    //Session
+//RoadURL
+    static func roadURL() -> NSURL {
+        let baseURL = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"
+        let location = "40.556,-111.803,40.588,-111.611?"
+        let apiKey = "key=Au0Nqg3IsgZBsYIpgkcDym5dtrArd4iA3KWUvdKCBcTLr_ZnLA8UnjVEP6bpmTFs"
+
+            return NSURL(string: "\(baseURL)\(location)\(apiKey)")!
+    }
+
+//Session
     static func dataAtURL(url: NSURL, completion: (resultData: NSData?) -> Void) {
         let session = NSURLSession.sharedSession()
 
-    //DataTask
+//DataTask
         let dataTask = session.dataTaskWithURL(url) { (data, response, error) -> Void in
             print(data)
 

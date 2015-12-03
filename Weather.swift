@@ -1,4 +1,3 @@
-//
 //  Weather.swift
 //  SkiApp
 //
@@ -21,7 +20,6 @@ class Weather {
     static let minTempKey = "temp_min"
     static let speedKey = "speed"
 
-
     var main = ""
     var iconString = ""
     var iconImage: UIImage?
@@ -29,15 +27,9 @@ class Weather {
     var highTemperatureK: Float?
     var lowTemperatureK: Float?
     var speed: Float?
-    var temperatureF: Float? {
-            if let temperatureK = temperatureK {
-                return (temperatureK * 9/5 - 459.67)
-            } else {
-                return nil
-            }
-        }
-    
+
     init(jsonDictionary:[String:AnyObject]) {
+
         if let arrayUsingWeatherKey = jsonDictionary[Weather.weatherKey] as? [[String:AnyObject]] {
             if let main = arrayUsingWeatherKey[0][Weather.mainKey] as? String {
                 self.main = main
@@ -58,7 +50,7 @@ class Weather {
             }
         }
         if let wind = jsonDictionary[Weather.windKey] as? [String:AnyObject] {
-            if let windSpeed = wind[Weather.windKey] as? Float {
+            if let windSpeed = wind[Weather.speedKey] as? Float {
                 self.speed = windSpeed
             }
         }
