@@ -26,17 +26,58 @@ class Lifts {
     static let peruvianKey = "Peruvian"
     static let wilbereKey = "Wilbere"
 
-    var name: String = ""
-    var status: String = ""
-    var difficulty: Int?  //(0=Green, 1=Blue, 2=Black, 3=DoubleBlack)
-    var trails: String?
+    var liftName: String = ""
+    var openStatus: String = ""
 
     init(jsonDictionary:[String:AnyObject]) {
 
         if let lift = jsonDictionary[Lifts.liftsKey] as? [String:AnyObject] {
-            if let liftStatus = lift[Lifts.statusKey] as? String {
-                self.status = liftStatus
+            if let status = lift[Lifts.statusKey] as? [String: AnyObject] {
+                if let name = status[Lifts.aerialTramKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.babyThunderKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.baldyKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.chickadeeKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.gad2Key] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.gadzoomKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.littleCloudKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.midGadKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.mineralBasinKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.peruvianKey] as? String {
+                    self.liftName = name
+                    print(liftName)
+                }
+                if let name = status[Lifts.wilbereKey] as? String {
+                    self.liftName = name
+                    print(liftName)
                 }
             }
         }
     }
+}

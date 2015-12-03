@@ -20,6 +20,10 @@ class ConditionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        LiftController.getCurrentLifts { (lift) -> Void in
+            
+        }
+
         WeatherController.sharedInstance.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
 
