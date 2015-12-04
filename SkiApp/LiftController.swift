@@ -10,7 +10,7 @@ import Foundation
 
 class LiftController {
     
-    static func getCurrentLifts(completion: (lift: Lifts?) -> Void) {
+    static func getCurrentLifts(completion: ([Lifts]) -> Void) {
 
         let url = NetworkController.snowbirdLiftsURL()
         NetworkController.dataAtURL(url) { (resultData) -> Void in
@@ -18,22 +18,45 @@ class LiftController {
             guard let resultData = resultData
                 else {
                     print("no data returned")
-                    completion(lift: nil)
+                    completion([Lifts]: nil)
                     return
             }
             do {
 
                 let liftsAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
-                var liftsModelObject: Lifts?
 
-                if let liftsDictionary = liftsAnyObject as? [String: AnyObject] {
-                    liftsModelObject = Lifts(jsonDictionary: liftsDictionary)
+                let liftsDictionary = liftsAnyObject[Lifts.liftsKey] as! [String : AnyObject]
+                let statusDictionary = liftsDictionary["status"] as! [String: AnyObject]
+                var arrayOfLifts : [Lifts] = []
+
+                for (key, value) in statusDictionary {
+                    let lift = Lifts(jsonDictionary: [key: value])
+                    arrayOfLifts.append(lift)
                 }
-                completion(lift: liftsModelObject)
+
+
+//                if let liftsDictionary = liftsAnyObject as? [String: AnyObject] {
+//                    liftsModelObject = Lifts(jsonDictionary: liftsDictionary)
+//                }
+//                completion(lift: liftsModelObject)
             } catch {
-                completion(lift: nil)
+                completion([Lifts]: nil)
             }
         }
     }
+}
+//    "lifts": {
+//    "status": {
+//    "Aerial Tram": "open",
+//    "Baby Thunder": "closed",
+//    "Baldy": "closed",
+//    "Chickadee": "open",
+//    "Gad 2": "open",
+//    "Gadzoom": "open",
+//    "Little Cloud": "closed",
+//    "Mid-Gad": "closed",
+//    "Mineral Basin": "closed",
+//    "Peruvian": "open",
+//    "Wilbere": "closed"
+//    },
 
-    }

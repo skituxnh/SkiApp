@@ -10,9 +10,7 @@ import UIKit
 
 class WeatherController {
 
-    static let sharedInstance = WeatherController()
-
-     func getCurrentWeather(completion: (weather: Weather?) -> Void) {
+     static func getCurrentWeather(completion: (weather: Weather?) -> Void) {
 
         let url = NetworkController.snowbirdWeatherURL()
         NetworkController.dataAtURL(url) { (resultData) -> Void in

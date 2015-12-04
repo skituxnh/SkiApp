@@ -20,11 +20,12 @@ class ConditionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//  Test Lift Data
         LiftController.getCurrentLifts { (lift) -> Void in
-            
+
         }
 
-        WeatherController.sharedInstance.getCurrentWeather() { (weather) -> Void in
+        WeatherController.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
