@@ -18,7 +18,7 @@ class LiftController {
             guard let resultData = resultData
                 else {
                     print("no data returned")
-                    completion([Lifts]: nil)
+                    completion([])
                     return
             }
             do {
@@ -30,17 +30,20 @@ class LiftController {
                 var arrayOfLifts : [Lifts] = []
 
                 for (key, value) in statusDictionary {
+                    print([key : value])
                     let lift = Lifts(jsonDictionary: [key: value])
+                 //   print(lift)
                     arrayOfLifts.append(lift)
                 }
-
+                completion(arrayOfLifts)
 
 //                if let liftsDictionary = liftsAnyObject as? [String: AnyObject] {
 //                    liftsModelObject = Lifts(jsonDictionary: liftsDictionary)
 //                }
 //                completion(lift: liftsModelObject)
             } catch {
-                completion([Lifts]: nil)
+                completion([])
+                print("no data returned")
             }
         }
     }

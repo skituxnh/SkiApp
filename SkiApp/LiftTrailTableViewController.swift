@@ -14,9 +14,9 @@ class LiftTrailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        LiftController.getCurrentLifts { (lift) -> Void in
+        LiftController.getCurrentLifts { (lifts) -> Void in
 
-            print(lift)
+            print(lifts[0].liftName)
 //            guard let lift = lift else { return }
 //
 //            dispatch_async(dispatch_get_main_queue(), { () -> Void in

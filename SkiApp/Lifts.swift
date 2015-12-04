@@ -14,18 +14,17 @@ class Lifts {
     static let liftsKey = "lifts"
     static let statusKey = "status"
 
-    let liftName: String = ""
-    let liftStatus: String = ""
+    var liftName: String = ""
+    var liftStatus: String = ""
 
     init(jsonDictionary:[String : AnyObject]) {
+        print(jsonDictionary[""])
+        print(jsonDictionary.keys)
+        self.liftName = jsonDictionary.keys.first!
+        self.liftStatus = jsonDictionary.values.first! as! String
+                print ("\(liftName) "+"\(liftStatus)")
+//                print(status)
 
-        if let lift = jsonDictionary[Lifts.liftsKey] as? [String:AnyObject] {
-            if let status = lift[Lifts.statusKey] as? [String: String] {
-//                let liftName = [String](status.keys)
-//                let liftStatus = [String](status.values)
-//                    print ("\(liftName) "+"\(liftStatus)")
-                print(status)
-            }
-        }
+
     }
 }

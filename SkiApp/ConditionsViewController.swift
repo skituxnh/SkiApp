@@ -21,7 +21,7 @@ class ConditionsViewController: UIViewController {
         super.viewDidLoad()
 
 //  Test Lift Data
-        LiftController.getCurrentLifts { (lift) -> Void in
+        LiftController.getCurrentLifts { (_: [Lifts]) -> Void in
 
         }
 
