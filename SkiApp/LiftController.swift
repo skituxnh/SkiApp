@@ -5,12 +5,11 @@
 //  Created by JB on 12/2/15.
 //  Copyright © 2015 Josh Burt. All rights reserved.
 //
-
-import Foundation
+import UIKit
 
 class LiftController {
     
-    static func getCurrentLifts(completion: ([Lifts]) -> Void) {
+    static func getCurrentLifts(completion: ( ([Lift], Int) ) -> Void) {
 
         let url = NetworkController.snowbirdLiftsURL()
         NetworkController.dataAtURL(url) { (resultData) -> Void in
@@ -18,48 +17,29 @@ class LiftController {
             guard let resultData = resultData
                 else {
                     print("no data returned")
-                    completion([])
+                    completion(([], -1))
                     return
             }
             do {
 
-                let liftsAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
+                let liftAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
 
-                let liftsDictionary = liftsAnyObject[Lifts.liftsKey] as! [String : AnyObject]
-                let statusDictionary = liftsDictionary["status"] as! [String: AnyObject]
-                var arrayOfLifts : [Lifts] = []
+                let liftDictionary = liftAnyObject[Lift.liftsKey] as! [String:AnyObject]
+                let statusDictionary = liftDictionary["status"] as! [String:AnyObject]
+                var arrayOfLifts : [Lift] = []
 
                 for (key, value) in statusDictionary {
                     print([key : value])
-                    let lift = Lifts(jsonDictionary: [key: value])
-                 //   print(lift)
+                    let lift = Lift(jsonDictionary: [key: value])
                     arrayOfLifts.append(lift)
                 }
-                completion(arrayOfLifts)
-
-//                if let liftsDictionary = liftsAnyObject as? [String: AnyObject] {
-//                    liftsModelObject = Lifts(jsonDictionary: liftsDictionary)
-//                }
-//                completion(lift: liftsModelObject)
+                let numberOfOpenLifts = liftDictionary["stats"] as! [String:AnyObject]
+                var openLifts = 0
+                completion((arrayOfLifts, numberOfOpenLifts))
             } catch {
-                completion([])
+                completion(([], -1))
                 print("no data returned")
             }
         }
     }
 }
-//    "lifts": {
-//    "status": {
-//    "Aerial Tram": "open",
-//    "Baby Thunder": "closed",
-//    "Baldy": "closed",
-//    "Chickadee": "open",
-//    "Gad 2": "open",
-//    "Gadzoom": "open",
-//    "Little Cloud": "closed",
-//    "Mid-Gad": "closed",
-//    "Mineral Basin": "closed",
-//    "Peruvian": "open",
-//    "Wilbere": "closed"
-//    },
-

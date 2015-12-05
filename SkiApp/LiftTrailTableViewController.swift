@@ -15,12 +15,9 @@ class LiftTrailTableViewController: UITableViewController {
         super.viewDidLoad()
 
         LiftController.getCurrentLifts { (lifts) -> Void in
-
-            print(lifts[0].liftName)
 //            guard let lift = lift else { return }
 //
 //            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//
 //
 //            })
         }

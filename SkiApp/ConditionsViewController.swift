@@ -21,9 +21,9 @@ class ConditionsViewController: UIViewController {
         super.viewDidLoad()
 
 //  Test Lift Data
-        LiftController.getCurrentLifts { (_: [Lifts]) -> Void in
-
-        }
+//        LiftController.getCurrentLifts { (_: [Lift]) -> Void in
+//
+//        }
 
         WeatherController.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
