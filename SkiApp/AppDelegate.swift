@@ -13,6 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    override init() {
+        super.init()
+
+        LiftController.getCurrentLifts { (lifts) -> Void in
+            LiftController.sharedInstance.liftArray = lifts
+        }
+    }
+
 //Add backgournd colors to carry throughout the NavBar and TabBar Controllers
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 

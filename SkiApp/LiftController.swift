@@ -8,8 +8,12 @@
 import UIKit
 
 class LiftController {
+
+    static let sharedInstance = LiftController()
+
+    var liftArray: [Lift] = []
     
-    static func getCurrentLifts(completion: ( ([Lift], Int) ) -> Void) {
+    static func getCurrentLifts(completion: ([Lift]) -> Void) {
 
         let url = NetworkController.snowbirdLiftsURL()
         NetworkController.dataAtURL(url) { (resultData) -> Void in
@@ -17,7 +21,7 @@ class LiftController {
             guard let resultData = resultData
                 else {
                     print("no data returned")
-                    completion(([], -1))
+                    completion([])
                     return
             }
             do {
@@ -29,16 +33,15 @@ class LiftController {
                 var arrayOfLifts : [Lift] = []
 
                 for (key, value) in statusDictionary {
-                    print([key : value])
+                   print([key : value])
                     let lift = Lift(jsonDictionary: [key: value])
                     arrayOfLifts.append(lift)
                 }
-                let numberOfOpenLifts = liftDictionary["stats"] as! [String:AnyObject]
-                var openLifts = 0
-                completion((arrayOfLifts, numberOfOpenLifts))
+                completion(arrayOfLifts)
             } catch {
-                completion(([], -1))
+                completion([])
                 print("no data returned")
+                return
             }
         }
     }
