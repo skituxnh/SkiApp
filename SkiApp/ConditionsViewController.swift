@@ -11,6 +11,7 @@ import UIKit
 class ConditionsViewController: UIViewController {
 
     @IBOutlet var currentRoadStatusLabel: UILabel!
+    var roadStatus :Bool = true
 
     @IBOutlet weak var currentWeatherIcon: UIImage!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
@@ -21,6 +22,14 @@ class ConditionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if roadStatus == true{
+            currentRoadStatusLabel.backgroundColor = UIColor.greenColor()
+            currentRoadStatusLabel.text = "SR-210 is Open"
+        }else{
+            currentRoadStatusLabel.backgroundColor = UIColor.redColor()
+            currentRoadStatusLabel.text = "SR-210 is Closed"
+
+        }
 
         WeatherController.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
@@ -50,12 +59,14 @@ class ConditionsViewController: UIViewController {
             })
         }
         RoadController.getCurrentRoad { (roadData) -> Void in
-            guard let roadData = roadData else { return }
 
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.roadStatus = roadData
+                print(roadData)
 
-               self.currentRoadStatusLabel.text = roadData.roadStatus
-            })
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//
+//               self.currentRoadStatusLabel.text = roadData.roadStatus
+//            })
         }
     }
 }

@@ -12,16 +12,15 @@ class RoadController {
 
     static let sharedInstance = RoadController()
 
-    var roadArray: [Road] = []
 
-    static func getCurrentRoad(completion: (roadData: Road?) -> Void) {
+    static func getCurrentRoad(completion: (status:Bool) -> Void) {
         let url = NetworkController.roadStatusURL()
         NetworkController.dataAtURL(url) { (resultData) -> Void in
 
             guard let resultData = resultData
                 else {
                     print("no data returned")
-                    completion(roadData: nil)
+                    completion(status:false)
                     return
             }
 
@@ -29,18 +28,22 @@ class RoadController {
 
             do {
                  jsonObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
-//                print(jsonObject)
+                print(jsonObject)
             } catch let error as NSError {
                 print("no data returned")
                 return
             }
-                if let dataDictionary = jsonObject["statusDescription"] as? [String:AnyObject] {
-                    if let statusDescription = dataDictionary["statusDescription"] as? String {
-                        print(dataDictionary["statusDescription"])
 
+            var roadStatus = true
+            if let status = jsonObject["statusDescription"] as? String{
+                if status == "OK"{
+                    roadStatus = true
+                }else{
+                    roadStatus = false
                 }
-                    completion(roadData: nil)
+            }
+               completion(status: roadStatus)
             }
         }
     }
-}
+
