@@ -25,7 +25,6 @@ class LiftController {
                     return
             }
             do {
-
                 let liftAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
 
                 let liftDictionary = liftAnyObject[Lift.liftsKey] as! [String:AnyObject]

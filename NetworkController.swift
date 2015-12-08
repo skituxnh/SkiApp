@@ -31,7 +31,7 @@ class NetworkController {
     }
 
 //RoadURL
-    static func roadURL() -> NSURL {
+    static func roadStatusURL() -> NSURL {
         let baseURL = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"
         let location = "40.556,-111.803,40.588,-111.611?"
         let apiKey = "key=Au0Nqg3IsgZBsYIpgkcDym5dtrArd4iA3KWUvdKCBcTLr_ZnLA8UnjVEP6bpmTFs"

@@ -347,6 +347,7 @@
                     <connections>
                         <outlet property="currentHighTemperatureLabel" destination="fyh-XT-GX2" id="crC-kD-L8P"/>
                         <outlet property="currentLowTemperatureLabel" destination="ZQ2-RC-lcq" id="6Li-iZ-qFF"/>
+                        <outlet property="currentRoadStatusLabel" destination="fKj-Pe-UNT" id="fha-aI-Wif"/>
                         <outlet property="currentTemperatureLabel" destination="0DR-Se-H6U" id="gyk-IW-mf1"/>
                         <outlet property="currentWindSpeedLabel" destination="p2Q-Zm-hOO" id="kS2-V3-Ymv"/>
                     </connections>
