@@ -9,6 +9,8 @@
 import UIKit
 
 class LiftTrailTableViewCell: UITableViewCell {
+    @IBOutlet var liftNameLabel: UILabel!
+    @IBOutlet var liftStatusLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

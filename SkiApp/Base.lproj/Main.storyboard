@@ -372,21 +372,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xV-tH-ftO">
-                                            <rect key="frame" x="8" y="19" width="200" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xV-tH-ftO">
+                                            <rect key="frame" x="8" y="19" width="150" height="21"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="200" id="W5B-IS-YYH"/>
+                                                <constraint firstAttribute="width" constant="150" id="W5B-IS-YYH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqH-LQ-Tn1">
-                                            <rect key="frame" x="237" y="19" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqH-LQ-Tn1">
+                                            <rect key="frame" x="187" y="19" width="100" height="21"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="42" id="OiR-VI-LXU"/>
+                                                <constraint firstAttribute="width" constant="100" id="OiR-VI-LXU"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -398,12 +398,16 @@
                                         <constraint firstItem="3xV-tH-ftO" firstAttribute="leading" secondItem="ctq-y5-gDP" secondAttribute="leadingMargin" id="2Ki-TT-ai9"/>
                                         <constraint firstItem="IqH-LQ-Tn1" firstAttribute="top" secondItem="ctq-y5-gDP" secondAttribute="topMargin" constant="11" id="6ZU-QU-PMo"/>
                                         <constraint firstItem="3xV-tH-ftO" firstAttribute="top" secondItem="ctq-y5-gDP" secondAttribute="topMargin" constant="11" id="CEl-4q-WO8"/>
-                                        <constraint firstItem="IqH-LQ-Tn1" firstAttribute="trailing" secondItem="ctq-y5-gDP" secondAttribute="trailingMargin" id="R2Q-Wl-Giw"/>
+                                        <constraint firstItem="IqH-LQ-Tn1" firstAttribute="trailing" secondItem="ctq-y5-gDP" secondAttribute="trailingMargin" constant="8" id="R2Q-Wl-Giw"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="IqH-LQ-Tn1" secondAttribute="bottom" constant="11.5" id="nEr-Pg-2nG"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="3xV-tH-ftO" secondAttribute="bottom" constant="11.5" id="vg1-eZ-Pg9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="liftNameLabel" destination="3xV-tH-ftO" id="DIt-sT-OXb"/>
+                                    <outlet property="liftStatusLabel" destination="IqH-LQ-Tn1" id="aiY-r0-rlY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
