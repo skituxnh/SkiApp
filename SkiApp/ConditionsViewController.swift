@@ -63,10 +63,6 @@ class ConditionsViewController: UIViewController {
                 self.roadStatus = roadData
                 print(roadData)
 
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//
-//               self.currentRoadStatusLabel.text = roadData.roadStatus
-//            })
         }
     }
 }

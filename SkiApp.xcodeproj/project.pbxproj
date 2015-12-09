@@ -12,6 +12,7 @@
 		294CEF5A1C0F8DB00003771B /* Lift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF591C0F8DB00003771B /* Lift.swift */; };
 		294CEF5C1C0F8DBF0003771B /* Road.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF5B1C0F8DBF0003771B /* Road.swift */; };
 		294CF0291C165D980003771B /* LiftTrailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CF0281C165D980003771B /* LiftTrailTableViewCell.swift */; };
+		294CF06F1C17D14C0003771B /* TrailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CF06E1C17D14C0003771B /* TrailController.swift */; };
 		2965AF991C03AF56006C913D /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965AF981C03AF56006C913D /* WeatherController.swift */; };
 		29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F871BFBCFE500493D04 /* AppDelegate.swift */; };
 		29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */; };
@@ -19,7 +20,7 @@
 		29C14F8F1BFBCFE500493D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F8E1BFBCFE500493D04 /* Assets.xcassets */; };
 		29C14F921BFBCFE500493D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */; };
 		29C14F9A1BFBEE7E00493D04 /* LiftTrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */; };
-		29DCF8661BFFE7CF002FF103 /* Trails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8651BFFE7CF002FF103 /* Trails.swift */; };
+		29DCF8661BFFE7CF002FF103 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8651BFFE7CF002FF103 /* Trail.swift */; };
 		29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8671BFFEA8C002FF103 /* NetworkController.swift */; };
 		29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8691BFFEC83002FF103 /* Weather.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		294CEF591C0F8DB00003771B /* Lift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lift.swift; sourceTree = "<group>"; };
 		294CEF5B1C0F8DBF0003771B /* Road.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Road.swift; sourceTree = "<group>"; };
 		294CF0281C165D980003771B /* LiftTrailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftTrailTableViewCell.swift; sourceTree = "<group>"; };
+		294CF06E1C17D14C0003771B /* TrailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailController.swift; sourceTree = "<group>"; };
 		2965AF981C03AF56006C913D /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		2965AF9A1C063CB4006C913D /* testing code.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "testing code.playground"; path = "SkiApp/testing code.playground"; sourceTree = "<group>"; };
 		29C14F841BFBCFE500493D04 /* SkiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +42,7 @@
 		29C14F911BFBCFE500493D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29C14F931BFBCFE500493D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftTrailTableViewController.swift; sourceTree = "<group>"; };
-		29DCF8651BFFE7CF002FF103 /* Trails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trails.swift; path = ../Trails.swift; sourceTree = "<group>"; };
+		29DCF8651BFFE7CF002FF103 /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trail.swift; path = ../Trail.swift; sourceTree = "<group>"; };
 		29DCF8671BFFEA8C002FF103 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
 		29DCF8691BFFEC83002FF103 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +64,7 @@
 				29DCF8691BFFEC83002FF103 /* Weather.swift */,
 				294CEF591C0F8DB00003771B /* Lift.swift */,
 				294CEF5B1C0F8DBF0003771B /* Road.swift */,
-				29DCF8651BFFE7CF002FF103 /* Trails.swift */,
+				29DCF8651BFFE7CF002FF103 /* Trail.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -74,6 +76,7 @@
 				2965AF981C03AF56006C913D /* WeatherController.swift */,
 				294CEF571C0F8D7E0003771B /* LiftController.swift */,
 				294CEF551C0F8D650003771B /* RoadController.swift */,
+				294CF06E1C17D14C0003771B /* TrailController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -208,8 +211,9 @@
 				294CEF581C0F8D7E0003771B /* LiftController.swift in Sources */,
 				294CF0291C165D980003771B /* LiftTrailTableViewCell.swift in Sources */,
 				294CEF5C1C0F8DBF0003771B /* Road.swift in Sources */,
-				29DCF8661BFFE7CF002FF103 /* Trails.swift in Sources */,
+				29DCF8661BFFE7CF002FF103 /* Trail.swift in Sources */,
 				294CEF5A1C0F8DB00003771B /* Lift.swift in Sources */,
+				294CF06F1C17D14C0003771B /* TrailController.swift in Sources */,
 				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
 				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,
 				29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */,

@@ -28,7 +28,7 @@ class RoadController {
 
             do {
                  jsonObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
-                print(jsonObject)
+//                print(jsonObject)
             } catch let error as NSError {
                 print("no data returned")
                 return
