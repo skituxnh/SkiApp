@@ -22,7 +22,8 @@ class ConditionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if roadStatus == true{
+        if roadStatus == true {
+//            currentRoadStatusLabel.backgroundColor = UIColor(red: 24, green: 136, blue: 67, alpha: 1.0)
             currentRoadStatusLabel.backgroundColor = UIColor.greenColor()
             currentRoadStatusLabel.text = "SR-210 is Open"
         }else{

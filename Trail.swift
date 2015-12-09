@@ -12,7 +12,7 @@ class Trails {
 
     let trailName: String
     var trailLift: String
-    var trailDifficulty: String //easy, moderate, more difficult, very difficult, expert
+    var trailDifficulty: String //1=easy, 2=moderate, 3=more difficult, 4=very difficult, 5=expert
     var trailStatus: String?
     var trailGroomed: String?
 

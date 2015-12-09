@@ -270,7 +270,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SR-210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKj-Pe-UNT">
                                 <rect key="frame" x="0.0" y="64" width="320" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.092734150588512421" green="0.53372740745544434" blue="0.26352775096893311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="x7C-th-GHO"/>
                                 </constraints>
@@ -389,9 +388,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="liftTrailCell" editingAccessoryType="disclosureIndicator" rowHeight="60" id="1l0-CG-d99" customClass="LiftTrailTableViewCell" customModule="SkiApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="liftTrailCell" editingAccessoryType="disclosureIndicator" rowHeight="60" id="1l0-CG-d99" customClass="LiftTrailTableViewCell" customModule="SkiApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1l0-CG-d99" id="ctq-y5-gDP">
@@ -430,6 +429,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="liftNameLabel" destination="3xV-tH-ftO" id="DIt-sT-OXb"/>
                                     <outlet property="liftStatusLabel" destination="IqH-LQ-Tn1" id="aiY-r0-rlY"/>

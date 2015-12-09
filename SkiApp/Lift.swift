@@ -16,10 +16,20 @@ class Lift {
 
     var liftName: String = ""
     var liftStatus: String = ""
+    var arrayOfTrails: [Trails] = []
 
     init(jsonDictionary:[String : AnyObject]) {
-        
         self.liftName = jsonDictionary.keys.first!
         self.liftStatus = jsonDictionary.values.first! as! String
+
+        // Test data
+        let chickadee = Trails(trailName: "Chickadee", trailLift: "Chickadee", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
+        let bananas = Trails(trailName: "Bananas", trailLift: "Gad 2", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
+
+        self.arrayOfTrails = [chickadee, bananas]
     }
+
+//    func setTrails(liftName: String) -> [Trails] {
+//        
+//    }
 }
