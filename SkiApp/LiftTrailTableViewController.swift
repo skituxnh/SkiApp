@@ -13,6 +13,9 @@ class LiftTrailTableViewController: UITableViewController {
     var liftArray: [Lift] {
         return LiftController.sharedInstance.liftArray
     }
+    var trailArray: [Trails] {
+        return TrailController.sharedInstance.trailArray
+    }
 
     var expandedTrailPaths: [NSIndexPath]?
     var selectedLiftPaths: NSIndexPath?

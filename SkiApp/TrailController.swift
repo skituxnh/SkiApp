@@ -61,7 +61,7 @@ class TrailController {
         let lowerPrimrosePath = Trails(trailName: "Lower Primrose Path", trailLift: "Peruvian Express", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
         let lowerSilverFox = Trails(trailName: "Lower Silver Fox", trailLift: "Peruvian Express", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
         let ohMyGod = Trails(trailName: "Oh My God", trailLift: "Peruvian Express", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
-        let route4Gulley = Trails(trailName: "Route 4 Gulley", trailLift: "Peruvian Express", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
+        let route4Gully = Trails(trailName: "Route 4 Gully", trailLift: "Peruvian Express", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
         let upperSilverFox = Trails(trailName: "Upper Silver Fox", trailLift: "Peruvian Express", trailDifficulty: "5", trailStatus: "", trailGroomed: "")
         let chickadee = Trails(trailName: "Chickadee", trailLift: "Chickadee", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
         let bananas = Trails(trailName: "Bananas", trailLift: "Gad 2", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
@@ -164,10 +164,10 @@ class TrailController {
         let sneakyPete = Trails(trailName: "Sneaky Pete", trailLift: "Mid-Gad", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
         let upperBigEmma = Trails(trailName: "Upper Big Emma", trailLift: "Mid-Gad", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
         let middleEmma = Trails(trailName: "Middle Emma", trailLift: "Mid-Gad", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
-        let lowerEmmma = Trails(trailName: "Lower Emma", trailLift: "Mid-Gad", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
+        let lowerEmma = Trails(trailName: "Lower Emma", trailLift: "Mid-Gad", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
         let blueAngel = Trails(trailName: "Blue Angel", trailLift: "Mid-Gad", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
         let fluffyBunny = Trails(trailName: "Fluffy Bunny", trailLift: "Mid-Gad", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
-        let fieldsCuttoff = Trails(trailName: "Fields Cutoff", trailLift: "Gadzoom", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
+        let fieldsCutoff = Trails(trailName: "Fields Cutoff", trailLift: "Gadzoom", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
         let lowestBassackwards = Trails(trailName: "Lowest Bassackwards", trailLift: "Gadzoom", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
         let lunchRun = Trails(trailName: "Lunch Run", trailLift: "Gadzoom", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
         let middleBassackwards = Trails(trailName: "Middle Bassackwards", trailLift: "Gadzoom", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
@@ -182,22 +182,18 @@ class TrailController {
         let west2ndSouth = Trails(trailName: "West 2nd South", trailLift: "Gadzoom", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
         let west2ndSouthOnramp = Trails(trailName: "West 2nd South Onramp", trailLift: "Gadzoom", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
 
-        return []
+        return [aliceAvenue, bluebell, easyStreet, figure8Gully, upperFigure8Gully, lazySusan, lowerMiniMinersCamp, thunderAlley, tinyTiger, toBabyThunderChair, centerOfGravity, fieldsOfGlory, highBaldyTraverse, highRidge3, midBaldyTraverse, thanksForTheMemories, venusLine, westBaldy, blackjackGully, blackjackTraverse, condoBypass, gunTowers, lightningTreeGully, shot8, theKeyhole, westwardHo, whoCares, whodunnit, chipsAccess, chipsBypass, chipsFace, chipsRun, hubbaBubba, lowerChipsRun, middleChipsRun, phone3Shot, rothmanWay, upperPrimrosePath, willows, adager, andersonsHill, cliffAccess, hotFootGully, hotLipsGully, lowerPrimrosePath, lowerSilverFox, ohMyGod, route4Gully, upperSilverFox, chickadee, bananas, bassBelow, blackForest, election, gad2TouringGate, gadGully, gadzooks, lowerBassackwards, organGrinder, sth, tricep, upperBassackwards, boundryBowl, gad2Return, lowerTigerTail, mozzaBowl, pearlyGates, redLensLine, sob, tedsBowl, temptationChutes, upperTigerTail, conrad, defianceLedge, delores, exitGully, figure8Bowl, highSaddleTraverse, lowSaddle, mo, mushroomLand, shot44, thunderBowl, whiteRabbit, bonarsPass, comeFromBehind, goblinGully, hoops, knuckleheadTraverse, lastChoice, markMalu, oldLadies, rastaChutes, roadToProvo, shireen, shot41, birdsNest, claimJumper, luckeyBoy, skiPatrolGully, forty9erGully, blueByYou, bassanova, chamonixBowl, chamonixChutes, doubleDown, fossilChutes, highStakes, limberPines, livinTheDream, loneStar, nashFloraLode, notQuiteCorn, pathToParadise, silverDipper, alimonyChutes, altarBowl, bookendsBowl, bookendsTraverse, richiesRun, theEndoras, bookmarkGully, juniorsPowderParadise, whiteDiamonds, barryBarrySteep, binxsBumper, cirqueTraverse, daltonsDraw, gadChutes, glen, greatScott, lowerCirque, middleCirque, restaurantRoll, upperCirque, upperMachSchnell, wilbereBowl, wilmas, regulatorJohnson, harpersFerryEast, harpersFerry, bassHighway, wilbereRidge, wilbereCutoff, catCrewCutoff, minersRoad, creekRoad, sneakyPete, upperBigEmma, middleEmma, lowerEmma, blueAngel, fluffyBunny, fieldsCutoff, lowestBassackwards, lunchRun, middleBassackwards, raceHill, upperMiniMinersCamp, carbonate, getSeriousChutes, lowerMachSchnell, madamAnnie, oldSamePlace, puckerBrush, west2ndSouth, west2ndSouthOnramp]
     }
+}
+
 
 //    func getTrailsForLiftName(liftName: String) -> [Trails] {
-
-
-
-//        return 
-
+//        return
 //    }
-
-}
 
 //var trailString = liftName.stringByReplacingOccurrencesOfString(" ", withString: "")
 //trailString = trailString.stringByReplacingOccurrencesOfString("-", withString: "")
 //trailString += "Lift"
 //// trails = allTrailsArray.filter({$0.liftName, }
 //if let trails =
-//
+
