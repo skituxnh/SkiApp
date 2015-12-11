@@ -11,9 +11,10 @@ import UIKit
 
 class TrailController {
 
-    static let sharedInstance = TrailController()
+//    static let sharedInstance = TrailController()
 
-    var trailArray: [Trails] {
+
+    static var trailArray: [Trails] {
         let aliceAvenue = Trails(trailName: "Alice Avenue", trailLift: "Baby Thunder", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
         let bluebell = Trails(trailName: "Bluebell", trailLift: "Baby Thunder", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
         let easyStreet = Trails(trailName: "Easy Street", trailLift: "Baby Thunder", trailDifficulty: "1", trailStatus: "", trailGroomed: "")

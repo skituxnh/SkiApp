@@ -13,54 +13,60 @@ class LiftTrailTableViewController: UITableViewController {
     var liftArray: [Lift] {
         return LiftController.sharedInstance.liftArray
     }
+    var lift : Lift?
+    var indexPath : NSIndexPath?
     var trailArray: [Trails] {
-        return TrailController.sharedInstance.trailArray
+        return TrailController.trailArray
     }
-
-    var expandedTrailPaths: [NSIndexPath]?
+    var expanded : Bool = false
+    var expandedTrailPaths: [NSIndexPath] = []
     var selectedLiftPaths: NSIndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        expandedTrailPaths = []
+//        expandedTrailPaths = []
 
         tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
-        tableView.backgroundView?.alpha = 1.0
+        tableView.backgroundView?.alpha = 0.15
     }
 
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let paths = expandedTrailPaths {
-            return self.liftArray.count + paths.count
-        }
-        else {
-            return self.liftArray.count
-        }
+        return self.liftArray.count + expandedTrailPaths.count
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("liftTrailCell", forIndexPath: indexPath) as! LiftTrailTableViewCell
-        let lifts = self.liftArray[indexPath.row]
+
+
+//        print("row: \(indexPath.row)")
+//        print("trails: \(expandedTrailPaths.count)")
+//        print("total: \(indexPath.row - expandedTrailPaths.count)")
+
+        if expanded == false{
+         self.lift = self.liftArray[indexPath.row]
+        }else{
+            lift = self.liftArray[self.indexPath!.row]
+        }
 
         // Trail cells
-        if let paths = expandedTrailPaths {
-            if paths.count != 0 {
-                if paths.contains(indexPath) == true {
+            if expandedTrailPaths.count != 0 {
+                if expandedTrailPaths.contains(indexPath) == true {
                     if let correctIndex = selectedLiftPaths {
-                        print(indexPath.row)
-                        print(correctIndex.row)
-                        let trail = lifts.arrayOfTrails[indexPath.row - correctIndex.row - 1]
+                        let trail = lift!.arrayOfTrails[indexPath.row - correctIndex.row - 1]
                         cell.liftNameLabel!.text = trail.trailName
+//                        cell.liftStatusLabel!.text = trail.trailDifficulty
                     }
                 }
                 return cell
+//                Ben Rocks!
             }
-        }
+
         //        let name = lifts.liftName
-        cell.liftNameLabel?.text = lifts.liftName
+        cell.liftNameLabel?.text = lift!.liftName
         //            cell.liftStatusLabel?.text = lifts.liftStatus
-        if lifts.liftStatus == "open" {
+        if lift!.liftStatus == "open" {
             cell.liftStatusLabel.text = "✔️"
             cell.liftStatusLabel.textColor = UIColor.greenColor()
         } else {
@@ -82,19 +88,21 @@ class LiftTrailTableViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
         // check to see if indexPath is an expanded Trail cell
-        if expandedTrailPaths?.contains(indexPath) == false {
+        if expandedTrailPaths.contains(indexPath) == false {
+            expanded = true
+            self.indexPath = indexPath
             let liftAtPath = liftArray[indexPath.row]
             let nextRow = indexPath.row + 1
             var trailIndex = 0
             var removablePaths = [NSIndexPath]()
             for _ in liftAtPath.arrayOfTrails {
                 let nextPath = NSIndexPath(forRow: nextRow + trailIndex, inSection: indexPath.section)
-                if expandedTrailPaths?.contains(nextPath) == true {
-                    let index = expandedTrailPaths?.indexOf(nextPath)
-                    expandedTrailPaths?.removeAtIndex(index!)
+                if expandedTrailPaths.contains(nextPath) == true {
+                    let index = expandedTrailPaths.indexOf(nextPath)
+                    expandedTrailPaths.removeAtIndex(index!)
                     removablePaths.append(nextPath)
                 } else  {
-                    expandedTrailPaths?.append(nextPath)
+                    expandedTrailPaths.append(nextPath)
                 }
                 trailIndex += 1
             }
@@ -103,10 +111,16 @@ class LiftTrailTableViewController: UITableViewController {
                 tableView.deleteRowsAtIndexPaths(removablePaths, withRowAnimation: UITableViewRowAnimation.Left)
                 selectedLiftPaths = nil
             } else {
-                tableView.insertRowsAtIndexPaths(expandedTrailPaths!, withRowAnimation: UITableViewRowAnimation.Left)
+                tableView.insertRowsAtIndexPaths(expandedTrailPaths, withRowAnimation: UITableViewRowAnimation.Left)
                 selectedLiftPaths = indexPath
             }
             tableView.endUpdates()
         } 
+    }
+
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+
+        expanded = false
+        tableView.reloadData()
     }
 }
