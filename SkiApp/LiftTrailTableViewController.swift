@@ -8,13 +8,12 @@
 
 import UIKit
 
-class LiftTrailTableViewController: UITableViewController {
+class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol {
 
     var liftArray: [Lift] {
         return LiftController.sharedInstance.liftArray
     }
     var lift : Lift?
-    var indexPath : NSIndexPath?
     var trailArray: [Trails] {
         return TrailController.trailArray
     }
@@ -26,12 +25,9 @@ class LiftTrailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        expandedTrailPaths = []
-
         tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
         tableView.backgroundView?.alpha = 0.15
     }
-
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,58 +37,47 @@ class LiftTrailTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("liftTrailCell", forIndexPath: indexPath) as! LiftTrailTableViewCell
 
 
-//        print("row: \(indexPath.row)")
-//        print("trails: \(expandedTrailPaths.count)")
-//        print("total: \(indexPath.row - expandedTrailPaths.count)")
-
-//        if expanded == false{
-
-//        }else{
-//            lift = self.liftArray[indexPath.row]
-//        }
-
         // Trail cells
-            if expandedTrailPaths.count != 0 {
-                if expandedTrailPaths.contains(indexPath) == true {
-                    if let correctIndex = selectedLiftPaths {
-                        let trail = lift!.arrayOfTrails[indexPath.row - correctIndex.row - 1]
-                        cell.liftNameLabel!.text = trail.trailName
-                        cell.liftNameLabel!.textColor = UIColor.lightGrayColor()
-//                        cell.liftStatusLabel!.text = trail.trailDifficulty
-                        cell.liftStatusLabel.text = ""
-                    }
+        if expandedTrailPaths.count != 0 && expanded == true {
+            if expandedTrailPaths.contains(indexPath) == true {
+                if let correctIndex = selectedLiftPaths {
+                    let trail = lift!.arrayOfTrails[indexPath.row - correctIndex.row - 1]
+                    cell.liftNameLabel!.text = trail.trailName
+                    cell.liftNameLabel!.textColor = UIColor.lightGrayColor()
+                    cell.liftStatusLabel.text = ""
                 }
-                return cell
-//                Ben Rocks!
             }
 
-        self.lift = self.liftArray[indexPath.row]
-        //        let name = lifts.liftName
-        cell.liftNameLabel?.text = lift!.liftName
-        //            cell.liftStatusLabel?.text = lifts.liftStatus
-        if lift!.liftStatus == "open" {
-            cell.liftStatusLabel.text = "✔️"
-            cell.liftNameLabel!.textColor = UIColor.blackColor()
-            cell.liftStatusLabel.textColor = UIColor.greenColor()
+            // need to determine which cell is tapped and keep the above constant but reset the below lifts
         } else {
-            cell.liftStatusLabel.text = "✖️"
-            cell.liftNameLabel!.textColor = UIColor.blackColor()
-            cell.liftStatusLabel.textColor = UIColor.redColor()
+
+            self.lift = self.liftArray[indexPath.row]
+            cell.liftNameLabel?.text = lift!.liftName
+            if lift!.liftStatus == "open" {
+                cell.liftStatusLabel.text = "✔️"
+                cell.liftNameLabel!.textColor = UIColor.greenColor()
+                //            cell.liftStatusLabel!.textColor = UIColor.greenColor()
+            } else {
+                cell.liftStatusLabel.text = "✖️"
+                cell.liftNameLabel!.textColor = UIColor.redColor()
+                //            cell.liftStatusLabel!.textColor = UIColor.redColor()
+            }
+            
         }
-        cell.backgroundView?.alpha = 0.4
         return cell
     }
     // MARK: - Navigation
-
     //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     //
     //    }
-
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
         // removes grey on selected tableview cell
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        expandLiftCell(indexPath)
+    }
+
+    func expandLiftCell(indexPath: NSIndexPath) {
         // check to see if indexPath is an expanded Trail cell
         if expandedTrailPaths.contains(indexPath) == false {
 
@@ -124,26 +109,19 @@ class LiftTrailTableViewController: UITableViewController {
 
             // Check for new Lift Cell selected, when expanded == true
 
-                // Selected the previously selected Lift cell -> should remove trails
-                if selectedLiftPaths == indexPath {
-                    tableView.deleteRowsAtIndexPaths(removablePaths, withRowAnimation: UITableViewRowAnimation.Left)
-                    selectedLiftPaths = nil
-                    expanded = false
-                } else { // Selecting a new Lift CEll
-                    tableView.insertRowsAtIndexPaths(expandedTrailPaths, withRowAnimation: UITableViewRowAnimation.Left)
-                    selectedLiftPaths = indexPath
-                    expanded = true
-                }
-                
-
+            // Selected the previously selected Lift cell -> should remove trails
+            if selectedLiftPaths == indexPath {
+                tableView.deleteRowsAtIndexPaths(removablePaths, withRowAnimation: UITableViewRowAnimation.Left)
+                selectedLiftPaths = nil
+                expanded = false
+            } else { // Selecting a new Lift CEll
+                tableView.insertRowsAtIndexPaths(expandedTrailPaths, withRowAnimation: UITableViewRowAnimation.Left)
+                selectedLiftPaths = indexPath
+                expanded = true
+            }
             tableView.endUpdates()
-                
-        } 
+        }
     }
 
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
 
-//        expanded = !expanded
-//        tableView.reloadData()
-    }
 }

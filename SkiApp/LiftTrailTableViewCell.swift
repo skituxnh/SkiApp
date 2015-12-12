@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CellExpansionProtocol {
+    func expandLiftCell(indexPath: NSIndexPath)
+}
+
 class LiftTrailTableViewCell: UITableViewCell {
     @IBOutlet var liftNameLabel: UILabel!
     @IBOutlet var liftStatusLabel: UILabel!
@@ -21,6 +25,11 @@ class LiftTrailTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    override func prepareForReuse() {
+        liftNameLabel.textColor = UIColor.orangeColor()
+        liftStatusLabel.textColor = UIColor.purpleColor()
     }
 
 }

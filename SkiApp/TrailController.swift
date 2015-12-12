@@ -19,7 +19,7 @@ class TrailController {
         let bluebell = Trails(trailName: "Bluebell", trailLift: "Baby Thunder", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
         let easyStreet = Trails(trailName: "Easy Street", trailLift: "Baby Thunder", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
         let figure8Gully = Trails(trailName: "Figure 8 Gully", trailLift: "Baby Thunder", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
-        let upperFigure8Gully = Trails(trailName: "Figure 8 Gully", trailLift: "Baby Thunder", trailDifficulty: "5", trailStatus: "", trailGroomed: "")
+        let upperFigure8Gully = Trails(trailName: "Upper Figure 8 Gully", trailLift: "Baby Thunder", trailDifficulty: "5", trailStatus: "", trailGroomed: "")
         let lazySusan = Trails(trailName: "Lazy Susan", trailLift: "Baby Thunder", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
         let lowerMiniMinersCamp = Trails(trailName: "Lower Mini Miners' Camp", trailLift: "Baby Thunder", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
         let thunderAlley = Trails(trailName: "Thunder Alley", trailLift: "Baby Thunder", trailDifficulty: "4", trailStatus: "", trailGroomed: "")
