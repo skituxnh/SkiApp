@@ -13,11 +13,18 @@ class NetworkController {
 //WeatherURL
     static func snowbirdWeatherURL() -> NSURL {
 
-        let baseURL = "http://api.openweathermap.org/data/2.5/weather?"
-        let zipCode = "zip=84092"
-        let apiKey = "&appid=07ac20177d4ea1e111c43b4694a8c950"
+        let baseURL = "https://api.forecast.io/forecast/"
+        let locationCode = "40.5897,-111.6393"
+        let apiKey = "f6343e5eb6cece8c1830aa248fcc6cb0/"
+        print("Forecast IO Data")
+        return NSURL(string: "\(baseURL)\(apiKey)\(locationCode)")!
 
-            return NSURL(string: "\(baseURL)\(zipCode)\(apiKey)")!
+
+//        let baseURL = "http://api.openweathermap.org/data/2.5/weather?"
+//        let zipCode = "zip=84092"
+//        let apiKey = "&appid=07ac20177d4ea1e111c43b4694a8c950"
+//        print("openWeather Data")
+//            return NSURL(string: "\(baseURL)\(zipCode)\(apiKey)")!
         }
 //    func urlForIcon(iconString: String) -> NSURL {
 //            return NSURL(string: "ttp://openweathermap.org/img/w/\(iconString).png")!
