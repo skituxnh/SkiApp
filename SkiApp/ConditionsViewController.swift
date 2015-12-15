@@ -77,7 +77,19 @@ class ConditionsViewController: UIViewController {
         }
     }
 
-    }
+ 
+
+//    @IBAction func trailMapButtonTapped(sender: AnyObject) {
+//        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//            if segue.identifier == "toTrailMap" {
+//                if let destinationViewController = segue.destinationViewController as? TrailMapViewController {
+//                destinationViewController.performSegueWithIdentifier("toTrailMap", sender: UIImage)
+//                }
+//            }
+//
+//        }
+//    }
+}
 
 
 

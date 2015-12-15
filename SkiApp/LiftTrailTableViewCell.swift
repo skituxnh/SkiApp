@@ -28,6 +28,7 @@ class LiftTrailTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     @IBAction func selectedHeader(sender: AnyObject) {
         delegate?.expandLiftCell(section)
     }

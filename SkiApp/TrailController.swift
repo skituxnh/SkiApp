@@ -13,7 +13,6 @@ class TrailController {
 
     static let sharedInstance = TrailController()
 
-
     static var trailArray: [Trails] {
         let aliceAvenue = Trails(trailName: "Alice Avenue", trailLift: "Baby Thunder", trailDifficulty: "1", trailStatus: "", trailGroomed: "")
         let bluebell = Trails(trailName: "Bluebell", trailLift: "Baby Thunder", trailDifficulty: "2", trailStatus: "", trailGroomed: "")
@@ -185,16 +184,17 @@ class TrailController {
 
         return [aliceAvenue, bluebell, easyStreet, figure8Gully, upperFigure8Gully, lazySusan, lowerMiniMinersCamp, thunderAlley, tinyTiger, toBabyThunderChair, centerOfGravity, fieldsOfGlory, highBaldyTraverse, highRidge3, midBaldyTraverse, thanksForTheMemories, venusLine, westBaldy, blackjackGully, blackjackTraverse, condoBypass, gunTowers, lightningTreeGully, shot8, theKeyhole, westwardHo, whoCares, whodunnit, chipsAccess, chipsBypass, chipsFace, chipsRun, hubbaBubba, lowerChipsRun, middleChipsRun, phone3Shot, rothmanWay, upperPrimrosePath, willows, adager, andersonsHill, cliffAccess, hotFootGully, hotLipsGully, lowerPrimrosePath, lowerSilverFox, ohMyGod, route4Gully, upperSilverFox, chickadee, bananas, bassBelow, blackForest, election, gad2TouringGate, gadGully, gadzooks, lowerBassackwards, organGrinder, sth, tricep, upperBassackwards, boundryBowl, gad2Return, lowerTigerTail, mozzaBowl, pearlyGates, redLensLine, sob, tedsBowl, temptationChutes, upperTigerTail, conrad, defianceLedge, delores, exitGully, figure8Bowl, highSaddleTraverse, lowSaddle, mo, mushroomLand, shot44, thunderBowl, whiteRabbit, bonarsPass, comeFromBehind, goblinGully, hoops, knuckleheadTraverse, lastChoice, markMalu, oldLadies, rastaChutes, roadToProvo, shireen, shot41, birdsNest, claimJumper, luckeyBoy, skiPatrolGully, forty9erGully, blueByYou, bassanova, chamonixBowl, chamonixChutes, doubleDown, fossilChutes, highStakes, limberPines, livinTheDream, loneStar, nashFloraLode, notQuiteCorn, pathToParadise, silverDipper, alimonyChutes, altarBowl, bookendsBowl, bookendsTraverse, richiesRun, theEndoras, bookmarkGully, juniorsPowderParadise, whiteDiamonds, barryBarrySteep, binxsBumper, cirqueTraverse, daltonsDraw, gadChutes, glen, greatScott, lowerCirque, middleCirque, restaurantRoll, upperCirque, upperMachSchnell, wilbereBowl, wilmas, regulatorJohnson, harpersFerryEast, harpersFerry, bassHighway, wilbereRidge, wilbereCutoff, catCrewCutoff, minersRoad, creekRoad, sneakyPete, upperBigEmma, middleEmma, lowerEmma, blueAngel, fluffyBunny, fieldsCutoff, lowestBassackwards, lunchRun, middleBassackwards, raceHill, upperMiniMinersCamp, carbonate, getSeriousChutes, lowerMachSchnell, madamAnnie, oldSamePlace, puckerBrush, west2ndSouth, west2ndSouthOnramp]
     }
-}
+
 
 
     func getTrailsForLiftName(liftName: String) -> [Trails] {
 
 //        var trailString = liftName.stringByReplacingOccurrencesOfString(" ", withString: "")
 //        trailString = trailString.stringByReplacingOccurrencesOfString("-", withString: "")
-//        trailString += "Lift"
+        let trails = TrailController.trailArray
 
-        return TrailController.trailArray.filter(){$0.trailLift != liftName}
+        return trails.filter(){$0.trailLift == liftName }
 
+
+    }
 }
-
