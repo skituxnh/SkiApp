@@ -9,10 +9,14 @@
 import UIKit
 
 protocol CellExpansionProtocol {
-    func expandLiftCell(indexPath: NSIndexPath)
+    func expandLiftCell(section: Int)
 }
 
 class LiftTrailTableViewCell: UITableViewCell {
+
+    var delegate: CellExpansionProtocol?
+    var section: Int = 0
+
     @IBOutlet var liftNameLabel: UILabel!
     @IBOutlet var liftStatusLabel: UILabel!
 
@@ -30,6 +34,9 @@ class LiftTrailTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         liftNameLabel.textColor = UIColor.orangeColor()
         liftStatusLabel.textColor = UIColor.purpleColor()
+    }
+    @IBAction func selectedHeader(sender: AnyObject) {
+        delegate?.expandLiftCell(section)
     }
 
 }
