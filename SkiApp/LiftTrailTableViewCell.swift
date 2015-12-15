@@ -11,7 +11,6 @@ import UIKit
 protocol CellExpansionProtocol {
     func expandLiftCell(section: Int)
 }
-
 class LiftTrailTableViewCell: UITableViewCell {
 
     var delegate: CellExpansionProtocol?
@@ -24,19 +23,12 @@ class LiftTrailTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-
-    override func prepareForReuse() {
-        liftNameLabel.textColor = UIColor.orangeColor()
-        liftStatusLabel.textColor = UIColor.purpleColor()
-    }
     @IBAction func selectedHeader(sender: AnyObject) {
         delegate?.expandLiftCell(section)
     }
-
 }

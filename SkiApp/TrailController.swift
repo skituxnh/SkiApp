@@ -11,7 +11,7 @@ import UIKit
 
 class TrailController {
 
-//    static let sharedInstance = TrailController()
+    static let sharedInstance = TrailController()
 
 
     static var trailArray: [Trails] {
@@ -188,13 +188,13 @@ class TrailController {
 }
 
 
-//    func getTrailsForLiftName(liftName: String) -> [Trails] {
-//        return
-//    }
+    func getTrailsForLiftName(liftName: String) -> [Trails] {
 
-//var trailString = liftName.stringByReplacingOccurrencesOfString(" ", withString: "")
-//trailString = trailString.stringByReplacingOccurrencesOfString("-", withString: "")
-//trailString += "Lift"
-//// trails = allTrailsArray.filter({$0.liftName, }
-//if let trails =
+//        var trailString = liftName.stringByReplacingOccurrencesOfString(" ", withString: "")
+//        trailString = trailString.stringByReplacingOccurrencesOfString("-", withString: "")
+//        trailString += "Lift"
+
+        return TrailController.trailArray.filter(){$0.trailLift != liftName}
+
+}
 
