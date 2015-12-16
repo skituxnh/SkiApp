@@ -10,10 +10,9 @@ class ConditionsViewController: UIViewController {
     @IBOutlet var snowCam: UIWebView!
     @IBOutlet var hiddenPeakCam: UIWebView!
     @IBOutlet var currentRoadStatusLabel: UILabel!
-    @IBOutlet var liftConditionLabel: UILabel!
     var roadStatus :Bool = true
 
-    @IBOutlet weak var currentWeatherIcon: UIImage!
+//    @IBOutlet weak var currentWeatherIcon: UIImage!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var currentWindSpeedLabel: UILabel!
     @IBOutlet weak var currentHighTemperatureLabel: UILabel!
@@ -32,6 +31,7 @@ class ConditionsViewController: UIViewController {
         let hpRequestURL = NSURL(string: "http://www.snowbird.com/imagelib/PeakCam/mineral/PeakCam_Mineral.jpg")
         let requestHP = NSURLRequest(URL: hpRequestURL!)
         hiddenPeakCam.loadRequest(requestHP)
+
 
         if roadStatus == true {
             //            currentRoadStatusLabel.backgroundColor = UIColor(red: 24, green: 136, blue: 67, alpha: 1.0)
