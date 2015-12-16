@@ -398,9 +398,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqH-LQ-Tn1">
-                                            <rect key="frame" x="275" y="10" width="35" height="35"/>
+                                            <rect key="frame" x="236" y="10" width="74" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="35" id="531-TT-HnC"/>
+                                                <constraint firstAttribute="width" constant="74" id="531-TT-HnC"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -417,7 +417,7 @@
                                         <constraint firstItem="3xV-tH-ftO" firstAttribute="baseline" secondItem="IqH-LQ-Tn1" secondAttribute="baseline" id="11X-cM-oxL"/>
                                         <constraint firstItem="vt2-kw-XDV" firstAttribute="top" secondItem="ctq-y5-gDP" secondAttribute="top" id="3QE-JU-2UZ"/>
                                         <constraint firstItem="vt2-kw-XDV" firstAttribute="leading" secondItem="ctq-y5-gDP" secondAttribute="leading" id="8DO-x6-4Sd"/>
-                                        <constraint firstItem="IqH-LQ-Tn1" firstAttribute="leading" secondItem="3xV-tH-ftO" secondAttribute="trailing" constant="47" id="BUP-bk-bLp"/>
+                                        <constraint firstItem="IqH-LQ-Tn1" firstAttribute="leading" secondItem="3xV-tH-ftO" secondAttribute="trailing" constant="8" id="BUP-bk-bLp"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="IqH-LQ-Tn1" secondAttribute="trailing" constant="2" id="Emm-xj-0fp"/>
                                         <constraint firstAttribute="trailing" secondItem="vt2-kw-XDV" secondAttribute="trailing" id="J1C-MX-XmL"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="3xV-tH-ftO" secondAttribute="bottom" constant="6.5" id="KP9-PO-kl9"/>
@@ -504,6 +504,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bou-me-jdg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.4941176471" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bcT-I9-d4q">

@@ -15,6 +15,7 @@ class ConditionsViewController: UIViewController {
 //    @IBOutlet weak var currentWeatherIcon: UIImage!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var currentWindSpeedLabel: UILabel!
+//    @IBOutlet weak var currentWindBearingLabel!: UILabel!
     @IBOutlet weak var currentHighTemperatureLabel: UILabel!
     @IBOutlet weak var currentLowTemperatureLabel: UILabel!
     @IBOutlet var forecast24hrSnow: UILabel!
@@ -55,6 +56,11 @@ class ConditionsViewController: UIViewController {
                 } else {
                     self.currentWindSpeedLabel.text = "No Data Available"
                 }
+//                if let bearing = weather.currentWindBearing {
+//                    self.currentWindBearingLabel.text = "\(Int(direction))"
+//                } else {
+//                    self.currentWindBearingLabel.text = "No Data Available"
+//                }
                 if let low = weather.tempMin {
                     self.currentLowTemperatureLabel.text = "\(Int(low))º"
                 } else {

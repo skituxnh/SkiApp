@@ -79,11 +79,13 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
             cell.delegate = self
 
             if lift.liftStatus == "open" {
-                cell.liftStatusLabel.text = "✔️"
-                cell.liftNameLabel!.textColor = UIColor.greenColor()
+                cell.liftStatusLabel.text = "open"
+                cell.liftStatusLabel.textColor = UIColor.greenColor()
+                cell.liftNameLabel!.textColor = UIColor.blackColor()
             } else {
-                cell.liftStatusLabel.text = "✖️"
-                cell.liftNameLabel!.textColor = UIColor.redColor()
+                cell.liftStatusLabel.text = "closed"
+                cell.liftStatusLabel.textColor = UIColor.redColor()
+                cell.liftNameLabel!.textColor = UIColor.blackColor()
             }
         }
         cell.backgroundColor = UIColor.whiteColor()

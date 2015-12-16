@@ -14,6 +14,7 @@ class Weather {
     static let currentlyKey = "currently"
     static let temperatureKey = "temperature"
     static let windSpeedKey = "windSpeed"
+    static let windBearingKey = "windBearing"
     static let dailyKey = "daily"
     static let dataKey = "data"
     static let precipTypeKey = "precipType"
@@ -24,6 +25,7 @@ class Weather {
     var currently = ""
     var currentTemperature: Float?
     var currentWindSpeed: Float?
+    var currentWindBearing: Float?
     var precipType = "snow"
     var day0Snow: Float?
     var day1Snow: Float?
@@ -39,6 +41,9 @@ class Weather {
             }
             if let windSpeed = currently[Weather.windSpeedKey] as? Float {
                 self.currentWindSpeed = windSpeed
+            }
+            if let windBearing = currently[Weather.windBearingKey] as? Float {
+                self.currentWindBearing = windBearing
             }
         }
 
