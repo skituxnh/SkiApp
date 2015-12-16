@@ -23,12 +23,12 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
 
         tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
 
-//        let blurEffect = UIBlurEffect(style: .ExtraLight)
-//        let blurredBackdropView = UIVisualEffectView(effect: blurEffect)
-//        blurredBackdropView.alpha = 0.6
-//        blurredBackdropView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-//        blurredBackdropView.frame = (tableView.backgroundView?.bounds)!
-//        tableView.backgroundView?.addSubview(blurredBackdropView)
+        let blurEffect = UIBlurEffect(style: .ExtraLight)
+        let blurredBackdropView = UIVisualEffectView(effect: blurEffect)
+        blurredBackdropView.alpha = 0.6
+        blurredBackdropView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        blurredBackdropView.frame = (tableView.backgroundView?.bounds)!
+        tableView.backgroundView?.addSubview(blurredBackdropView)
 
         tableView.backgroundView?.alpha = 1.0
     }
@@ -49,7 +49,6 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
         if liftArray.count != 0 {
             let lift = liftArray[indexPath.section]
             let trail = lift.arrayOfTrails[indexPath.row]
-//            cell.liftNameLabel.font = UIFont.systemFontOfSize(17)
             cell.liftNameLabel!.text = "     \(trail.trailName)"
             cell.liftNameLabel!.textColor = UIColor.whiteColor()
 

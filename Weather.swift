@@ -10,6 +10,7 @@ import UIKit
 
 class Weather {
 
+
     static let currentlyKey = "currently"
     static let temperatureKey = "temperature"
     static let windSpeedKey = "windSpeed"
@@ -19,7 +20,6 @@ class Weather {
     static let precipAccumulationKey = "precipAccumulation"
     static let temperatureMinKey = "temperatureMin"
     static let temperatureMaxKey = "temperatureMax"
-
 
     var currently = ""
     var currentTemperature: Float?

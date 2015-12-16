@@ -23,7 +23,4 @@ class Lift {
         self.liftStatus = jsonDictionary.values.first! as! String
         self.arrayOfTrails = TrailController.sharedInstance.getTrailsForLiftName(liftName)
     }
-//    func setTrails(liftName: String) -> [Trails] {
-//        
-//    }
 }
