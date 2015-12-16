@@ -15,9 +15,6 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
     }
     var expandedLifts: [Bool] = []
 
-//    var expandedTrailPaths: [Int] = []
-//    var selectedLiftPaths: NSIndexPath?
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +22,15 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
         expandedLifts = [Bool](count: liftArray.count, repeatedValue: false)
 
         tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
-        tableView.backgroundView?.alpha = 0.15
+
+//        let blurEffect = UIBlurEffect(style: .ExtraLight)
+//        let blurredBackdropView = UIVisualEffectView(effect: blurEffect)
+//        blurredBackdropView.alpha = 0.6
+//        blurredBackdropView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+//        blurredBackdropView.frame = (tableView.backgroundView?.bounds)!
+//        tableView.backgroundView?.addSubview(blurredBackdropView)
+
+        tableView.backgroundView?.alpha = 1.0
     }
     // MARK: - Table view data source
 
@@ -41,18 +46,30 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
         let cell = tableView.dequeueReusableCellWithIdentifier("liftTrailCell", forIndexPath: indexPath) as! LiftTrailTableViewCell
         
         // Trail cells
-
         if liftArray.count != 0 {
             let lift = liftArray[indexPath.section]
             let trail = lift.arrayOfTrails[indexPath.row]
-            cell.liftNameLabel!.text = trail.trailName
-            cell.liftNameLabel!.textColor = UIColor.blueColor()
-            cell.liftStatusLabel.text = ""
-            cell.backgroundColor = UIColor.whiteColor()
+//            cell.liftNameLabel.font = UIFont.systemFontOfSize(17)
+            cell.liftNameLabel!.text = "     \(trail.trailName)"
+            cell.liftNameLabel!.textColor = UIColor.whiteColor()
 
+            if trail.trailDifficulty == "1" {
+                cell.liftStatusLabel.text = "💚"
+            } else if trail.trailDifficulty == "2" {
+                cell.liftStatusLabel.text = "💙"
+            } else if trail.trailDifficulty == "3" {
+                cell.liftStatusLabel.text = "💛"
+            } else if trail.trailDifficulty == "4" {
+                cell.liftStatusLabel.text = "❤️"
+            } else {
+                cell.liftStatusLabel.text = "💔"
+            }
         }
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
+
+        // Lift Cell
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("liftTrailCell") as! LiftTrailTableViewCell
 
@@ -70,7 +87,7 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
                 cell.liftNameLabel!.textColor = UIColor.redColor()
             }
         }
-        cell.contentView.backgroundColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.whiteColor()
 
         return cell
     }
@@ -80,7 +97,6 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
-
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
@@ -88,7 +104,7 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
     //MARK: custom cell delegate
 
     func expandLiftCell(section: Int) {
-        //check specific section(header) to see if expanded, then set accorddingly
+        //check specific section(header) to see if expanded, then set accordingly
         if expandedLifts[section] == false {
             expandedLifts[section] = true
         } else {
