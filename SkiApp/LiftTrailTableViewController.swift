@@ -43,25 +43,25 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
         }
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("liftTrailCell", forIndexPath: indexPath) as! LiftTrailTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("trailCell", forIndexPath: indexPath) as! TrailTableViewCell
         
         // Trail cells
         if liftArray.count != 0 {
             let lift = liftArray[indexPath.section]
             let trail = lift.arrayOfTrails[indexPath.row]
-            cell.liftNameLabel!.text = "     \(trail.trailName)"
-            cell.liftNameLabel!.textColor = UIColor.whiteColor()
+            cell.trailNameLabel!.text = "     \(trail.trailName)"
+            cell.trailNameLabel!.textColor = UIColor.whiteColor()
 
             if trail.trailDifficulty == "1" {
-                cell.liftStatusLabel.text = "💚"
+                cell.trailSymbolImage.image = UIImage(named: "greenCircle")
             } else if trail.trailDifficulty == "2" {
-                cell.liftStatusLabel.text = "💙"
+                cell.trailSymbolImage.image = UIImage(named: "blueSquare")
             } else if trail.trailDifficulty == "3" {
-                cell.liftStatusLabel.text = "💛"
+                cell.trailSymbolImage.image = UIImage(named: "")
             } else if trail.trailDifficulty == "4" {
-                cell.liftStatusLabel.text = "❤️"
+                cell.trailSymbolImage.image = UIImage(named: "blackDiamond")
             } else {
-                cell.liftStatusLabel.text = "💔"
+                cell.trailSymbolImage.image = UIImage(named: "doubleBlackDiamond")
             }
         }
         cell.backgroundColor = UIColor.clearColor()
@@ -70,7 +70,7 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
 
         // Lift Cell
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("liftTrailCell") as! LiftTrailTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("liftCell") as! LiftTableViewCell
 
         if liftArray.count != 0 {
             let lift = liftArray[section]

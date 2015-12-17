@@ -42,7 +42,7 @@ class NetworkController {
 
         //DataTask
         let dataTask = session.dataTaskWithURL(url) { (data, response, error) -> Void in
-            print(data)
+//            print(data)
 
             guard let data = data else {
                 print(error?.localizedDescription)
