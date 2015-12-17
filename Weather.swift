@@ -21,6 +21,7 @@ class Weather {
     static let precipAccumulationKey = "precipAccumulation"
     static let temperatureMinKey = "temperatureMin"
     static let temperatureMaxKey = "temperatureMax"
+    static let iconKey = "icon"
 
     var currently = ""
     var currentTemperature: Float?
@@ -32,12 +33,16 @@ class Weather {
     var day2Snow: Float?
     var tempMin: Float?
     var tempMax: Float?
+    var iconImageString: String?
 
     init(jsonDictionary:[String:AnyObject]) {
 
         if let currently = jsonDictionary[Weather.currentlyKey] as? [String:AnyObject] {
             if let temperature = currently[Weather.temperatureKey] as? Float {
                 self.currentTemperature = temperature
+            }
+            if let iconCurrentString = currently[Weather.iconKey] as? String {
+                self.iconImageString = iconCurrentString
             }
             if let windSpeed = currently[Weather.windSpeedKey] as? Float {
                 self.currentWindSpeed = windSpeed

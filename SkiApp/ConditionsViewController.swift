@@ -10,12 +10,12 @@ class ConditionsViewController: UIViewController {
     @IBOutlet var snowCam: UIWebView!
     @IBOutlet var hiddenPeakCam: UIWebView!
     @IBOutlet var currentRoadStatusLabel: UILabel!
-    var roadStatus :Bool = true
+    var roadStatus: Bool = true
 
-//    @IBOutlet weak var currentWeatherIcon: UIImage!
+    @IBOutlet weak var currentWeatherIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var currentWindSpeedLabel: UILabel!
-//    @IBOutlet weak var currentWindBearingLabel!: UILabel!
+    //    @IBOutlet weak var currentWindBearingLabel!: UILabel!
     @IBOutlet weak var currentHighTemperatureLabel: UILabel!
     @IBOutlet weak var currentLowTemperatureLabel: UILabel!
     @IBOutlet var forecast24hrSnow: UILabel!
@@ -56,11 +56,11 @@ class ConditionsViewController: UIViewController {
                 } else {
                     self.currentWindSpeedLabel.text = "No Data Available"
                 }
-//                if let bearing = weather.currentWindBearing {
-//                    self.currentWindBearingLabel.text = "\(Int(direction))"
-//                } else {
-//                    self.currentWindBearingLabel.text = "No Data Available"
-//                }
+                //                if let bearing = weather.currentWindBearing {
+                //                    self.currentWindBearingLabel.text = "\(Int(direction))"
+                //                } else {
+                //                    self.currentWindBearingLabel.text = "No Data Available"
+                //                }
                 if let low = weather.tempMin {
                     self.currentLowTemperatureLabel.text = "\(Int(low))º"
                 } else {
@@ -86,6 +86,11 @@ class ConditionsViewController: UIViewController {
                 } else {
                     self.forecast48hrSnow.text = "No Data Available"
                 }
+                if let weatherIcon = weather.iconImageString {
+                    self.currentWeatherIcon.image = UIImage(named: weatherIcon)
+                } else {
+                    print("HOLY SHNIKIES, NO IMAGE FOR WEATHER ICON")
+                }
             })
         }
         RoadController.getCurrentRoad { (roadData) -> Void in
@@ -97,6 +102,7 @@ class ConditionsViewController: UIViewController {
         performSegueWithIdentifier("showMapSegue", sender: nil)
     }
 }
+
 
 
 

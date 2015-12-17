@@ -58,20 +58,23 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-i3-GMz">
                                         <rect key="frame" x="181" y="0.0" width="130" height="76"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="65" placeholderIntrinsicHeight="65" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-vn-Xcr">
-                                                <rect key="frame" x="0.0" y="0.0" width="65" height="76"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WVj-mx-NNb">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="WVj-mx-NNb" secondAttribute="height" multiplier="1:1" id="dsv-es-LqD"/>
+                                                </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4DG-Gy-hNI">
-                                                <rect key="frame" x="69" y="0.0" width="61" height="76"/>
+                                                <rect key="frame" x="80" y="0.0" width="50" height="76"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-Se-H6U">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="51"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="51"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gd-e3-r7x">
-                                                        <rect key="frame" x="0.0" y="55" width="61" height="21"/>
+                                                        <rect key="frame" x="0.0" y="55" width="50" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="0ZD-YZ-X5V"/>
                                                         </constraints>
@@ -329,6 +332,7 @@
                         <outlet property="currentRoadStatusLabel" destination="fKj-Pe-UNT" id="fha-aI-Wif"/>
                         <outlet property="currentSnow" destination="rCi-w5-9Mb" id="SlL-HM-lDP"/>
                         <outlet property="currentTemperatureLabel" destination="0DR-Se-H6U" id="gyk-IW-mf1"/>
+                        <outlet property="currentWeatherIcon" destination="WVj-mx-NNb" id="G87-L6-OUM"/>
                         <outlet property="currentWindSpeedLabel" destination="p2Q-Zm-hOO" id="kS2-V3-Ymv"/>
                         <outlet property="forecast24hrSnow" destination="RVU-ru-UoS" id="LeN-Yh-h1d"/>
                         <outlet property="forecast48hrSnow" destination="3aB-zV-y4c" id="iMC-Sg-HTl"/>
@@ -566,7 +570,6 @@
         <image name="SR210" width="25" height="25"/>
         <image name="SnowbirdTrailMap" width="2160" height="1440"/>
         <image name="Snowflake" width="65" height="65"/>
-        <image name="Sun" width="65" height="65"/>
         <image name="TrailMap" width="594" height="364"/>
         <image name="homeTabIcon" width="75" height="75"/>
         <image name="liftTabIcon" width="75" height="75"/>
