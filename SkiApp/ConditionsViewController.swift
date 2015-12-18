@@ -36,7 +36,6 @@ class ConditionsViewController: UIViewController {
 
         if roadStatus == true {
             currentRoadStatusLabel.backgroundColor = UIColor(red: 110/255, green: 180/255, blue: 63/255, alpha: 1.0)
-//            currentRoadStatusLabel.backgroundColor = UIColor.greenColor()
             currentRoadStatusLabel.text = "SR-210 is Open"
         } else {
             currentRoadStatusLabel.backgroundColor = UIColor.redColor()

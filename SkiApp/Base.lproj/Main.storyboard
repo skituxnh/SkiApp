@@ -592,7 +592,7 @@
         <image name="SR210" width="25" height="25"/>
         <image name="SnowbirdTrailMap" width="2160" height="1440"/>
         <image name="TrailMap" width="594" height="364"/>
-        <image name="homeTabIcon" width="75" height="75"/>
-        <image name="liftTabIcon" width="75" height="75"/>
+        <image name="homeTabIcon" width="44" height="40"/>
+        <image name="liftTabIcon" width="32" height="40"/>
     </resources>
 </document>
