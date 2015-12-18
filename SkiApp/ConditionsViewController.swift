@@ -25,13 +25,13 @@ class ConditionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBarHidden = false
-        let scRequestURL = NSURL(string: "http://www.snowbird.com/imagelib/SnowCam/SnowCam_main.jpg")
-        let requestSC = NSURLRequest(URL: scRequestURL!)
-        snowCam.loadRequest(requestSC)
-
-        let hpRequestURL = NSURL(string: "http://www.snowbird.com/imagelib/PeakCam/mineral/PeakCam_Mineral.jpg")
-        let requestHP = NSURLRequest(URL: hpRequestURL!)
-        hiddenPeakCam.loadRequest(requestHP)
+//        let scRequestURL = NSURL(string: "http://www.snowbird.com/imagelib/SnowCam/SnowCam_main.jpg")
+//        let requestSC = NSURLRequest(URL: scRequestURL!)
+//        snowCam.loadRequest(requestSC)
+//
+//        let hpRequestURL = NSURL(string: "http://www.snowbird.com/imagelib/PeakCam/mineral/PeakCam_Mineral.jpg")
+//        let requestHP = NSURLRequest(URL: hpRequestURL!)
+//        hiddenPeakCam.loadRequest(requestHP)
 
 
         if roadStatus == true {
