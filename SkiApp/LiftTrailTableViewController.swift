@@ -21,16 +21,16 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
         //initialize array of booleans(all false) equal to the length on number of lifts
         expandedLifts = [Bool](count: liftArray.count, repeatedValue: false)
 
-        tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
-
-        let blurEffect = UIBlurEffect(style: .ExtraLight)
-        let blurredBackdropView = UIVisualEffectView(effect: blurEffect)
-        blurredBackdropView.alpha = 0.6
-        blurredBackdropView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        blurredBackdropView.frame = (tableView.backgroundView?.bounds)!
-        tableView.backgroundView?.addSubview(blurredBackdropView)
-
-        tableView.backgroundView?.alpha = 1.0
+//        tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
+//
+//        let blurEffect = UIBlurEffect(style: .ExtraLight)
+//        let blurredBackdropView = UIVisualEffectView(effect: blurEffect)
+//        blurredBackdropView.alpha = 0.6
+//        blurredBackdropView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+//        blurredBackdropView.frame = (tableView.backgroundView?.bounds)!
+//        tableView.backgroundView?.addSubview(blurredBackdropView)
+//
+//        tableView.backgroundView?.alpha = 1.0
     }
     // MARK: - Table view data source
 
@@ -49,22 +49,21 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
         if liftArray.count != 0 {
             let lift = liftArray[indexPath.section]
             let trail = lift.arrayOfTrails[indexPath.row]
-            cell.trailNameLabel!.text = "     \(trail.trailName)"
-            cell.trailNameLabel!.textColor = UIColor.whiteColor()
+            cell.trailNameLabel!.text = "\(trail.trailName)"
+            cell.trailNameLabel!.textColor = UIColor.lightGrayColor()
 
             if trail.trailDifficulty == "1" {
                 cell.trailSymbolImage.image = UIImage(named: "greenCircle")
             } else if trail.trailDifficulty == "2" {
                 cell.trailSymbolImage.image = UIImage(named: "blueSquare")
             } else if trail.trailDifficulty == "3" {
-                cell.trailSymbolImage.image = UIImage(named: "")
+                cell.trailSymbolImage.image = UIImage(named: "blueBlackDiamond")
             } else if trail.trailDifficulty == "4" {
                 cell.trailSymbolImage.image = UIImage(named: "blackDiamond")
             } else {
                 cell.trailSymbolImage.image = UIImage(named: "doubleBlackDiamond")
             }
         }
-        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
 
@@ -80,11 +79,11 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
 
             if lift.liftStatus == "open" {
                 cell.liftStatusLabel.text = "open"
-                cell.liftStatusLabel.textColor = UIColor.greenColor()
+                cell.liftStatusLabel.textColor = UIColor(red: 110/255, green: 180/255, blue: 63/255, alpha: 1.0)
                 cell.liftNameLabel!.textColor = UIColor.blackColor()
             } else {
                 cell.liftStatusLabel.text = "closed"
-                cell.liftStatusLabel.textColor = UIColor.redColor()
+                cell.liftStatusLabel.textColor = UIColor.darkGrayColor()
                 cell.liftNameLabel!.textColor = UIColor.blackColor()
             }
         }

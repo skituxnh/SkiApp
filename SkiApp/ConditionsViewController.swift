@@ -10,12 +10,12 @@ class ConditionsViewController: UIViewController {
     @IBOutlet var snowCam: UIWebView!
     @IBOutlet var hiddenPeakCam: UIWebView!
     @IBOutlet var currentRoadStatusLabel: UILabel!
-    var roadStatus: Bool = true
+        var roadStatus: Bool = true
 
     @IBOutlet weak var currentWeatherIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var currentWindSpeedLabel: UILabel!
-    //    @IBOutlet weak var currentWindBearingLabel!: UILabel!
+    @IBOutlet weak var currentWindBearingLabel: UILabel!
     @IBOutlet weak var currentHighTemperatureLabel: UILabel!
     @IBOutlet weak var currentLowTemperatureLabel: UILabel!
     @IBOutlet var forecast24hrSnow: UILabel!
@@ -24,7 +24,7 @@ class ConditionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBarHidden = false
         let scRequestURL = NSURL(string: "http://www.snowbird.com/imagelib/SnowCam/SnowCam_main.jpg")
         let requestSC = NSURLRequest(URL: scRequestURL!)
         snowCam.loadRequest(requestSC)
@@ -35,8 +35,8 @@ class ConditionsViewController: UIViewController {
 
 
         if roadStatus == true {
-            //            currentRoadStatusLabel.backgroundColor = UIColor(red: 24, green: 136, blue: 67, alpha: 1.0)
-            currentRoadStatusLabel.backgroundColor = UIColor.greenColor()
+            currentRoadStatusLabel.backgroundColor = UIColor(red: 110/255, green: 180/255, blue: 63/255, alpha: 1.0)
+//            currentRoadStatusLabel.backgroundColor = UIColor.greenColor()
             currentRoadStatusLabel.text = "SR-210 is Open"
         } else {
             currentRoadStatusLabel.backgroundColor = UIColor.redColor()
@@ -56,11 +56,11 @@ class ConditionsViewController: UIViewController {
                 } else {
                     self.currentWindSpeedLabel.text = "No Data Available"
                 }
-                //                if let bearing = weather.currentWindBearing {
-                //                    self.currentWindBearingLabel.text = "\(Int(direction))"
-                //                } else {
-                //                    self.currentWindBearingLabel.text = "No Data Available"
-                //                }
+                if let bearing = weather.currentWindBearing {
+                    self.currentWindBearingLabel.text = "\(bearing)"
+                } else {
+                    self.currentWindBearingLabel.text = "No Data Available"
+                }
                 if let low = weather.tempMin {
                     self.currentLowTemperatureLabel.text = "\(Int(low))º"
                 } else {
@@ -97,6 +97,13 @@ class ConditionsViewController: UIViewController {
             self.roadStatus = roadData
             print(roadData)
         }
+    }
+
+    override func viewWillAppear(animated: Bool) {
+
+        navigationController?.navigationBar.frame.size.height = 30
+        navigationController?.navigationBarHidden = false
+
     }
     @IBAction func showMap(sender: AnyObject) {
         performSegueWithIdentifier("showMapSegue", sender: nil)

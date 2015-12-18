@@ -18,14 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         LiftController.getCurrentLifts { (lifts) -> Void in
             LiftController.sharedInstance.liftArray = lifts
+
         }
     }
 
 //Add backgournd colors to carry throughout the NavBar and TabBar Controllers
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.barTintColor = UIColor(red: 0, green: 126, blue: 200, alpha: 0.0)
 
         // Override point for customization after application launch.
         return true
