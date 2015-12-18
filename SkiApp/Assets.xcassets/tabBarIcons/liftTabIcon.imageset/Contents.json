@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "liftTabIcon.png",
+      "filename" : "liftIcon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "liftTabIcon-1.png",
+      "filename" : "liftIcon@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "liftTabIcon-2.png",
+      "filename" : "liftIcon@3x.png",
       "scale" : "3x"
     }
   ],
