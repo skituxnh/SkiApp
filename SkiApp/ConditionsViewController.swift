@@ -7,8 +7,6 @@ import UIKit
 
 class ConditionsViewController: UIViewController {
 
-    @IBOutlet var snowCam: UIWebView!
-    @IBOutlet var hiddenPeakCam: UIWebView!
     @IBOutlet var currentRoadStatusLabel: UILabel!
         var roadStatus: Bool = true
 
@@ -25,14 +23,6 @@ class ConditionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBarHidden = false
-//        let scRequestURL = NSURL(string: "http://www.snowbird.com/imagelib/SnowCam/SnowCam_main.jpg")
-//        let requestSC = NSURLRequest(URL: scRequestURL!)
-//        snowCam.loadRequest(requestSC)
-//
-//        let hpRequestURL = NSURL(string: "http://www.snowbird.com/imagelib/PeakCam/mineral/PeakCam_Mineral.jpg")
-//        let requestHP = NSURLRequest(URL: hpRequestURL!)
-//        hiddenPeakCam.loadRequest(requestHP)
-
 
         if roadStatus == true {
             currentRoadStatusLabel.backgroundColor = UIColor(red: 110/255, green: 180/255, blue: 63/255, alpha: 1.0)
@@ -55,8 +45,9 @@ class ConditionsViewController: UIViewController {
                 } else {
                     self.currentWindSpeedLabel.text = "No Data Available"
                 }
-                if let bearing = weather.currentWindBearing {
-                    self.currentWindBearingLabel.text = "\(bearing)"
+                if let direction = weather.currentWindBearing {
+                    let directionText = WeatherController.convertBearingToDirection(direction)
+                    self.currentWindBearingLabel.text = "\(directionText)"
                 } else {
                     self.currentWindBearingLabel.text = "No Data Available"
                 }
