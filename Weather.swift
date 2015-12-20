@@ -30,6 +30,7 @@ class Weather {
     var day0Snow: Float?
     var day1Snow: Float?
     var day2Snow: Float?
+    var day3Snow: Float?
     var tempMin: Float?
     var tempMax: Float?
     var iconImageString: String?
@@ -77,6 +78,13 @@ class Weather {
                 if let day2precipAccumulation = arrayUsingDataKey[2][Weather.precipAccumulationKey] as? Float {
                     self.day2Snow = day2precipAccumulation
                 }
+                if let day3PrecipType = arrayUsingDataKey[3][Weather.precipTypeKey] as? String {
+                    self.precipType = day3PrecipType
+                }
+                if let day3precipAccumulation = arrayUsingDataKey[3][Weather.precipAccumulationKey] as? Float {
+                    self.day2Snow = day3precipAccumulation
+                }
+
             }
         }
     }

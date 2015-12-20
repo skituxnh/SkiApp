@@ -13,11 +13,11 @@ class NetworkController {
     //WeatherURL
     static func snowbirdWeatherURL() -> NSURL {
 
-        let baseURL = "https://api.forecast.io/forecast/"
+        let baseURL = "https://api.forecast.io/forecast/f6343e5eb6cece8c1830aa248fcc6cb0/"
         let locationCode = "40.5897,-111.6393"
-        let apiKey = "f6343e5eb6cece8c1830aa248fcc6cb0/"
+//        let apiKey = "f6343e5eb6cece8c1830aa248fcc6cb0/"
 
-        return NSURL(string: "\(baseURL)\(apiKey)\(locationCode)")!
+        return NSURL(string: "\(baseURL)\(locationCode)")!
     }
 
     //LiftsURL

@@ -18,6 +18,7 @@ class ConditionsViewController: UIViewController {
     @IBOutlet weak var currentLowTemperatureLabel: UILabel!
     @IBOutlet var forecast24hrSnow: UILabel!
     @IBOutlet var forecast48hrSnow: UILabel!
+    @IBOutlet var forecast72hrSnow: UILabel!
     @IBOutlet var currentSnow: UILabel!
 
     override func viewDidLoad() {
@@ -67,14 +68,19 @@ class ConditionsViewController: UIViewController {
                     self.currentSnow.text = "No Data Available"
                 }
                 if let day1Snow = weather.day1Snow {
-                    self.forecast24hrSnow.text = "\(Int(day1Snow))\""
+                    self.forecast24hrSnow.text = "\(Int(day1Snow))\" 24hrs"
                 } else {
                     self.forecast24hrSnow.text = "No Data Available"
                 }
                 if let day2Snow = weather.day2Snow {
-                    self.forecast48hrSnow.text = "\(Int(day2Snow))\""
+                    self.forecast48hrSnow.text = "\(Int(day2Snow))\" 48hrs"
                 } else {
                     self.forecast48hrSnow.text = "No Data Available"
+                }
+                if let day3Snow = weather.day3Snow {
+                    self.forecast72hrSnow.text = "\(Int(day3Snow))\" 72hrs"
+                } else {
+                    self.forecast72hrSnow.text = "No Data Available"
                 }
                 if let weatherIcon = weather.iconImageString {
                     self.currentWeatherIcon.image = UIImage(named: weatherIcon)
