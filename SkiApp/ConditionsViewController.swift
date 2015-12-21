@@ -7,6 +7,7 @@ import UIKit
 
 class ConditionsViewController: UIViewController {
 
+    @IBOutlet var currentWeatherSummaryLabel: UILabel!
     @IBOutlet var currentRoadStatusLabel: UILabel!
         var roadStatus: Bool = true
 
@@ -20,6 +21,8 @@ class ConditionsViewController: UIViewController {
     @IBOutlet var forecast48hrSnow: UILabel!
     @IBOutlet var forecast72hrSnow: UILabel!
     @IBOutlet var currentSnow: UILabel!
+
+   @IBOutlet var currentAlertLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +39,11 @@ class ConditionsViewController: UIViewController {
             guard let weather = weather else { return }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
 
+                if let summary = weather.summaryString {
+                    self.currentWeatherSummaryLabel.text = "\(summary)"
+                } else {
+                    self.currentWeatherSummaryLabel.text = ""
+                }
                 if let temp = weather.currentTemperature {
                     self.currentTemperatureLabel.text = "\(Int(temp))ºF"
                 } else {
@@ -84,6 +92,11 @@ class ConditionsViewController: UIViewController {
                 }
                 if let weatherIcon = weather.iconImageString {
                     self.currentWeatherIcon.image = UIImage(named: weatherIcon)
+                } else {
+                    print("")
+                }
+                if let titleAlert = weather.titleAlertsString {
+                    self.currentAlertLabel.text = "\(titleAlert)"
                 } else {
                     print("")
                 }

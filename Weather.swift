@@ -21,6 +21,9 @@ class Weather {
     static let temperatureMinKey = "temperatureMin"
     static let temperatureMaxKey = "temperatureMax"
     static let iconKey = "icon"
+    static let summaryKey = "summary"
+    static let alertsKey = "alerts"
+    static let titleKey = "title"
 
     var currently = ""
     var currentTemperature: Float?
@@ -34,6 +37,8 @@ class Weather {
     var tempMin: Float?
     var tempMax: Float?
     var iconImageString: String?
+    var summaryString: String?
+    var titleAlertsString: String?
 
     init(jsonDictionary:[String:AnyObject]) {
 
@@ -51,8 +56,19 @@ class Weather {
                 self.currentWindBearing = windBearing
             }
         }
+        if let alerts = jsonDictionary[Weather.alertsKey] as? [[String:AnyObject]] {
+            print(alerts)
+            if let day0Alerts = alerts[0][Weather.titleKey] as? String {
+                    self.titleAlertsString = day0Alerts
+                } else {
+                    print("")
+                }
+            }
 
         if let daily = jsonDictionary[Weather.dailyKey] as? [String:AnyObject] {
+            if let summary = daily[Weather.summaryKey] as? String {
+                self.summaryString = summary
+            }
             if let arrayUsingDataKey = daily[Weather.dataKey] as? [[String:AnyObject]] {
                 if let day1PrecipType = arrayUsingDataKey[0][Weather.precipTypeKey] as? String {
                     self.precipType = day1PrecipType
@@ -84,7 +100,6 @@ class Weather {
                 if let day3precipAccumulation = arrayUsingDataKey[3][Weather.precipAccumulationKey] as? Float {
                     self.day2Snow = day3precipAccumulation
                 }
-
             }
         }
     }
