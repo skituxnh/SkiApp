@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zuS-Xf-5iF">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -163,29 +162,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="high temp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3h-Oj-qG2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="high temp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3h-Oj-qG2">
                                 <rect key="frame" x="252" y="171" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="low temp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csA-go-e3z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="low temp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csA-go-e3z">
                                 <rect key="frame" x="252" y="195" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOT-HQ-IId">
-                                <rect key="frame" x="272" y="220" width="20" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOT-HQ-IId">
+                                <rect key="frame" x="252" y="220" width="25" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="7Ka-id-DK9"/>
+                                    <constraint firstAttribute="width" constant="25" id="7Ka-id-DK9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIN-9E-u6E">
-                                <rect key="frame" x="292" y="220" width="20" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIN-9E-u6E">
+                                <rect key="frame" x="277" y="220" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -240,7 +239,7 @@
                             <constraint firstItem="263-NC-IL1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T9G-ny-0Aq"/>
                             <constraint firstItem="40v-gn-Fb2" firstAttribute="trailing" secondItem="Qgr-oH-fnn" secondAttribute="trailing" id="TcH-oJ-VBf"/>
                             <constraint firstItem="32M-Wj-ogq" firstAttribute="top" secondItem="P3h-Oj-qG2" secondAttribute="top" id="U8x-KM-tUJ"/>
-                            <constraint firstItem="HOT-HQ-IId" firstAttribute="centerX" secondItem="csA-go-e3z" secondAttribute="centerX" id="UrL-nQ-ae6"/>
+                            <constraint firstItem="HOT-HQ-IId" firstAttribute="centerX" secondItem="csA-go-e3z" secondAttribute="centerX" constant="-17.5" id="UrL-nQ-ae6"/>
                             <constraint firstItem="XBx-sx-nk1" firstAttribute="centerX" secondItem="cNw-N3-jjn" secondAttribute="centerX" id="VBs-K0-W98"/>
                             <constraint firstItem="NzL-bC-Eze" firstAttribute="leading" secondItem="gdH-8Y-a2E" secondAttribute="leading" id="VhL-ps-mIr"/>
                             <constraint firstItem="csA-go-e3z" firstAttribute="baseline" secondItem="UIL-d6-7v1" secondAttribute="baseline" id="Vm8-v1-zJr"/>
@@ -249,7 +248,7 @@
                             <constraint firstItem="32M-Wj-ogq" firstAttribute="firstBaseline" secondItem="TSS-aU-Er0" secondAttribute="firstBaseline" id="Ydd-to-3RP"/>
                             <constraint firstItem="csA-go-e3z" firstAttribute="trailing" secondItem="LIN-9E-u6E" secondAttribute="trailing" id="Ywd-LU-A9c"/>
                             <constraint firstItem="UX2-K9-mQt" firstAttribute="leading" secondItem="NzL-bC-Eze" secondAttribute="trailing" constant="47" id="bby-Or-1G5"/>
-                            <constraint firstItem="HOT-HQ-IId" firstAttribute="leading" secondItem="40v-gn-Fb2" secondAttribute="trailing" constant="46" id="bnQ-mO-OCd"/>
+                            <constraint firstItem="HOT-HQ-IId" firstAttribute="leading" secondItem="40v-gn-Fb2" secondAttribute="trailing" constant="26" id="bnQ-mO-OCd"/>
                             <constraint firstItem="TSS-aU-Er0" firstAttribute="leading" secondItem="Mg9-HE-Epi" secondAttribute="leading" id="ces-gA-7h1"/>
                             <constraint firstItem="FoT-qQ-rrs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-24" id="cj2-34-Nba"/>
                             <constraint firstItem="JFB-OO-SqK" firstAttribute="trailing" secondItem="UIL-d6-7v1" secondAttribute="trailing" id="dWF-du-e8A"/>
@@ -296,8 +295,8 @@
                         <outlet property="currentTemperatureLabel" destination="Qis-vf-5Wv" id="oA9-hT-GcB"/>
                         <outlet property="currentWeatherIcon" destination="UX2-K9-mQt" id="ztz-vQ-xNc"/>
                         <outlet property="currentWeatherSummaryLabel" destination="2xT-Kz-6yw" id="SIw-IE-hlI"/>
-                        <outlet property="currentWindBearingLabel" destination="HOT-HQ-IId" id="YHl-jP-bsR"/>
-                        <outlet property="currentWindSpeedLabel" destination="LIN-9E-u6E" id="g01-6K-EHn"/>
+                        <outlet property="currentWindBearingLabel" destination="LIN-9E-u6E" id="Hzw-GO-y1R"/>
+                        <outlet property="currentWindSpeedLabel" destination="HOT-HQ-IId" id="ugQ-C5-Lsr"/>
                         <outlet property="forecast24hrSnow" destination="JFB-OO-SqK" id="ZNc-sg-dyl"/>
                         <outlet property="forecast48hrSnow" destination="UIL-d6-7v1" id="zvK-Az-qH1"/>
                         <outlet property="forecast72hrSnow" destination="I9G-SH-ACy" id="ZTm-af-Qh1"/>

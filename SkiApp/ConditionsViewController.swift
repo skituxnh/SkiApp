@@ -104,7 +104,7 @@ class ConditionsViewController: UIViewController {
         }
         RoadController.getCurrentRoad { (roadData) -> Void in
             self.roadStatus = roadData
-            print(roadData)
+//            print(roadData)
         }
     }
 
