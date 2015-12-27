@@ -29,11 +29,13 @@ class NetworkController {
 
     //RoadURL
     static func roadStatusURL() -> NSURL {
-        let baseURL = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"
-        let location = "40.556,-111.803,40.588,-111.611?"
-        let apiKey = "key=Au0Nqg3IsgZBsYIpgkcDym5dtrArd4iA3KWUvdKCBcTLr_ZnLA8UnjVEP6bpmTFs"
-//            let apiURL = "http://www.mapquestapi.com/directions/v2/route?key=b6DImnAvCoyRDzoU5TEoZUemxYyGE4SY&from=4261%20E%20Little%20Cottonwood%20Road%20Sandy,UT&to=Alta,UT"
-        return NSURL(string: "\(baseURL)\(apiKey)\(location)")!
+//        let baseURL = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"
+//        let location = "40.556,-111.803,40.588,-111.611?"
+//        let apiKey = "key=Au0Nqg3IsgZBsYIpgkcDym5dtrArd4iA3KWUvdKCBcTLr_ZnLA8UnjVEP6bpmTFs"
+            let apiURL = "http://www.mapquestapi.com/directions/v2/route?key=b6DImnAvCoyRDzoU5TEoZUemxYyGE4SY&from=4261%20E%20Little%20Cottonwood%20Road%20Sandy,UT&to=Alta,UT"
+//        return NSURL(string: "\(baseURL)\(apiKey)\(location)")!
+        return NSURL(string: "\(apiURL)")!
+
     }
 
     //Session

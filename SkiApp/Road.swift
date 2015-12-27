@@ -11,11 +11,26 @@ import UIKit
 
 class Road {
 
-    var roadStatus: String
+    static let routeKey = "route"
+    static let realTimeKey = "realTime"
+    static let formattedTimeKey = "formattedTime"
 
-    init(roadDescriptionString: String) {
+    var realTimeInSeconds: Int = 0
+    var estimatedTravelTime: String = ""
 
-        self.roadStatus = roadDescriptionString
+    init(jsonDictionary: [String:AnyObject]) {
+
+        if let route = jsonDictionary[Road.routeKey] as? [String:AnyObject] {
+            if let totalSeconds = route[Road.realTimeKey] as? Int {
+                self.realTimeInSeconds = totalSeconds
+//                print(realTimeInSeconds)
+            }
+            if let estimatedTime = route[Road.formattedTimeKey] as? String {
+                self.estimatedTravelTime = estimatedTime
+                print(estimatedTravelTime)
+            }
+        }
     }
 }
+
 

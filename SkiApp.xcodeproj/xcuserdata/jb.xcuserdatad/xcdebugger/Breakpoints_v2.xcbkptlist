@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkiApp/AppDelegate.swift"
+            timestampString = "472867481.068833"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkiApp.AppDelegate.init (SkiApp.AppDelegate.Type)() -&gt; SkiApp.AppDelegate"
+                  moduleName = "SkiApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb/DevMountain/SkiApp/SkiApp/AppDelegate.swift"
+                  timestampString = "472867481.56306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkiApp.AppDelegate.(init (SkiApp.AppDelegate.Type) -&gt; () -&gt; SkiApp.AppDelegate).(closure #1)"
+                  moduleName = "SkiApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jb/DevMountain/SkiApp/SkiApp/AppDelegate.swift"
+                  timestampString = "472867481.563317"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
