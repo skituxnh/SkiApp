@@ -8,9 +8,7 @@ import UIKit
 class ConditionsViewController: UIViewController {
 
     @IBOutlet var currentWeatherSummaryLabel: UILabel!
-    @IBOutlet var currentRoadStatusLabel: UILabel!
-        var roadStatus: Bool = true
-
+   
     @IBOutlet weak var currentWeatherIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var currentWindSpeedLabel: UILabel!
@@ -23,18 +21,20 @@ class ConditionsViewController: UIViewController {
     @IBOutlet var currentSnow: UILabel!
 
    @IBOutlet var currentAlertLabel: UILabel!
+    @IBOutlet var currentCanyonTravelTimeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBarHidden = false
 
-        if roadStatus == true {
-            currentRoadStatusLabel.backgroundColor = UIColor(red: 110/255, green: 180/255, blue: 63/255, alpha: 1.0)
-            currentRoadStatusLabel.text = "SR-210 is Open"
-        } else {
-            currentRoadStatusLabel.backgroundColor = UIColor.redColor()
-            currentRoadStatusLabel.text = "SR-210 is Closed"
-        }
+        RoadController.getCurrentRoad() { (result) -> Void in
+//            guard let road = road else { return }
+            if let time = Road.estimatedTravelTime {
+                self.currentCanyonTravelTimeLabel.text = "\(time)"
+            } else {
+                self.currentCanyonTravelTimeLabel.text = ""
+            }
+
         WeatherController.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -102,12 +102,7 @@ class ConditionsViewController: UIViewController {
                 }
             })
         }
-        RoadController.getCurrentRoad { (roadData) -> Void in
-            self.roadStatus = roadData
-//            print(roadData)
-        }
     }
-
     override func viewWillAppear(animated: Bool) {
 
         navigationController?.navigationBar.frame.size.height = 30

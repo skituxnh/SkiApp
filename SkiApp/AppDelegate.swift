@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         LiftController.getCurrentLifts { (lifts) -> Void in
             LiftController.sharedInstance.liftArray = lifts
-
+        }
+        RoadController.getCurrentRoad { (road) -> Void in
         }
     }
 
