@@ -6,9 +6,9 @@
 import UIKit
 
 class ConditionsViewController: UIViewController {
-
+    
     @IBOutlet var currentWeatherSummaryLabel: UILabel!
-   
+    
     @IBOutlet weak var currentWeatherIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var currentWindSpeedLabel: UILabel!
@@ -19,100 +19,100 @@ class ConditionsViewController: UIViewController {
     @IBOutlet var forecast48hrSnow: UILabel!
     @IBOutlet var forecast72hrSnow: UILabel!
     @IBOutlet var currentSnow: UILabel!
-
-   @IBOutlet var currentAlertLabel: UILabel!
+    
+    @IBOutlet var currentAlertLabel: UILabel!
     @IBOutlet var currentCanyonTravelTimeLabel: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBarHidden = false
-
-        RoadController.getCurrentRoad() { (result) -> Void in
-//            guard let road = road else { return }
-            if let time = Road.estimatedTravelTime {
-                self.currentCanyonTravelTimeLabel.text = "\(time)"
-            } else {
-                self.currentCanyonTravelTimeLabel.text = ""
+        
+//        RoadController.getCurrentRoad() { (result) -> Void in
+//            //            guard let road = road else { return }
+//            if let time = Road.estimatedTravelTime {
+//                self.currentCanyonTravelTimeLabel.text = "\(time)"
+//            } else {
+//                self.currentCanyonTravelTimeLabel.text = ""
+//            }
+        
+            WeatherController.getCurrentWeather() { (weather) -> Void in
+                guard let weather = weather else { return }
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    
+                    if let summary = weather.summaryString {
+                        self.currentWeatherSummaryLabel.text = "\(summary)"
+                    } else {
+                        self.currentWeatherSummaryLabel.text = ""
+                    }
+                    if let temp = weather.currentTemperature {
+                        self.currentTemperatureLabel.text = "\(Int(temp))ºF"
+                    } else {
+                        self.currentTemperatureLabel.text = "NA"
+                    }
+                    if let wind = weather.currentWindSpeed {
+                        self.currentWindSpeedLabel.text = "\(Int(wind))"
+                    } else {
+                        self.currentWindSpeedLabel.text = "NA"
+                    }
+                    if let direction = weather.currentWindBearing {
+                        let directionText = WeatherController.convertBearingToDirection(direction)
+                        self.currentWindBearingLabel.text = "\(directionText)"
+                    } else {
+                        self.currentWindBearingLabel.text = "NA"
+                    }
+                    if let low = weather.tempMin {
+                        self.currentLowTemperatureLabel.text = "\(Int(low))º"
+                    } else {
+                        self.currentLowTemperatureLabel.text = "NA"
+                    }
+                    if let high = weather.tempMax {
+                        self.currentHighTemperatureLabel.text = "\(Int(high))º"
+                    } else {
+                        self.currentHighTemperatureLabel.text = "NA"
+                    }
+                    if let day0Snow = weather.day0Snow {
+                        self.currentSnow.text = "\(Int(day0Snow))\""
+                    } else {
+                        self.currentSnow.text = "0\""
+                    }
+                    if let day1Snow = weather.day1Snow {
+                        self.forecast24hrSnow.text = "\(Int(day1Snow))\" 24hrs"
+                    } else {
+                        self.forecast24hrSnow.text = "0\" 24hrs"
+                    }
+                    if let day2Snow = weather.day2Snow {
+                        self.forecast48hrSnow.text = "\(Int(day2Snow))\" 48hrs"
+                    } else {
+                        self.forecast48hrSnow.text = "0\" 48hrs"
+                    }
+                    if let day3Snow = weather.day3Snow {
+                        self.forecast72hrSnow.text = "\(Int(day3Snow))\" 72hrs"
+                    } else {
+                        self.forecast72hrSnow.text = "0\" 72hrs"
+                    }
+                    if let weatherIcon = weather.iconImageString {
+                        self.currentWeatherIcon.image = UIImage(named: weatherIcon)
+                    } else {
+                        print("")
+                    }
+                    if let titleAlert = weather.titleAlertsString {
+                        self.currentAlertLabel.text = "\(titleAlert)"
+                    } else {
+                        print("")
+                    }
+                })
             }
-
-        WeatherController.getCurrentWeather() { (weather) -> Void in
-            guard let weather = weather else { return }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-
-                if let summary = weather.summaryString {
-                    self.currentWeatherSummaryLabel.text = "\(summary)"
-                } else {
-                    self.currentWeatherSummaryLabel.text = ""
-                }
-                if let temp = weather.currentTemperature {
-                    self.currentTemperatureLabel.text = "\(Int(temp))ºF"
-                } else {
-                    self.currentTemperatureLabel.text = "NA"
-                }
-                if let wind = weather.currentWindSpeed {
-                    self.currentWindSpeedLabel.text = "\(Int(wind))"
-                } else {
-                    self.currentWindSpeedLabel.text = "NA"
-                }
-                if let direction = weather.currentWindBearing {
-                    let directionText = WeatherController.convertBearingToDirection(direction)
-                    self.currentWindBearingLabel.text = "\(directionText)"
-                } else {
-                    self.currentWindBearingLabel.text = "NA"
-                }
-                if let low = weather.tempMin {
-                    self.currentLowTemperatureLabel.text = "\(Int(low))º"
-                } else {
-                    self.currentLowTemperatureLabel.text = "NA"
-                }
-                if let high = weather.tempMax {
-                    self.currentHighTemperatureLabel.text = "\(Int(high))º"
-                } else {
-                    self.currentHighTemperatureLabel.text = "NA"
-                }
-                if let day0Snow = weather.day0Snow {
-                    self.currentSnow.text = "\(Int(day0Snow))\""
-                } else {
-                    self.currentSnow.text = "0\""
-                }
-                if let day1Snow = weather.day1Snow {
-                    self.forecast24hrSnow.text = "\(Int(day1Snow))\" 24hrs"
-                } else {
-                    self.forecast24hrSnow.text = "0\" 24hrs"
-                }
-                if let day2Snow = weather.day2Snow {
-                    self.forecast48hrSnow.text = "\(Int(day2Snow))\" 48hrs"
-                } else {
-                    self.forecast48hrSnow.text = "0\" 48hrs"
-                }
-                if let day3Snow = weather.day3Snow {
-                    self.forecast72hrSnow.text = "\(Int(day3Snow))\" 72hrs"
-                } else {
-                    self.forecast72hrSnow.text = "0\" 72hrs"
-                }
-                if let weatherIcon = weather.iconImageString {
-                    self.currentWeatherIcon.image = UIImage(named: weatherIcon)
-                } else {
-                    print("")
-                }
-                if let titleAlert = weather.titleAlertsString {
-                    self.currentAlertLabel.text = "\(titleAlert)"
-                } else {
-                    print("")
-                }
-            })
+        }
+        override func viewWillAppear(animated: Bool) {
+            
+            navigationController?.navigationBar.frame.size.height = 30
+            navigationController?.navigationBarHidden = false
+            
+        }
+        @IBAction func showMap(sender: AnyObject) {
+            performSegueWithIdentifier("showMapSegue", sender: nil)
         }
     }
-    override func viewWillAppear(animated: Bool) {
-
-        navigationController?.navigationBar.frame.size.height = 30
-        navigationController?.navigationBarHidden = false
-
-    }
-    @IBAction func showMap(sender: AnyObject) {
-        performSegueWithIdentifier("showMapSegue", sender: nil)
-    }
-}
 
 
 
