@@ -26,15 +26,15 @@ class TrailMapViewController: UIViewController, UIScrollViewDelegate {
 
 //Scrolling Properties
         scrollView = UIScrollView(frame: view.bounds)
-        scrollView.backgroundColor = UIColor.blackColor()
+        scrollView.backgroundColor = UIColor.black
         scrollView.contentSize = imageView.bounds.size
-        scrollView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         scrollView.addSubview(imageView)
         view.addSubview(scrollView)
 
     }
 
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
 
     }
 }

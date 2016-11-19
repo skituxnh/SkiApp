@@ -11,48 +11,54 @@ class NetworkController {
     //Change plist to include App Transport to YES...This creates a security issue. Need to add domian exceptions to prevent major issues
 
     //WeatherURL
-    static func snowbirdWeatherURL() -> NSURL {
+    static func snowbirdWeatherURL() -> URL {
 
         let baseURL = "https://api.forecast.io/forecast/f6343e5eb6cece8c1830aa248fcc6cb0/"
         let locationCode = "40.5897,-111.6393"
-//        let apiKey = "f6343e5eb6cece8c1830aa248fcc6cb0/"
 
-        return NSURL(string: "\(baseURL)\(locationCode)")!
+        return URL(string: "\(baseURL)\(locationCode)")!
     }
 
     //LiftsURL
-    static func snowbirdLiftsURL() -> NSURL {
+    static func snowbirdLiftsURL() -> URL {
         let liftAPI = "http://liftie.info/api/resort/snowbird"
 
-        return NSURL(string: "\(liftAPI)")!
+        return URL(string: "\(liftAPI)")!
     }
+    
+    //UDotURL
+//    static func sr210Status() -> URL {
+//        
+//        
+//        return URL
+//    }
+    
 
     //RoadURL
-    static func roadStatusURL() -> NSURL {
-//        let baseURL = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"
-//        let location = "40.556,-111.803,40.588,-111.611?"
-//        let apiKey = "key=Au0Nqg3IsgZBsYIpgkcDym5dtrArd4iA3KWUvdKCBcTLr_ZnLA8UnjVEP6bpmTFs"
-            let apiURL = "http://www.mapquestapi.com/directions/v2/route?key=b6DImnAvCoyRDzoU5TEoZUemxYyGE4SY&from=4261%20E%20Little%20Cottonwood%20Road%20Sandy,UT&to=Alta,UT"
-//        return NSURL(string: "\(baseURL)\(apiKey)\(location)")!
-        return NSURL(string: "\(apiURL)")!
+    static func roadStatusURL() -> URL {
+        
+        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.61434337107406%2C-111.6434097290039%2C40.535459565069004%2C-111.79018020629883&key"
+        let apiKey = "key=b6DImnAvCoyRDzoU5TEoZUemxYyGE4SY"
+
+        return URL(string: "\(mapRegionURL)\(apiKey)")!
 
     }
 
     //Session
-    static func dataAtURL(url: NSURL, completion: (resultData: NSData?) -> Void) {
-        let session = NSURLSession.sharedSession()
+    static func dataAtURL(_ url: URL, completion: @escaping (_ resultData: Data?) -> Void) {
+        let session = URLSession.shared
 
         //DataTask
-        let dataTask = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+        let dataTask = session.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
 //            print(data)
 
             guard let data = data else {
                 print(error?.localizedDescription)
-                completion(resultData: nil)
+                completion(nil)
                 return
             }
-            completion(resultData: data)
-        }
+            completion(data)
+        }) 
         dataTask.resume()
     }
 }

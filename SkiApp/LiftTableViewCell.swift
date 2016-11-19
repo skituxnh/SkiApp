@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CellExpansionProtocol {
-    func expandLiftCell(section: Int)
+    func expandLiftCell(_ section: Int)
 }
 
 class LiftTableViewCell: UITableViewCell {
@@ -24,13 +24,13 @@ class LiftTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
 
-    @IBAction func selectedHeader(sender: AnyObject) {
+    @IBAction func selectedHeader(_ sender: AnyObject) {
         delegate?.expandLiftCell(section)
     }
 

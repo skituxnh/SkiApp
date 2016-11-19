@@ -19,7 +19,7 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
         super.viewDidLoad()
 
         //initialize array of booleans(all false) equal to the length on number of lifts
-        expandedLifts = [Bool](count: liftArray.count, repeatedValue: false)
+        expandedLifts = [Bool](repeating: false, count: liftArray.count)
 
 //        tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
 //
@@ -34,7 +34,7 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
     }
     // MARK: - Table view data source
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if expandedLifts[section] == true {
             let lift = liftArray[section]
             return lift.arrayOfTrails.count
@@ -42,15 +42,15 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
             return 0
         }
     }
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("trailCell", forIndexPath: indexPath) as! TrailTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "trailCell", for: indexPath) as! TrailTableViewCell
         
         // Trail cells
         if liftArray.count != 0 {
-            let lift = liftArray[indexPath.section]
-            let trail = lift.arrayOfTrails[indexPath.row]
+            let lift = liftArray[(indexPath as NSIndexPath).section]
+            let trail = lift.arrayOfTrails[(indexPath as NSIndexPath).row]
             cell.trailNameLabel!.text = "\(trail.trailName)"
-            cell.trailNameLabel!.textColor = UIColor.lightGrayColor()
+            cell.trailNameLabel!.textColor = UIColor.lightGray
 
             if trail.trailDifficulty == "1" {
                 cell.trailSymbolImage.image = UIImage(named: "greenCircle")
@@ -68,8 +68,8 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
     }
 
         // Lift Cell
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("liftCell") as! LiftTableViewCell
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "liftCell") as! LiftTableViewCell
 
         if liftArray.count != 0 {
             let lift = liftArray[section]
@@ -80,37 +80,37 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
             if lift.liftStatus == "open" {
                 cell.liftStatusLabel.text = "open"
                 cell.liftStatusLabel.textColor = UIColor(red: 110/255, green: 180/255, blue: 63/255, alpha: 1.0)
-                cell.liftNameLabel!.textColor = UIColor.blackColor()
+                cell.liftNameLabel!.textColor = UIColor.black
             } else {
                 cell.liftStatusLabel.text = "closed"
-                cell.liftStatusLabel.textColor = UIColor.darkGrayColor()
-                cell.liftNameLabel!.textColor = UIColor.blackColor()
+                cell.liftStatusLabel.textColor = UIColor.darkGray
+                cell.liftNameLabel!.textColor = UIColor.black
             }
         }
-        cell.backgroundColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.white
 
         return cell
     }
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return liftArray.count
     }
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     //MARK: custom cell delegate
 
-    func expandLiftCell(section: Int) {
+    func expandLiftCell(_ section: Int) {
         //check specific section(header) to see if expanded, then set accordingly
         if expandedLifts[section] == false {
             expandedLifts[section] = true
         } else {
             expandedLifts[section] = false
         }
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+        DispatchQueue.main.async { () -> Void in
             self.tableView.reloadData()
         }
     }

@@ -13,7 +13,7 @@ class LiftController {
 
     var liftArray: [Lift] = []
     
-    static func getCurrentLifts(completion: ([Lift]) -> Void) {
+    static func getCurrentLifts(_ completion: @escaping ([Lift]) -> Void) {
 
         let url = NetworkController.snowbirdLiftsURL()
         NetworkController.dataAtURL(url) { (resultData) -> Void in
@@ -25,9 +25,10 @@ class LiftController {
                     return
             }
             do {
-                let liftAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
+                let jsonAnyObject = try JSONSerialization.jsonObject(with: resultData, options: JSONSerialization.ReadingOptions.allowFragments)
 
-                let liftDictionary = liftAnyObject[Lift.liftsKey] as! [String:AnyObject]
+                let jsonDictionary = jsonAnyObject as! [String:AnyObject]
+                let liftDictionary = jsonDictionary["lifts"] as! [String: Any]
                 let statusDictionary = liftDictionary["status"] as! [String:AnyObject]
                 var arrayOfLifts : [Lift] = []
 

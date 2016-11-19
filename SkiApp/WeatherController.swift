@@ -10,7 +10,7 @@ import UIKit
 
 class WeatherController {
 
-    static func getCurrentWeather(completion: (weather: Weather?) -> Void) {
+    static func getCurrentWeather(_ completion: @escaping (_ weather: Weather?) -> Void) {
 
 
         let url = NetworkController.snowbirdWeatherURL()
@@ -19,24 +19,24 @@ class WeatherController {
             guard let resultData = resultData
                 else {
                     print("no data returned")
-                    completion(weather: nil)
+                    completion(nil)
                     return
             }
             do {
-                let weatherAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
+                let weatherAnyObject = try JSONSerialization.jsonObject(with: resultData, options: JSONSerialization.ReadingOptions.allowFragments)
                 var weatherModelObject: Weather?
 
                 if let weatherDictionary = weatherAnyObject as? [String: AnyObject] {
                     weatherModelObject = Weather(jsonDictionary: weatherDictionary)
                 }
-                completion(weather: weatherModelObject)
+                completion(weatherModelObject)
             } catch {
-                completion(weather: nil)
+                completion(nil)
             }
         }
     }
 
-    static func convertBearingToDirection(currentWindBearing: Float) -> String {
+    static func convertBearingToDirection(_ currentWindBearing: Float) -> String {
 
         let result: String
 

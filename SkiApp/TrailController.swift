@@ -186,7 +186,7 @@ class TrailController {
 
 
 
-    func getTrailsForLiftName(liftName: String) -> [Trails] {
+    func getTrailsForLiftName(_ liftName: String) -> [Trails] {
 
         let trails = TrailController.trailArray
 

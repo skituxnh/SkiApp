@@ -25,7 +25,17 @@ class ConditionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
+        
+//        UIView.transition(with: currentWeatherSummaryLabel, duration: 8.0, options: .repeat, animations: {
+//            self.currentWeatherSummaryLabel.text
+//            }, completion: nil)
+        
+        currentWeatherSummaryLabel.clipsToBounds = false
+        
+        UIView.animate(withDuration: 8.0, delay: 0, options: ([.repeat]), animations: {
+            self.currentWeatherSummaryLabel.frame = CGRect(x: self.currentWeatherSummaryLabel.frame.origin.x - 500, y: self.currentWeatherSummaryLabel.frame.origin.y - 0, width: self.currentWeatherSummaryLabel.frame.size.width, height: self.currentWeatherSummaryLabel.frame.size.height)
+            }, completion: nil)
         
 //        RoadController.getCurrentRoad() { (result) -> Void in
 //            //            guard let road = road else { return }
@@ -37,7 +47,7 @@ class ConditionsViewController: UIViewController {
         
             WeatherController.getCurrentWeather() { (weather) -> Void in
                 guard let weather = weather else { return }
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     
                     if let summary = weather.summaryString {
                         self.currentWeatherSummaryLabel.text = "\(summary)"
@@ -103,14 +113,14 @@ class ConditionsViewController: UIViewController {
                 })
             }
         }
-        override func viewWillAppear(animated: Bool) {
+        override func viewWillAppear(_ animated: Bool) {
             
             navigationController?.navigationBar.frame.size.height = 30
-            navigationController?.navigationBarHidden = false
+            navigationController?.isNavigationBarHidden = false
             
         }
-        @IBAction func showMap(sender: AnyObject) {
-            performSegueWithIdentifier("showMapSegue", sender: nil)
+        @IBAction func showMap(_ sender: AnyObject) {
+            performSegue(withIdentifier: "showMapSegue", sender: nil)
         }
     }
 
