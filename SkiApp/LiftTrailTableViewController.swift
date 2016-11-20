@@ -21,21 +21,11 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
         //initialize array of booleans(all false) equal to the length on number of lifts
         expandedLifts = [Bool](repeating: false, count: liftArray.count)
 
-//        tableView.backgroundView = UIImageView(image: UIImage(named: "liftBackground.png"))
-//
-//        let blurEffect = UIBlurEffect(style: .ExtraLight)
-//        let blurredBackdropView = UIVisualEffectView(effect: blurEffect)
-//        blurredBackdropView.alpha = 0.6
-//        blurredBackdropView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-//        blurredBackdropView.frame = (tableView.backgroundView?.bounds)!
-//        tableView.backgroundView?.addSubview(blurredBackdropView)
-//
-//        tableView.backgroundView?.alpha = 1.0
     }
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if expandedLifts[section] == true {
+        if expandedLifts[section] {
             let lift = liftArray[section]
             return lift.arrayOfTrails.count
         } else {
@@ -105,10 +95,14 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
 
     func expandLiftCell(_ section: Int) {
         //check specific section(header) to see if expanded, then set accordingly
-        if expandedLifts[section] == false {
+        if !expandedLifts[section]  {
+            
             expandedLifts[section] = true
+            
         } else {
+            
             expandedLifts[section] = false
+            
         }
         DispatchQueue.main.async { () -> Void in
             self.tableView.reloadData()

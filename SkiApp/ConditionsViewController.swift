@@ -27,15 +27,7 @@ class ConditionsViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
         
-//        UIView.transition(with: currentWeatherSummaryLabel, duration: 8.0, options: .repeat, animations: {
-//            self.currentWeatherSummaryLabel.text
-//            }, completion: nil)
         
-        currentWeatherSummaryLabel.clipsToBounds = false
-        
-        UIView.animate(withDuration: 8.0, delay: 0, options: ([.repeat]), animations: {
-            self.currentWeatherSummaryLabel.frame = CGRect(x: self.currentWeatherSummaryLabel.frame.origin.x - 500, y: self.currentWeatherSummaryLabel.frame.origin.y - 0, width: self.currentWeatherSummaryLabel.frame.size.width, height: self.currentWeatherSummaryLabel.frame.size.height)
-            }, completion: nil)
         
 //        RoadController.getCurrentRoad() { (result) -> Void in
 //            //            guard let road = road else { return }
@@ -122,6 +114,7 @@ class ConditionsViewController: UIViewController {
         @IBAction func showMap(_ sender: AnyObject) {
             performSegue(withIdentifier: "showMapSegue", sender: nil)
         }
+    
     }
 
 

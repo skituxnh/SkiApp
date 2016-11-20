@@ -11,6 +11,7 @@ import UIKit
 class RoadController {
 
     static let sharedInstance = RoadController()
+    
     static func getCurrentRoad(_ completion: @escaping (_ road:Road?) -> Void) {
 
         let url = NetworkController.roadStatusURL()

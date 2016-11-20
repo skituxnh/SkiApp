@@ -56,6 +56,7 @@ class Weather {
                 self.currentWindBearing = windBearing
             }
         }
+        
         if let alerts = jsonDictionary[Weather.alertsKey] as? [[String:AnyObject]] {
             print(alerts)
             if let day0Alerts = alerts[0][Weather.titleKey] as? String {
