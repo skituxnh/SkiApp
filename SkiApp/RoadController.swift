@@ -9,7 +9,7 @@
 import UIKit
 
 class RoadController {
-
+    
     static let sharedInstance = RoadController()
     
     static func getCurrentRoad(_ completion: @escaping (_ road:Road?) -> Void) {
@@ -18,6 +18,7 @@ class RoadController {
         NetworkController.dataAtURL(url) { (resultData) -> Void in
             guard let resultData = resultData
                 else {
+                    
                     print("no data returned")
                     completion(nil)
                     return
@@ -29,15 +30,25 @@ class RoadController {
                 
                 if let roadDictionary = roadAnyObject as? [String:AnyObject] {
                     if let incidentArray = roadDictionary[Road.incidentKey] as? [[String:AnyObject]] {
+                        print(incidentArray)
                         for dict in incidentArray {
                             for (key, value) in dict {
                                 switch key {
-                                case "impacting":
-                                    print(value)
-                                case "eventCode":
-                                    print(value)
-                                default:
-                                    print("")
+                                case Road.impactingKey:
+                                        print("Road Open")
+                                case Road.eventCodeKey:
+                                    print("Trouble")
+                                default: break
+                                }
+                                switch value {
+                                case false as Bool where key == Road.impactingKey:
+                                    print("Road is Open")
+                                    fallthrough
+                                case 701 as Int where key == Road.eventCodeKey:
+                                    print("Construction")
+                                    fallthrough
+                                default: break
+                                    
                                 }
                             }
                         }
