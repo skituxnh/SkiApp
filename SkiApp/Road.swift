@@ -10,24 +10,22 @@ import Foundation
 import UIKit
 
 class Road {
+    
+    static let incidentKey = "incidents"
+    static let impactingKey = "impacting"
+    static let eventCodeKey = "eventCode"
 
-    static let routeKey = "route"
-    static let realTimeKey = "realTime"
-    static let formattedTimeKey = "formattedTime"
-
-    var realTimeInSeconds: Int = 0
-    var estimatedTravelTime: String = ""
-
+    var impact: Int = 0
+    var eventCode: Int = 0
+    
     init(jsonDictionary: [String:AnyObject]) {
-
-        if let route = jsonDictionary[Road.routeKey] as? [String:AnyObject] {
-            if let totalSeconds = route[Road.realTimeKey] as? Int {
-                self.realTimeInSeconds = totalSeconds
-//                print(realTimeInSeconds)
+        
+        if let incidents = jsonDictionary[Road.incidentKey] as? [String:AnyObject] {
+            if let impacting = incidents[Road.impactingKey] as? Int {
+                self.impact = impacting
             }
-            if let estimatedTime = route[Road.formattedTimeKey] as? String {
-                self.estimatedTravelTime = estimatedTime
-                print(estimatedTravelTime)
+            if let eventCode = incidents[Road.eventCodeKey] as? Int {
+                self.eventCode = eventCode
             }
         }
     }

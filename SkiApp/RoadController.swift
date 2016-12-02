@@ -24,10 +24,27 @@ class RoadController {
             }
             do {
                 let roadAnyObject = try JSONSerialization.jsonObject(with: resultData, options: JSONSerialization.ReadingOptions.allowFragments)
+                
                 var roadModelObject: Road?
+                
                 if let roadDictionary = roadAnyObject as? [String:AnyObject] {
+                    if let incidentArray = roadDictionary[Road.incidentKey] as? [[String:AnyObject]] {
+                        for dict in incidentArray {
+                            for (key, value) in dict {
+                                switch key {
+                                case "impacting":
+                                    print(value)
+                                case "eventCode":
+                                    print(value)
+                                default:
+                                    print("")
+                                }
+                            }
+                        }
+                    }
                     roadModelObject = Road(jsonDictionary: roadDictionary)
                 }
+                
                 completion(roadModelObject)
             } catch {
                 completion(nil)

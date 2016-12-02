@@ -26,19 +26,12 @@ class NetworkController {
         return URL(string: "\(liftAPI)")!
     }
     
-    //UDotURL
-//    static func sr210Status() -> URL {
-//        
-//        
-//        return URL
-//    }
-    
-
     //RoadURL
     static func roadStatusURL() -> URL {
+        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.76000064275874%2C-111.73988342285156%2C40.553200226291715%2C-112.12406158447266&key="
         
-        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.61434337107406%2C-111.6434097290039%2C40.535459565069004%2C-111.79018020629883&key"
-        let apiKey = "key=b6DImnAvCoyRDzoU5TEoZUemxYyGE4SY"
+//        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.620207045205625%2C-111.59671783447266%2C40.516670214159504%2C-111.7888069152832&key="
+        let apiKey = "b6DImnAvCoyRDzoU5TEoZUemxYyGE4SY"
 
         return URL(string: "\(mapRegionURL)\(apiKey)")!
 

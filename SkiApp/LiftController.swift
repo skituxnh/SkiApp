@@ -31,7 +31,6 @@ class LiftController {
                 let liftDictionary = jsonDictionary["lifts"] as! [String: AnyObject]
                 let statusDictionary = liftDictionary["status"] as! [String: AnyObject]
                 var arrayOfLifts : [Lift] = []
-
                 for (key, value) in statusDictionary {
                     let lift = Lift(jsonDictionary: [key: value])
                     arrayOfLifts.append(lift)
