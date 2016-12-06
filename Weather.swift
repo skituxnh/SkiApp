@@ -58,7 +58,7 @@ class Weather {
         }
         
         if let alerts = jsonDictionary[Weather.alertsKey] as? [[String:AnyObject]] {
-            print(alerts)
+//            print(alerts)
             if let day0Alerts = alerts[0][Weather.titleKey] as? String {
                     self.titleAlertsString = day0Alerts
                 } else {

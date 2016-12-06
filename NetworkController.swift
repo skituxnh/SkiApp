@@ -28,7 +28,7 @@ class NetworkController {
     
     //RoadURL
     static func roadStatusURL() -> URL {
-        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.76000064275874%2C-111.73988342285156%2C40.553200226291715%2C-112.12406158447266&key="
+        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.8595252289932%2C-111.69456481933592%2C40.68584503000695%2C-112.01282501220703&key="
         
 //        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.620207045205625%2C-111.59671783447266%2C40.516670214159504%2C-111.7888069152832&key="
         let apiKey = "b6DImnAvCoyRDzoU5TEoZUemxYyGE4SY"

@@ -15,18 +15,28 @@ class Road {
     static let impactingKey = "impacting"
     static let eventCodeKey = "eventCode"
 
-    var impact: Int = 0
+//    static let parameterizedDescriptionKey = "parameterizedDescription"
+//    static let roadNameKey = "roadName"
+    
+
+    var impact: Bool = false
     var eventCode: Int = 0
+//    var roadName: String = ""
     
     init(jsonDictionary: [String:AnyObject]) {
         
         if let incidents = jsonDictionary[Road.incidentKey] as? [String:AnyObject] {
-            if let impacting = incidents[Road.impactingKey] as? Int {
+            if let impacting = incidents[Road.impactingKey] as? Bool {
                 self.impact = impacting
             }
             if let eventCode = incidents[Road.eventCodeKey] as? Int {
                 self.eventCode = eventCode
             }
+//            if let parameterizedDescription = jsonDictionary[Road.parameterizedDescriptionKey] as? [String:AnyObject] {
+//                if let roadName = parameterizedDescription[Road.roadNameKey] as? String {
+//                    self.roadName = roadName
+//                }
+//            }
         }
     }
 }

@@ -28,8 +28,8 @@ class LiftController {
                 let jsonAnyObject = try JSONSerialization.jsonObject(with: resultData, options: JSONSerialization.ReadingOptions.allowFragments)
 
                 let jsonDictionary = jsonAnyObject as! [String: AnyObject]
-                let liftDictionary = jsonDictionary["lifts"] as! [String: AnyObject]
-                let statusDictionary = liftDictionary["status"] as! [String: AnyObject]
+                let liftDictionary = jsonDictionary[Lift.liftsKey] as! [String: AnyObject]
+                let statusDictionary = liftDictionary[Lift.statusKey] as! [String: AnyObject]
                 var arrayOfLifts : [Lift] = []
                 for (key, value) in statusDictionary {
                     let lift = Lift(jsonDictionary: [key: value])

@@ -29,14 +29,6 @@ class ConditionsViewController: UIViewController {
         
         
         
-//        RoadController.getCurrentRoad() { (result) -> Void in
-//            //            guard let road = road else { return }
-//            if let time = Road.estimatedTravelTime {
-//                self.currentCanyonTravelTimeLabel.text = "\(time)"
-//            } else {
-//                self.currentCanyonTravelTimeLabel.text = ""
-//            }
-        
             WeatherController.getCurrentWeather() { (weather) -> Void in
                 guard let weather = weather else { return }
                 DispatchQueue.main.async(execute: { () -> Void in
