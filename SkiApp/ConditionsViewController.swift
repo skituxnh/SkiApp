@@ -21,12 +21,19 @@ class ConditionsViewController: UIViewController {
     @IBOutlet var currentSnow: UILabel!
     
     @IBOutlet var currentAlertLabel: UILabel!
-    @IBOutlet var currentCanyonTravelTimeLabel: UILabel!
+    @IBOutlet weak var roadStatusLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
         
+            RoadController.getCurrentRoad { (road) in
+                guard let road = road else { return }
+                
+                if let roadStatus = road.id {
+                    self.roadStatusLabel.text = "\(roadStatus)"
+                }
+        }
         
         
             WeatherController.getCurrentWeather() { (weather) -> Void in
