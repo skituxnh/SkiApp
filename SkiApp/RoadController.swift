@@ -43,8 +43,7 @@ class RoadController {
                     let paramDescValue = incidentDictionary[Road.parameterizedDescriptionKey] as? [String:String]
                     let roadNameValue = paramDescValue?[Road.roadNameKey]
                     
-                    let alertCodeArray: [Int] = [407]
-//                    let alertCodeArray: [Int] = [681,861,862,911,912,943,944,992,993,994,1012,1013,1014,1015,1016,407]
+                    let alertCodeArray: [Int] = [681,861,862,911,912,943,944,992,993,994,1012,1013,1014,1015,1016,407]
                     let eventCode = eventValue
                     var codeAppears = false
                     
@@ -53,32 +52,29 @@ class RoadController {
                             codeAppears = true
                         }
                     }
-                    
                     var roadOpen = true
                     
-                    if roadNameValue == "UT-201" {
+                    if roadNameValue == "UT-210" {
                         if codeAppears && impactValue == true {
                             roadOpen = false
-//                            print("Road is Closed")
+                            print("Road is Closed")
                         } else {
                             roadOpen = true
-//                            print("Road is Open")
+                            print("Road is Open")
                         }
                     } else {
                         roadOpen = true
-//                        print("Road is Open")
+                        print("Road is Open")
                     }
                     roadModelObject = Road(impact: impactValue!, eventCode: eventValue!, id: idValue!, roadName: roadNameValue!, roadOpen: roadOpen)
                     
                     roadModelObjectDict["\(roadModelObject.roadName!)"] = roadModelObject
                     
                 }
-                
-//                print(impactValue, idValue, eventValue, roadNameValue)
-//                print(roadOpen)
                 sharedRoadDict = roadModelObjectDict
-                print(sharedRoadDict)
                 completion(roadModelObject)
+
+                
             } catch {
                 completion(nil)
             }

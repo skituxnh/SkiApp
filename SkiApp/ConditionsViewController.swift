@@ -28,14 +28,14 @@ class ConditionsViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
         
         RoadController.getCurrentRoad { (road) in
+            DispatchQueue.main.async {
+                if RoadController.sharedRoadDict["UT-210"]?.roadOpen == false {
+                    self.roadStatusLabel.text = "DELAYED"
+                } else {
+                    self.roadStatusLabel.text = "OPEN"
+                }
+            }
         }
-        
-        if RoadController.sharedRoadDict["UT-201"]?.roadOpen == false {
-            self.roadStatusLabel.text = "DELAYED"
-        } else {
-            self.roadStatusLabel.text = "OPEN"
-        }
-        
         WeatherController.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
             DispatchQueue.main.async(execute: { () -> Void in
