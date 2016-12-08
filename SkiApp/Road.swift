@@ -19,9 +19,22 @@ class Road {
     static let roadNameKey = "roadName"
     
     var impact: Bool?
-    var eventCode: Double?
+    var eventCode: Int?
     var id: String?
-    var roadName: String? 
+    var roadName: String?
+    var roadOpen: Bool?
+    
+//    init(roadOpen: Bool) {
+//        self.roadOpen = roadOpen
+//    }
+    
+    init(impact: Bool, eventCode: Int, id: String, roadName: String, roadOpen: Bool) {
+        self.impact = impact
+        self.eventCode = eventCode
+        self.id = id
+        self.roadName = roadName
+        self.roadOpen = roadOpen
+    }
     
     init(jsonDictionary: [String:AnyObject]) {
         
@@ -29,7 +42,7 @@ class Road {
             if let impacting = incidents[Road.impactingKey] as? Bool {
                 self.impact = impacting
             }
-            if let eventCode = incidents[Road.eventCodeKey] as? Double {
+            if let eventCode = incidents[Road.eventCodeKey] as? Int {
                 self.eventCode = eventCode
             }
             if let id = incidents[Road.idKey] as? String {
