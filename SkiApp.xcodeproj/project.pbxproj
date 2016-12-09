@@ -25,6 +25,8 @@
 		29DCF8661BFFE7CF002FF103 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8651BFFE7CF002FF103 /* Trail.swift */; };
 		29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8671BFFEA8C002FF103 /* NetworkController.swift */; };
 		29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8691BFFEC83002FF103 /* Weather.swift */; };
+		D120A88C1DFB224100BF988F /* SnowbirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A88B1DFB224100BF988F /* SnowbirdController.swift */; };
+		D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */; };
 		D1DF59661DDFC263003FB100 /* food.tsv in Resources */ = {isa = PBXBuildFile; fileRef = D1DF59651DDFC263003FB100 /* food.tsv */; };
 		D1DF59681DDFC2BD003FB100 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF59671DDFC2BD003FB100 /* FoodCell.swift */; };
 		D1DF596A1DDFC317003FB100 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */; };
@@ -51,6 +53,9 @@
 		29DCF8651BFFE7CF002FF103 /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trail.swift; path = ../Trail.swift; sourceTree = "<group>"; };
 		29DCF8671BFFEA8C002FF103 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
 		29DCF8691BFFEC83002FF103 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../Weather.swift; sourceTree = "<group>"; };
+		D120A88B1DFB224100BF988F /* SnowbirdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowbirdController.swift; sourceTree = "<group>"; };
+		D120A88D1DFB350500BF988F /* TestGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestGround.playground; sourceTree = "<group>"; };
+		D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snowbird.swift; sourceTree = "<group>"; };
 		D1DF59651DDFC263003FB100 /* food.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food.tsv; sourceTree = "<group>"; };
 		D1DF59671DDFC2BD003FB100 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 				294CEF591C0F8DB00003771B /* Lift.swift */,
 				294CEF5B1C0F8DBF0003771B /* Road.swift */,
 				29DCF8651BFFE7CF002FF103 /* Trail.swift */,
+				D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -83,11 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				29DCF8671BFFEA8C002FF103 /* NetworkController.swift */,
+				D120A88B1DFB224100BF988F /* SnowbirdController.swift */,
 				2965AF981C03AF56006C913D /* WeatherController.swift */,
 				294CEF571C0F8D7E0003771B /* LiftController.swift */,
 				294CEF551C0F8D650003771B /* RoadController.swift */,
 				294CF06E1C17D14C0003771B /* TrailController.swift */,
-				D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +106,7 @@
 				29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */,
 				299B8EE51C2321A100B0F0A4 /* LiftTableViewCell.swift */,
 				299B8EE31C231F3700B0F0A4 /* TrailTableViewCell.swift */,
+				D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */,
 				D1DF59671DDFC2BD003FB100 /* FoodCell.swift */,
 			);
 			name = View;
@@ -120,6 +127,7 @@
 		29C14F7B1BFBCFE500493D04 = {
 			isa = PBXGroup;
 			children = (
+				D120A88D1DFB350500BF988F /* TestGround.playground */,
 				294CEF841C10ED690003771B /* System Files */,
 				29C14F861BFBCFE500493D04 /* SkiApp */,
 				29C14F851BFBCFE500493D04 /* Products */,
@@ -228,10 +236,12 @@
 				294CEF581C0F8D7E0003771B /* LiftController.swift in Sources */,
 				294CEF5C1C0F8DBF0003771B /* Road.swift in Sources */,
 				29DCF8661BFFE7CF002FF103 /* Trail.swift in Sources */,
+				D120A88C1DFB224100BF988F /* SnowbirdController.swift in Sources */,
 				294CEF5A1C0F8DB00003771B /* Lift.swift in Sources */,
 				D1DF596A1DDFC317003FB100 /* FoodTableViewController.swift in Sources */,
 				299B8EE41C231F3700B0F0A4 /* TrailTableViewCell.swift in Sources */,
 				294CF06F1C17D14C0003771B /* TrailController.swift in Sources */,
+				D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */,
 				298FD67C1C209F8B008034B4 /* TrailMapViewController.swift in Sources */,
 				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
 				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,

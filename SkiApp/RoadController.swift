@@ -43,7 +43,7 @@ class RoadController {
                     let paramDescValue = incidentDictionary[Road.parameterizedDescriptionKey] as? [String:String]
                     let roadNameValue = paramDescValue?[Road.roadNameKey]
                     
-                    let alertCodeArray: [Int] = [681,861,862,911,912,943,944,992,993,994,1012,1013,1014,1015,1016,407]
+                    let alertCodeArray: [Int] = [681,861,862,911,912,943,944,992,993,994,1012,1013,1014,1015,1016]
                     let eventCode = eventValue
                     var codeAppears = false
                     

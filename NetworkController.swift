@@ -1,4 +1,3 @@
-
 //  NetworkController.swift
 //  SkiApp
 //  Created by JB on 11/20/15.
@@ -12,7 +11,6 @@ class NetworkController {
 
     //WeatherURL
     static func snowbirdWeatherURL() -> URL {
-
         let baseURL = "https://api.forecast.io/forecast/f6343e5eb6cece8c1830aa248fcc6cb0/"
         let locationCode = "40.5897,-111.6393"
 
@@ -28,22 +26,23 @@ class NetworkController {
     
     //RoadURL
     static func roadStatusURL() -> URL {
-        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.8595252289932%2C-111.69456481933592%2C40.68584503000695%2C-112.01282501220703&key="
-        
-//        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.620207045205625%2C-111.59671783447266%2C40.516670214159504%2C-111.7888069152832&key="
+        let mapRegionURL = "https://www.mapquestapi.com/traffic/v2/incidents?&outFormat=json&boundingBox=40.620207045205625%2C-111.59671783447266%2C40.516670214159504%2C-111.7888069152832&key="
         let apiKey = "b6DImnAvCoyRDzoU5TEoZUemxYyGE4SY"
 
         return URL(string: "\(mapRegionURL)\(apiKey)")!
-
+    }
+    
+    //SnowURL
+    static func snowDataURL() -> URL {
+        let snowURL = "http://www.snowbird.com"
+        
+        return URL(string: "\(snowURL)")!
     }
 
     //Session
     static func dataAtURL(_ url: URL, completion: @escaping (_ resultData: Data?) -> Void) {
         let session = URLSession.shared
-
-        //DataTask
         let dataTask = session.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
-//            print(data)
 
             guard let data = data else {
                 print(error?.localizedDescription)
