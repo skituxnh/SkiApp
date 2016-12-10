@@ -12,26 +12,25 @@ class SnowbirdController {
     
     static let sharedInstance = SnowbirdController()
     
-    static func getSnowData(_ completion: @escaping (_ snowbird: Snowbird?) -> Void) {
-    
-        let url = NetworkController.snowDataURL()
-        NetworkController.dataAtURL(url) { (resultData) -> Void in
-            
-            guard let resultData = resultData else {
-                print("no snow data returned")
-                completion(nil)
-                return
-            }
+    static func fetchSnowData(completionHandler: @escaping (_ snowbird: Snowbird?) -> ()) {
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let url = URL(string: "https://www.snowbird.com")!
+        let task = session.dataTask(with: url, completionHandler: { data,response,error in
+        
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
                 
-            do {
-                    let urlContent = resultData
-                    let webContent = NSString(data: urlContent, encoding: String.Encoding.utf8.rawValue)
+                do {
+                    var snowDataModel = Snowbird(snow24Hrs: "", snow48Hrs: "", snowBase: "", snowYTD: "")
                     
+                    let urlContent = data
+                    let webContent = NSString(data: urlContent!, encoding: String.Encoding.utf8.rawValue)
                     let websiteArray = webContent?.components(separatedBy: "<div id=\"conditions-links\">")
-                
-                    var snowbirdDataObject = Snowbird(snow24Hrs: "", snow48Hrs: "", snowBase: "", snowYTD: "")
-                    
                     if (websiteArray!.count) > 0 {
+                        
                         var snowDataArray = websiteArray?[0].components(separatedBy: "<div class=\"total-inches\">")
                         snowDataArray?.remove(at: 0)
                         
@@ -53,15 +52,16 @@ class SnowbirdController {
                         var trimmedYTD = ytdSplitted.map { String($0).trimmingCharacters(in: .whitespaces) }
                         print("YTD: \(trimmedYTD[0])\"")
                         
-                        snowbirdDataObject = Snowbird(snow24Hrs: "\(trimmed24[0])", snow48Hrs: "\(trimmed48[0])", snowBase: "\(trimmedBase[0])", snowYTD: "\(trimmedYTD[0])")
+                        snowDataModel = Snowbird(snow24Hrs: "\(trimmed24[0])", snow48Hrs: "\(trimmed48[0])", snowBase: "\(trimmedBase[0])", snowYTD: "\(trimmedYTD[0])")
+
                     }
-                completion(snowbirdDataObject)
-            } catch {
-                completion(nil)
-                print("no snow data returned")
-                return
+                    completionHandler(snowDataModel)
+                }
             }
-            }
-        }
+        })
+        task.resume()
     }
+}
+
+
 

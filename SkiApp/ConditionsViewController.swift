@@ -36,6 +36,27 @@ class ConditionsViewController: UIViewController {
                 }
             }
         }
+        
+        SnowbirdController.fetchSnowData { (snowbird) in
+            guard let snowbird = snowbird else { return }
+            DispatchQueue.main.async {
+                
+                if let hrs24 = snowbird.snow24Hrs {
+                    self.forecast24hrSnow.text = "24HRS: \(hrs24)"
+                }
+                if let hrs48 = snowbird.snow24Hrs {
+                    self.forecast48hrSnow.text = "48HRS: \(hrs48)"
+                }
+                if let base = snowbird.snowBase {
+                    self.currentSnow.text = "BASE: \(base)"
+                }
+                if let ytd = snowbird.snowYTD {
+                    self.forecast72hrSnow.text = "YTD: \(ytd)"
+                }
+            }
+        }
+        
+        
         WeatherController.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
             DispatchQueue.main.async(execute: { () -> Void in

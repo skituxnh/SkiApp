@@ -10,10 +10,10 @@ import Foundation
 
 class Snowbird {
     
-    let snow24Hrs: String
-    let snow48Hrs: String
-    let snowBase: String
-    let snowYTD: String
+    let snow24Hrs: String?
+    let snow48Hrs: String?
+    let snowBase: String?
+    let snowYTD: String?
 
     
     init(snow24Hrs: String, snow48Hrs: String, snowBase: String, snowYTD: String) {

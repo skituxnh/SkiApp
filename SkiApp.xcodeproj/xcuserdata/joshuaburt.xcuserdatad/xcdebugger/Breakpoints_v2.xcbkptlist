@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SkiApp/WeatherController.swift"
-            timestampString = "502837221.302935"
+            filePath = "SkiApp/SnowbirdController.swift"
+            timestampString = "503086287.78724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "getCurrentWeather(_:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "fetchSnowData(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
