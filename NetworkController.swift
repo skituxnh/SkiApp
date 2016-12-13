@@ -7,8 +7,6 @@ import Foundation
 
 class NetworkController {
 
-    //Change plist to include App Transport to YES...This creates a security issue. Need to add domian exceptions to prevent major issues
-
     //WeatherURL
     static func snowbirdWeatherURL() -> URL {
         let baseURL = "https://api.forecast.io/forecast/f6343e5eb6cece8c1830aa248fcc6cb0/"
