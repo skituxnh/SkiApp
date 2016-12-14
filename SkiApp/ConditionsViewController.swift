@@ -34,6 +34,8 @@ class ConditionsViewController: UIViewController {
                 if RoadController.sharedRoadDict["UT-210"]?.roadOpen == false {
                     self.roadStatusLabel.text = "DELAYED"
                 } else {
+                    self.roadStatusLabel.backgroundColor = UIColor.green
+                    self.roadStatusLabel.textColor = UIColor.white
                     self.roadStatusLabel.text = "OPEN"
                 }
             }
@@ -42,88 +44,63 @@ class ConditionsViewController: UIViewController {
         SnowbirdController.fetchSnowData { (snowbird) in
             guard let snowbird = snowbird else { return }
             DispatchQueue.main.async {
-                
                 if let hrs24 = snowbird.snow24Hrs {
-                    self.snow24Label.text = "24HRS: \(hrs24)"
+                    self.snow24Label.text = "24hrs: \(hrs24)\""
                 }
                 if let hrs48 = snowbird.snow24Hrs {
-                    self.snow48Label.text = "48HRS: \(hrs48)"
+                    self.snow48Label.text = "48hrs: \(hrs48)\""
                 }
                 if let base = snowbird.snowBase {
-                    self.snowBaseLabel.text = "BASE: \(base)"
+                    self.snowBaseLabel.text = "base: \(base)\""
                 }
                 if let ytd = snowbird.snowYTD {
-                    self.snowYTDLabel.text = "YTD: \(ytd)"
+                    self.snowYTDLabel.text = "ytd: \(ytd)\""
                 }
             }
         }
         
-        
         WeatherController.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
             DispatchQueue.main.async(execute: { () -> Void in
-                
-                
                 if let summary = weather.summaryString {
                     self.currentWeatherSummaryLabel.text = "\(summary)"
                 } else {
                     self.currentWeatherSummaryLabel.text = ""
                 }
                 if let temp = weather.currentTemperature {
-                    self.currentTemperatureLabel.text = "\(Int(temp))ºF"
+                    self.currentTemperatureLabel.text = "now: \(Int(temp))º"
                 } else {
                     self.currentTemperatureLabel.text = "NA"
                 }
-//                if let wind = weather.currentWindSpeed {
-//                    self.currentWindSpeedLabel.text = "\(Int(wind))"
-//                } else {
-//                    self.currentWindSpeedLabel.text = "NA"
-//                }
-//                if let direction = weather.currentWindBearing {
-//                    let directionText = WeatherController.convertBearingToDirection(direction)
-//                    self.currentWindBearingLabel.text = "\(directionText)"
-//                } else {
-//                    self.currentWindBearingLabel.text = "NA"
-//                }
+                if let wind = weather.currentWindSpeed {
+                    if let direction = weather.currentWindBearing {
+                        let directionText = WeatherController.convertBearingToDirection(direction)
+                        self.currentWindLabel.text = "\(Int(wind))mph \(directionText)"
+                    } else {
+                        self.currentWindLabel.text = "NA"
+                    }
+                }
                 if let low = weather.tempMin {
-                    self.currentLowTemperatureLabel.text = "\(Int(low))º"
+                    self.currentLowTemperatureLabel.text = "low: \(Int(low))º"
                 } else {
                     self.currentLowTemperatureLabel.text = "NA"
                 }
                 if let high = weather.tempMax {
-                    self.currentHighTemperatureLabel.text = "\(Int(high))º"
+                    self.currentHighTemperatureLabel.text = "high: \(Int(high))º"
                 } else {
                     self.currentHighTemperatureLabel.text = "NA"
                 }
-//                if let day0Snow = weather.day0Snow {
-//                    self.currentSnow.text = "\(Int(day0Snow))\""
-//                } else {
-//                    self.currentSnow.text = "0\""
-//                }
-//                if let day1Snow = weather.day1Snow {
-//                    self.forecast24hrSnow.text = "\(Int(day1Snow))\" 24hrs"
-//                } else {
-//                    self.forecast24hrSnow.text = "0\" 24hrs"
-//                }
-//                if let day2Snow = weather.day2Snow {
-//                    self.forecast48hrSnow.text = "\(Int(day2Snow))\" 48hrs"
-//                } else {
-//                    self.forecast48hrSnow.text = "0\" 48hrs"
-//                }
-//                if let day3Snow = weather.day3Snow {
-//                    self.forecast72hrSnow.text = "\(Int(day3Snow))\" 72hrs"
-//                } else {
-//                    self.forecast72hrSnow.text = "0\" 72hrs"
-//                }
                 if let weatherIcon = weather.iconImageString {
                     self.currentWeatherIcon.image = UIImage(named: weatherIcon)
+                    print(weatherIcon)
                 } else {
                     print("")
                 }
                 if let titleAlert = weather.titleAlertsString {
                     self.currentAlertLabel.text = "\(titleAlert)"
                 } else {
-                    print("")
+//                    self.currentAlertLabel.
+                    self.currentAlertLabel.isHidden = true
                 }
             })
         }

@@ -38,22 +38,17 @@ class SnowbirdController {
                         
                         let hrs24Splitted = hrs24.characters.split { ["<",">","\"","=","/"].contains(String($0)) }
                         var trimmed24 = hrs24Splitted.map { String($0).trimmingCharacters(in: .whitespaces) }
-                        print("24HRS: \(trimmed24[0])\"")
                         
                         let hrs48Splitted = hrs48.characters.split { ["<",">","\"","=","/"].contains(String($0)) }
                         var trimmed48 = hrs48Splitted.map { String($0).trimmingCharacters(in: .whitespaces) }
-                        print("48HRS: \(trimmed48[0])\"")
                         
                         let baseSplitted = base.characters.split { ["<",">","\"","=","/"].contains(String($0)) }
                         var trimmedBase = baseSplitted.map { String($0).trimmingCharacters(in: .whitespaces) }
-                        print("BASE: \(trimmedBase[0])\"")
                         
                         let ytdSplitted = ytd.characters.split { ["<",">","\"","=","/"].contains(String($0)) }
                         var trimmedYTD = ytdSplitted.map { String($0).trimmingCharacters(in: .whitespaces) }
-                        print("YTD: \(trimmedYTD[0])\"")
                         
                         snowDataModel = Snowbird(snow24Hrs: "\(trimmed24[0])", snow48Hrs: "\(trimmed48[0])", snowBase: "\(trimmedBase[0])", snowYTD: "\(trimmedYTD[0])")
-
                     }
                     completionHandler(snowDataModel)
                 }
