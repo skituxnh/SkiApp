@@ -11,6 +11,7 @@ class ConditionsViewController: UIViewController {
     
     @IBOutlet weak var currentWeatherIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
+    @IBOutlet weak var windchillTemperatureLabel: UILabel!
     @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var windDirectionLabel: UILabel!
     @IBOutlet weak var currentHighTemperatureLabel: UILabel!
@@ -33,8 +34,8 @@ class ConditionsViewController: UIViewController {
                 if RoadController.sharedRoadDict["UT-210"]?.roadOpen == false {
                     self.roadStatusLabel.text = "DELAYED"
                 } else {
-//                    self.roadStatusLabel.backgroundColor = UIColor.green
-                    self.roadStatusLabel.textColor = UIColor.white
+//                    self.roadStatusLabel.backgroundColor = SNOWBIRD_GREEN
+                    self.roadStatusLabel.textColor = SNOWBIRD_GREEN
                     self.roadStatusLabel.text = "OPEN"
                 }
             }
@@ -61,15 +62,29 @@ class ConditionsViewController: UIViewController {
         WeatherController.getCurrentWeather() { (weather) -> Void in
             guard let weather = weather else { return }
             DispatchQueue.main.async(execute: { () -> Void in
-                if let summary = weather.summaryString {
-                    self.currentWeatherSummaryLabel.text = "\(summary)"
+                
+                if let alert = weather.titleAlertsString {
+                    self.currentWeatherSummaryLabel.text = "\(alert)"
+                    self.currentWeatherSummaryLabel.textColor = UIColor.red
                 } else {
-                    self.currentWeatherSummaryLabel.text = ""
+                    if let summary = weather.summaryString {
+                        self.currentWeatherSummaryLabel.text = "\(summary)"
+                    }
                 }
+//                if let summary = weather.summaryString {
+//                    self.currentWeatherSummaryLabel.text = "\(summary)"
+//                } else {
+//                    self.currentWeatherSummaryLabel.text = ""
+//                }
                 if let temp = weather.currentTemperature {
                     self.currentTemperatureLabel.text = "\(Int(temp))Fº"
                 } else {
                     self.currentTemperatureLabel.text = "NA"
+                }
+                if let chill = weather.windchillTemperature {
+                    self.windchillTemperatureLabel.text = "\(Int(chill))Fº"
+                } else {
+                    self.windchillTemperatureLabel.text = ""
                 }
                 if let speed = weather.currentWindSpeed {
                     self.windSpeedLabel.text = "\(Int(speed))mph"
@@ -83,12 +98,12 @@ class ConditionsViewController: UIViewController {
                     self.windDirectionLabel.text = ""
                 }
                 if let low = weather.tempMin {
-                    self.currentLowTemperatureLabel.text = "low: \(Int(low))º"
+                    self.currentLowTemperatureLabel.text = "low:\(Int(low))º"
                 } else {
                     self.currentLowTemperatureLabel.text = "NA"
                 }
                 if let high = weather.tempMax {
-                    self.currentHighTemperatureLabel.text = "\(Int(high))º :high"
+                    self.currentHighTemperatureLabel.text = "high:\(Int(high))º"
                 } else {
                     self.currentHighTemperatureLabel.text = "NA"
                 }

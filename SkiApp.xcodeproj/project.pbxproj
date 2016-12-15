@@ -26,6 +26,7 @@
 		29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8671BFFEA8C002FF103 /* NetworkController.swift */; };
 		29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8691BFFEC83002FF103 /* Weather.swift */; };
 		D120A88C1DFB224100BF988F /* SnowbirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A88B1DFB224100BF988F /* SnowbirdController.swift */; };
+		D13D4C261E02028C00251B7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D4C251E02028C00251B7D /* Constants.swift */; };
 		D13ED75C1DFC7E6000D33554 /* Notes-ToDo in Resources */ = {isa = PBXBuildFile; fileRef = D13ED75B1DFC7E6000D33554 /* Notes-ToDo */; };
 		D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */; };
 		D1DF59661DDFC263003FB100 /* food.tsv in Resources */ = {isa = PBXBuildFile; fileRef = D1DF59651DDFC263003FB100 /* food.tsv */; };
@@ -55,6 +56,7 @@
 		29DCF8671BFFEA8C002FF103 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
 		29DCF8691BFFEC83002FF103 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../Weather.swift; sourceTree = "<group>"; };
 		D120A88B1DFB224100BF988F /* SnowbirdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowbirdController.swift; sourceTree = "<group>"; };
+		D13D4C251E02028C00251B7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D13ED75A1DFC7E4000D33554 /* TestingGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGround.playground; sourceTree = "<group>"; };
 		D13ED75B1DFC7E6000D33554 /* Notes-ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes-ToDo"; sourceTree = "<group>"; };
 		D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snowbird.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		29C14F7B1BFBCFE500493D04 = {
 			isa = PBXGroup;
 			children = (
+				D13D4C241E02027600251B7D /* Resources */,
 				D13ED7591DFC7E1C00D33554 /* Testing/Notes */,
 				294CEF841C10ED690003771B /* System Files */,
 				29C14F861BFBCFE500493D04 /* SkiApp */,
@@ -153,6 +156,14 @@
 				29C14F8E1BFBCFE500493D04 /* Assets.xcassets */,
 			);
 			path = SkiApp;
+			sourceTree = "<group>";
+		};
+		D13D4C241E02027600251B7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D13D4C251E02028C00251B7D /* Constants.swift */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		D13ED7591DFC7E1C00D33554 /* Testing/Notes */ = {
@@ -254,6 +265,7 @@
 				299B8EE41C231F3700B0F0A4 /* TrailTableViewCell.swift in Sources */,
 				294CF06F1C17D14C0003771B /* TrailController.swift in Sources */,
 				D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */,
+				D13D4C261E02028C00251B7D /* Constants.swift in Sources */,
 				298FD67C1C209F8B008034B4 /* TrailMapViewController.swift in Sources */,
 				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
 				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,
