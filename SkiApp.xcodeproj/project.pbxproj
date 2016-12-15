@@ -26,6 +26,9 @@
 		29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8671BFFEA8C002FF103 /* NetworkController.swift */; };
 		29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8691BFFEC83002FF103 /* Weather.swift */; };
 		D120A88C1DFB224100BF988F /* SnowbirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A88B1DFB224100BF988F /* SnowbirdController.swift */; };
+		D13D4C261E02028C00251B7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D4C251E02028C00251B7D /* Constants.swift */; };
+		D13D4C2A1E02266B00251B7D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D4C291E02266B00251B7D /* WebViewController.swift */; };
+		D13ED75C1DFC7E6000D33554 /* Notes-ToDo in Resources */ = {isa = PBXBuildFile; fileRef = D13ED75B1DFC7E6000D33554 /* Notes-ToDo */; };
 		D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */; };
 		D1DF59661DDFC263003FB100 /* food.tsv in Resources */ = {isa = PBXBuildFile; fileRef = D1DF59651DDFC263003FB100 /* food.tsv */; };
 		D1DF59681DDFC2BD003FB100 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF59671DDFC2BD003FB100 /* FoodCell.swift */; };
@@ -54,7 +57,10 @@
 		29DCF8671BFFEA8C002FF103 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
 		29DCF8691BFFEC83002FF103 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../Weather.swift; sourceTree = "<group>"; };
 		D120A88B1DFB224100BF988F /* SnowbirdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowbirdController.swift; sourceTree = "<group>"; };
-		D120A88D1DFB350500BF988F /* TestGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestGround.playground; sourceTree = "<group>"; };
+		D13D4C251E02028C00251B7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D13D4C291E02266B00251B7D /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D13ED75A1DFC7E4000D33554 /* TestingGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGround.playground; sourceTree = "<group>"; };
+		D13ED75B1DFC7E6000D33554 /* Notes-ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes-ToDo"; sourceTree = "<group>"; };
 		D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snowbird.swift; sourceTree = "<group>"; };
 		D1DF59651DDFC263003FB100 /* food.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food.tsv; sourceTree = "<group>"; };
 		D1DF59671DDFC2BD003FB100 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 				294CEF571C0F8D7E0003771B /* LiftController.swift */,
 				294CEF551C0F8D650003771B /* RoadController.swift */,
 				294CF06E1C17D14C0003771B /* TrailController.swift */,
+				D13D4C291E02266B00251B7D /* WebViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -127,7 +134,7 @@
 		29C14F7B1BFBCFE500493D04 = {
 			isa = PBXGroup;
 			children = (
-				D120A88D1DFB350500BF988F /* TestGround.playground */,
+				D13ED7591DFC7E1C00D33554 /* Testing/Notes */,
 				294CEF841C10ED690003771B /* System Files */,
 				29C14F861BFBCFE500493D04 /* SkiApp */,
 				29C14F851BFBCFE500493D04 /* Products */,
@@ -149,8 +156,27 @@
 				294CEF821C10ED140003771B /* Controllers */,
 				294CEF831C10ED2A0003771B /* View */,
 				29C14F8E1BFBCFE500493D04 /* Assets.xcassets */,
+				D13D4C241E02027600251B7D /* Resources */,
 			);
 			path = SkiApp;
+			sourceTree = "<group>";
+		};
+		D13D4C241E02027600251B7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D13D4C251E02028C00251B7D /* Constants.swift */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D13ED7591DFC7E1C00D33554 /* Testing/Notes */ = {
+			isa = PBXGroup;
+			children = (
+				D13ED75A1DFC7E4000D33554 /* TestingGround.playground */,
+				D13ED75B1DFC7E6000D33554 /* Notes-ToDo */,
+			);
+			name = Testing/Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D13ED75C1DFC7E6000D33554 /* Notes-ToDo in Resources */,
 				29C14F921BFBCFE500493D04 /* LaunchScreen.storyboard in Resources */,
 				29C14F8F1BFBCFE500493D04 /* Assets.xcassets in Resources */,
 				29C14F8D1BFBCFE500493D04 /* Main.storyboard in Resources */,
@@ -231,6 +258,7 @@
 				D1DF59681DDFC2BD003FB100 /* FoodCell.swift in Sources */,
 				294CEF561C0F8D650003771B /* RoadController.swift in Sources */,
 				29C14F9A1BFBEE7E00493D04 /* LiftTrailTableViewController.swift in Sources */,
+				D13D4C2A1E02266B00251B7D /* WebViewController.swift in Sources */,
 				29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */,
 				299B8EE61C2321A100B0F0A4 /* LiftTableViewCell.swift in Sources */,
 				294CEF581C0F8D7E0003771B /* LiftController.swift in Sources */,
@@ -242,6 +270,7 @@
 				299B8EE41C231F3700B0F0A4 /* TrailTableViewCell.swift in Sources */,
 				294CF06F1C17D14C0003771B /* TrailController.swift in Sources */,
 				D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */,
+				D13D4C261E02028C00251B7D /* Constants.swift in Sources */,
 				298FD67C1C209F8B008034B4 /* TrailMapViewController.swift in Sources */,
 				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
 				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,
