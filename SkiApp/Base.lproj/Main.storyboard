@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Khk-Be-v2c">
-                                <rect key="frame" x="8" y="64" width="398" height="664"/>
+                                <rect key="frame" x="8" y="64" width="398" height="615"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kgb-QF-PCe">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="29"/>
@@ -168,21 +168,21 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cl9-Fq-7Ga">
-                                        <rect key="frame" x="0.0" y="151" width="398" height="30"/>
+                                        <rect key="frame" x="0.0" y="151" width="398" height="25"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sr210" translatesAutoresizingMaskIntoConstraints="NO" id="xzt-eg-78I">
-                                                <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="25"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Road Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="EgL-Mb-0Xy">
-                                                <rect key="frame" x="34" y="0.0" width="325.66666666666669" height="30"/>
+                                                <rect key="frame" x="34" y="0.0" width="325.66666666666669" height="25"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sn-ca-cQS">
-                                                <rect key="frame" x="359.66666666666674" y="0.0" width="38.333333333333314" height="30"/>
+                                                <rect key="frame" x="359.66666666666674" y="0.0" width="38.333333333333314" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="38.329999999999998" id="Dvc-D9-tP9"/>
                                                 </constraints>
@@ -195,7 +195,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmx-QV-yOv">
-                                        <rect key="frame" x="0.0" y="184" width="398" height="480"/>
+                                        <rect key="frame" x="0.0" y="179" width="398" height="436"/>
                                         <state key="normal" image="SnowbirdTrailMap"/>
                                         <connections>
                                             <action selector="showMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0Z-bZ-8CN"/>
@@ -249,11 +249,11 @@
                         <viewControllerLayoutGuide type="bottom" id="r1G-74-U0j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g6y-pM-A90">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4d-pS-bKA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -277,42 +277,43 @@
         <!--TrailMap-->
         <scene sceneID="bu6-qU-Tz1">
             <objects>
-                <viewController title="TrailMap" id="PEZ-DS-z4w" customClass="TrailMapViewController" customModule="SkiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TrailMap" hidesBottomBarWhenPushed="YES" id="PEZ-DS-z4w" customClass="TrailMapViewController" customModule="SkiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BW6-pJ-H1s"/>
                         <viewControllerLayoutGuide type="bottom" id="vsC-EQ-e2Y"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="flQ-sO-pZ6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="flQ-sO-pZ6">
+                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SnowbirdTrailMap" translatesAutoresizingMaskIntoConstraints="NO" id="g8j-hV-8PD">
-                                <rect key="frame" x="0.0" y="63" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="g8j-hV-8PD" firstAttribute="top" secondItem="BW6-pJ-H1s" secondAttribute="bottom" id="AjN-hF-ljC"/>
                             <constraint firstItem="g8j-hV-8PD" firstAttribute="leading" secondItem="flQ-sO-pZ6" secondAttribute="leading" id="HzW-M4-cxp"/>
                             <constraint firstAttribute="trailing" secondItem="g8j-hV-8PD" secondAttribute="trailing" id="SEB-Jk-e5V"/>
-                            <constraint firstItem="g8j-hV-8PD" firstAttribute="top" secondItem="flQ-sO-pZ6" secondAttribute="topMargin" constant="63" id="ftw-IN-9Kd"/>
                             <constraint firstAttribute="bottom" secondItem="g8j-hV-8PD" secondAttribute="bottom" id="kuf-1b-B7L"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="B3x-jS-fmW">
                         <barButtonItem key="backBarButtonItem" title="  " id="XsG-4J-p9E"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55D-Yx-0i1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="417" y="-422"/>
+            <point key="canvasLocation" x="415.94202898550731" y="-422.28260869565219"/>
         </scene>
         <!--Lifts-->
         <scene sceneID="tC2-gS-yok">
             <objects>
                 <tableViewController id="Ang-rr-Wo3" customClass="LiftTrailTableViewController" customModule="SkiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="vFp-9V-2gB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -428,7 +429,7 @@
             <objects>
                 <tableViewController id="sbK-OW-T2e" customClass="FoodTableViewController" customModule="SkiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mfX-sc-05z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -560,11 +561,11 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zuS-Xf-5iF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="TBh-eA-Ow4">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" translucent="NO" id="TBh-eA-Ow4">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.0" green="0.4941176471" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">

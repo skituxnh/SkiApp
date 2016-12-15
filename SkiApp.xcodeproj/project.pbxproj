@@ -134,7 +134,6 @@
 		29C14F7B1BFBCFE500493D04 = {
 			isa = PBXGroup;
 			children = (
-				D13D4C241E02027600251B7D /* Resources */,
 				D13ED7591DFC7E1C00D33554 /* Testing/Notes */,
 				294CEF841C10ED690003771B /* System Files */,
 				29C14F861BFBCFE500493D04 /* SkiApp */,
@@ -157,6 +156,7 @@
 				294CEF821C10ED140003771B /* Controllers */,
 				294CEF831C10ED2A0003771B /* View */,
 				29C14F8E1BFBCFE500493D04 /* Assets.xcassets */,
+				D13D4C241E02027600251B7D /* Resources */,
 			);
 			path = SkiApp;
 			sourceTree = "<group>";
@@ -167,6 +167,7 @@
 				D13D4C251E02028C00251B7D /* Constants.swift */,
 			);
 			name = Resources;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D13ED7591DFC7E1C00D33554 /* Testing/Notes */ = {
