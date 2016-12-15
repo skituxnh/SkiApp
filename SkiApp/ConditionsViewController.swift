@@ -123,5 +123,8 @@ class ConditionsViewController: UIViewController {
     @IBAction func showMap(_ sender: AnyObject) {
         performSegue(withIdentifier: "showMapSegue", sender: nil)
     }
-}
+    @IBAction func roadCameraTapped(_ sender: Any) {
 
+        
+    }
+}

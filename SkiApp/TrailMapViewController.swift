@@ -16,11 +16,6 @@ class TrailMapViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//Hiddens Status Bar
-//        navigationController?.navigationItem.leftBarButtonItem!.title = ""
-//        navigationController?.navigationBarHidden = true
-
-
 //Setting Image for View Adjustments
         imageView = UIImageView(image: UIImage(named: "SnowbirdTrailMap.png"))
 
