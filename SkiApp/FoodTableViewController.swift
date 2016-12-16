@@ -71,9 +71,9 @@ class FoodTableViewController: UITableViewController {
 //CALayer values
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.layer.borderColor = UIColor.lightGray.cgColor
-//        cell.layer.shadowOpacity = 0.5
-        cell.layer.shadowOffset = CGSize(width: 0, height: 3)
-        cell.layer.borderWidth = 3
+        cell.layer.shadowOpacity = 0.5
+        cell.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cell.layer.borderWidth = 2
         cell.layer.masksToBounds = false
     }
 }

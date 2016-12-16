@@ -17,7 +17,7 @@ class NetworkController {
 
     //LiftsURL
     static func snowbirdLiftsURL() -> URL {
-        let liftAPI = "http://liftie.info/api/resort/snowbird"
+        let liftAPI = "https://liftie.info/api/resort/snowbird"
 
         return URL(string: "\(liftAPI)")!
     }
@@ -32,7 +32,7 @@ class NetworkController {
     
     //SnowURL
     static func snowDataURL() -> URL {
-        let snowURL = "http://www.snowbird.com"
+        let snowURL = "https://www.snowbird.com"
         
         return URL(string: "\(snowURL)")!
     }

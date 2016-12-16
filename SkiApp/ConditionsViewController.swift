@@ -46,7 +46,7 @@ class ConditionsViewController: UIViewController {
                 if let hrs24 = snowbird.snow24Hrs {
                     self.snow24Label.text = "24hrs: \(hrs24)\""
                 }
-                if let hrs48 = snowbird.snow24Hrs {
+                if let hrs48 = snowbird.snow48Hrs {
                     self.snow48Label.text = "48hrs: \(hrs48)\""
                 }
                 if let base = snowbird.snowBase {
@@ -103,10 +103,7 @@ class ConditionsViewController: UIViewController {
                 }
                 if let weatherIcon = weather.iconImageString {
                     self.currentWeatherIcon.image = UIImage(named: weatherIcon)
-                    print(weatherIcon)
-                } else {
-                    print("")
-                }
+                } 
             })
         }
     }

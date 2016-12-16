@@ -1,6 +1,11 @@
+
+
+
+**Build a launch screen
+
 **Change plist to include App Transport to YES...This creates a security issue. Need to add domian exceptions to prevent major issues
 
-**Disabled the button to select trails under lift...want to pull html to populate open and/or groomed trails
+**Enbale the button to select trails under lift...want to pull html to populate open and/or groomed trails
 
 **Remove URLSession from Snowbird Controller and utilize Network Controller
 
