@@ -9,6 +9,13 @@
 import UIKit
 
 class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol {
+    
+//    enum LiftStatus {
+//        case open
+//        case closed
+//        case hold
+//        case scheduled
+//    }
 
     var liftArray: [Lift] {
         return LiftController.sharedInstance.liftArray
@@ -66,15 +73,19 @@ class LiftTrailTableViewController: UITableViewController, CellExpansionProtocol
             cell.liftNameLabel.text = lift.liftName
             cell.section = section
             cell.delegate = self
-
+            
             if lift.liftStatus == "open" {
-                cell.liftStatusLabel.text = "open"
-                cell.liftStatusLabel.textColor = UIColor(red: 110/255, green: 180/255, blue: 63/255, alpha: 1.0)
-                cell.liftNameLabel!.textColor = UIColor.black
-            } else {
-                cell.liftStatusLabel.text = "closed"
-                cell.liftStatusLabel.textColor = UIColor.darkGray
-                cell.liftNameLabel!.textColor = UIColor.black
+                cell.liftNameLabel!.textColor = UIColor.darkGray
+                cell.statusImage.image = UIImage(named: "open")
+            } else if lift.liftStatus == "hold" {
+                cell.liftNameLabel!.textColor = UIColor.darkGray
+                cell.statusImage.image = UIImage(named: "hold")
+            } else if lift.liftStatus == "scheduled" {
+                cell.liftNameLabel!.textColor = UIColor.darkGray
+                cell.statusImage.image = UIImage(named: "scheduled")
+            } else if lift.liftStatus == "closed" {
+                cell.liftNameLabel!.textColor = UIColor.darkGray
+                cell.statusImage.image = UIImage(named: "closed")
             }
         }
         cell.backgroundColor = UIColor.white

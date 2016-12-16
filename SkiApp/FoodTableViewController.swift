@@ -36,12 +36,10 @@ class FoodTableViewController: UITableViewController {
                     
                     arrayFood.add(dictFood)
                 }
-                
             } catch let error as NSError {
                 fatalError("Error: \(error)")
             }
         }
-        self.title = "Restaurants"
     }
 
     // MARK: - Table view data source
@@ -68,5 +66,14 @@ class FoodTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 135
+    }
+    
+//CALayer values
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+//        cell.layer.shadowOpacity = 0.5
+        cell.layer.shadowOffset = CGSize(width: 0, height: 3)
+        cell.layer.borderWidth = 3
+        cell.layer.masksToBounds = false
     }
 }

@@ -27,14 +27,13 @@ class ConditionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = false
         
         RoadController.getCurrentRoad { (road) in
             DispatchQueue.main.async {
                 if RoadController.sharedRoadDict["UT-210"]?.roadOpen == false {
+                    self.roadStatusLabel.textColor = UIColor.red
                     self.roadStatusLabel.text = "DELAYED"
                 } else {
-//                    self.roadStatusLabel.backgroundColor = SNOWBIRD_GREEN
                     self.roadStatusLabel.textColor = SNOWBIRD_GREEN
                     self.roadStatusLabel.text = "OPEN"
                 }
@@ -71,11 +70,6 @@ class ConditionsViewController: UIViewController {
                         self.currentWeatherSummaryLabel.text = "\(summary)"
                     }
                 }
-//                if let summary = weather.summaryString {
-//                    self.currentWeatherSummaryLabel.text = "\(summary)"
-//                } else {
-//                    self.currentWeatherSummaryLabel.text = ""
-//                }
                 if let temp = weather.currentTemperature {
                     self.currentTemperatureLabel.text = "\(Int(temp))Fº"
                 } else {

@@ -18,7 +18,8 @@ class LiftTableViewCell: UITableViewCell {
     var section: Int = 0
 
     @IBOutlet var liftNameLabel: UILabel!
-    @IBOutlet var liftStatusLabel: UILabel!
+//    @IBOutlet var liftStatusLabel: UILabel!
+    @IBOutlet var statusImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

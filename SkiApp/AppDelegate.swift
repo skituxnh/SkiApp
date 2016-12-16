@@ -22,12 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RoadController.getCurrentRoad { (road) -> Void in
         }
     }
-
-//Add backgournd colors to carry throughout the NavBar and TabBar Controllers
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        // Override point for customization after application launch.
+        
+        //Add background colors to carry throughout the NavBar and TabBar Controllers
+        
         return true
     }
 
@@ -53,15 +52,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
-//extension UIColor {
-//    convenience init(red: Int, green: Int, blue: Int)
-//    {
-//        let newRed = CGFloat(red)/255
-//        let newGreen = CGFloat(green)/255
-//        let newBlue = CGFloat(blue)/255
-//
-//        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
-//    }
-//}
-
-
