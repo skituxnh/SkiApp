@@ -9,15 +9,16 @@ class ConditionsViewController: UIViewController {
     
     @IBOutlet var currentWeatherSummaryLabel: UILabel!
     
+    @IBOutlet weak var snowIcon: UIImageView!
     @IBOutlet weak var currentWeatherIcon: UIImageView!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var windchillTemperatureLabel: UILabel!
+    
     @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var windDirectionLabel: UILabel!
     @IBOutlet weak var currentHighTemperatureLabel: UILabel!
     @IBOutlet weak var currentLowTemperatureLabel: UILabel!
     
-    @IBOutlet weak var snowIcon: UIImageView!
     @IBOutlet weak var snow24Label: UILabel!
     @IBOutlet weak var snow48Label: UILabel!
     @IBOutlet weak var snowBaseLabel: UILabel!
@@ -28,17 +29,17 @@ class ConditionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        RoadController.getCurrentRoad { (road) in
-            DispatchQueue.main.async {
-                if RoadController.sharedRoadDict["UT-210"]?.roadOpen == false {
-                    self.roadStatusLabel.textColor = UIColor.red
-                    self.roadStatusLabel.text = "DELAYED"
-                } else {
-                    self.roadStatusLabel.textColor = SNOWBIRD_GREEN
-                    self.roadStatusLabel.text = "OPEN"
-                }
-            }
-        }
+//        RoadController.getCurrentRoad { (road) in
+//            DispatchQueue.main.async {
+//                if RoadController.sharedRoadDict["UT-210"]?.roadOpen == false {
+//                    self.roadStatusLabel.textColor = UIColor.red
+//                    self.roadStatusLabel.text = "DELAYED"
+//                } else {
+//                    self.roadStatusLabel.textColor = SNOWBIRD_GREEN
+//                    self.roadStatusLabel.text = "OPEN"
+//                }
+//            }
+//        }
         
         SnowbirdController.fetchSnowData { (snowbird) in
             guard let snowbird = snowbird else { return }
@@ -54,6 +55,14 @@ class ConditionsViewController: UIViewController {
                 }
                 if let ytd = snowbird.snowYTD {
                     self.snowYTDLabel.text = "ytd: \(ytd)\""
+                }
+                if let roadMessage = snowbird.roadStatus {
+                    self.roadStatusLabel.text = "\(roadMessage)"
+                    if roadMessage == "Open" {
+                        self.roadStatusLabel.textColor = SNOWBIRD_GREEN
+                    } else {
+                        self.roadStatusLabel.textColor = UIColor.orange
+                    }
                 }
             }
         }
@@ -76,7 +85,7 @@ class ConditionsViewController: UIViewController {
                     self.currentTemperatureLabel.text = "NA"
                 }
                 if let chill = weather.windchillTemperature {
-                    self.windchillTemperatureLabel.text = "\(Int(chill))Fº"
+                    self.windchillTemperatureLabel.text = "chill: \(Int(chill))º"
                 } else {
                     self.windchillTemperatureLabel.text = ""
                 }
@@ -115,7 +124,5 @@ class ConditionsViewController: UIViewController {
         performSegue(withIdentifier: "showMapSegue", sender: nil)
     }
     @IBAction func roadCameraTapped(_ sender: Any) {
-
-        
     }
 }
