@@ -57,7 +57,7 @@ class ConditionsViewController: UIViewController {
                     self.snowYTDLabel.text = "ytd: \(ytd)\""
                 }
                 if let roadMessage = snowbird.roadStatus {
-                    self.roadStatusLabel.text = "\(roadMessage)"
+                    self.roadStatusLabel.text = "\(roadMessage.uppercased())"
                     if roadMessage == "Open" {
                         self.roadStatusLabel.textColor = SNOWBIRD_GREEN
                     } else {
