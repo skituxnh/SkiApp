@@ -1,0 +1,36 @@
+
+
+
+**Build a launch screen
+
+**Change plist to include App Transport to YES...This creates a security issue. Need to add domian exceptions to prevent major issues
+
+**Enbale the button to select trails under lift...want to pull html to populate open and/or groomed trails
+
+**Remove URLSession from Snowbird Controller and utilize Network Controller
+
+**Add Ski bus PDFs
+
+**Add Twitter/Facebook/Instgram Feeds
+
+**Add Call Ski Patrol...get coordinates to send
+
+**Clean up IF LET and use GUARD LET
+
+**Add extensions to clean up VCs
+
+**Make Trails Array into a JSON file
+
+**Add Utah Avalanche Feed
+
+**Add Notifications for Lift Opening and Specials
+
+**Add Zoom to Trail Map View
+
+**Add Pull to refresh on Conditions Scene
+
+
+
+
+
+

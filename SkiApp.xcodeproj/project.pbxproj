@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		294CEF561C0F8D650003771B /* RoadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF551C0F8D650003771B /* RoadController.swift */; };
+		294CEF581C0F8D7E0003771B /* LiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF571C0F8D7E0003771B /* LiftController.swift */; };
+		294CEF5A1C0F8DB00003771B /* Lift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF591C0F8DB00003771B /* Lift.swift */; };
+		294CEF5C1C0F8DBF0003771B /* Road.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CEF5B1C0F8DBF0003771B /* Road.swift */; };
+		294CF06F1C17D14C0003771B /* TrailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294CF06E1C17D14C0003771B /* TrailController.swift */; };
+		2965AF991C03AF56006C913D /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2965AF981C03AF56006C913D /* WeatherController.swift */; };
+		298FD67C1C209F8B008034B4 /* TrailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FD67B1C209F8B008034B4 /* TrailMapViewController.swift */; };
+		299B8EE41C231F3700B0F0A4 /* TrailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B8EE31C231F3700B0F0A4 /* TrailTableViewCell.swift */; };
+		299B8EE61C2321A100B0F0A4 /* LiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B8EE51C2321A100B0F0A4 /* LiftTableViewCell.swift */; };
+		29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F871BFBCFE500493D04 /* AppDelegate.swift */; };
+		29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */; };
+		29C14F8D1BFBCFE500493D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F8B1BFBCFE500493D04 /* Main.storyboard */; };
+		29C14F8F1BFBCFE500493D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F8E1BFBCFE500493D04 /* Assets.xcassets */; };
+		29C14F921BFBCFE500493D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */; };
+		29C14F9A1BFBEE7E00493D04 /* LiftTrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */; };
+		29DCF8661BFFE7CF002FF103 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8651BFFE7CF002FF103 /* Trail.swift */; };
+		29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8671BFFEA8C002FF103 /* NetworkController.swift */; };
+		29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8691BFFEC83002FF103 /* Weather.swift */; };
+		D10FF58C1E0E2B3F00373325 /* food.tsv in Resources */ = {isa = PBXBuildFile; fileRef = D10FF58B1E0E2B3F00373325 /* food.tsv */; };
+		D120A88C1DFB224100BF988F /* SnowbirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A88B1DFB224100BF988F /* SnowbirdController.swift */; };
+		D13D4C261E02028C00251B7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D4C251E02028C00251B7D /* Constants.swift */; };
+		D13D4C2A1E02266B00251B7D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D4C291E02266B00251B7D /* WebViewController.swift */; };
+		D13ED75C1DFC7E6000D33554 /* Notes-ToDo in Resources */ = {isa = PBXBuildFile; fileRef = D13ED75B1DFC7E6000D33554 /* Notes-ToDo */; };
+		D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */; };
+		D1DF59681DDFC2BD003FB100 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF59671DDFC2BD003FB100 /* FoodCell.swift */; };
+		D1DF596A1DDFC317003FB100 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		294CEF551C0F8D650003771B /* RoadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoadController.swift; sourceTree = "<group>"; };
+		294CEF571C0F8D7E0003771B /* LiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftController.swift; sourceTree = "<group>"; };
+		294CEF591C0F8DB00003771B /* Lift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lift.swift; sourceTree = "<group>"; };
+		294CEF5B1C0F8DBF0003771B /* Road.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Road.swift; sourceTree = "<group>"; };
+		294CF06E1C17D14C0003771B /* TrailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailController.swift; sourceTree = "<group>"; };
+		2965AF981C03AF56006C913D /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
+		298FD67B1C209F8B008034B4 /* TrailMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailMapViewController.swift; sourceTree = "<group>"; };
+		299B8EE31C231F3700B0F0A4 /* TrailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrailTableViewCell.swift; path = ../TrailTableViewCell.swift; sourceTree = "<group>"; };
+		299B8EE51C2321A100B0F0A4 /* LiftTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftTableViewCell.swift; sourceTree = "<group>"; };
+		29C14F841BFBCFE500493D04 /* SkiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C14F871BFBCFE500493D04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsViewController.swift; sourceTree = "<group>"; };
+		29C14F8C1BFBCFE500493D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29C14F8E1BFBCFE500493D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29C14F911BFBCFE500493D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		29C14F931BFBCFE500493D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftTrailTableViewController.swift; sourceTree = "<group>"; };
+		29DCF8651BFFE7CF002FF103 /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trail.swift; path = ../Trail.swift; sourceTree = "<group>"; };
+		29DCF8671BFFEA8C002FF103 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
+		29DCF8691BFFEC83002FF103 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../Weather.swift; sourceTree = "<group>"; };
+		D10FF58B1E0E2B3F00373325 /* food.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food.tsv; sourceTree = "<group>"; };
+		D120A88B1DFB224100BF988F /* SnowbirdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowbirdController.swift; sourceTree = "<group>"; };
+		D13D4C251E02028C00251B7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D13D4C291E02266B00251B7D /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D13ED75A1DFC7E4000D33554 /* TestingGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGround.playground; sourceTree = "<group>"; };
+		D13ED75B1DFC7E6000D33554 /* Notes-ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes-ToDo"; sourceTree = "<group>"; };
+		D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snowbird.swift; sourceTree = "<group>"; };
+		D1DF59671DDFC2BD003FB100 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29C14F811BFBCFE500493D04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		294CEF811C10ECF50003771B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D10FF58B1E0E2B3F00373325 /* food.tsv */,
+				29DCF8691BFFEC83002FF103 /* Weather.swift */,
+				294CEF591C0F8DB00003771B /* Lift.swift */,
+				294CEF5B1C0F8DBF0003771B /* Road.swift */,
+				29DCF8651BFFE7CF002FF103 /* Trail.swift */,
+				D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		294CEF821C10ED140003771B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				29DCF8671BFFEA8C002FF103 /* NetworkController.swift */,
+				D120A88B1DFB224100BF988F /* SnowbirdController.swift */,
+				2965AF981C03AF56006C913D /* WeatherController.swift */,
+				294CEF571C0F8D7E0003771B /* LiftController.swift */,
+				294CEF551C0F8D650003771B /* RoadController.swift */,
+				294CF06E1C17D14C0003771B /* TrailController.swift */,
+				D13D4C291E02266B00251B7D /* WebViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		294CEF831C10ED2A0003771B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				298FD67B1C209F8B008034B4 /* TrailMapViewController.swift */,
+				29C14F891BFBCFE500493D04 /* ConditionsViewController.swift */,
+				29C14F991BFBEE7E00493D04 /* LiftTrailTableViewController.swift */,
+				299B8EE51C2321A100B0F0A4 /* LiftTableViewCell.swift */,
+				299B8EE31C231F3700B0F0A4 /* TrailTableViewCell.swift */,
+				D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */,
+				D1DF59671DDFC2BD003FB100 /* FoodCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		294CEF841C10ED690003771B /* System Files */ = {
+			isa = PBXGroup;
+			children = (
+				29C14F871BFBCFE500493D04 /* AppDelegate.swift */,
+				29C14F8B1BFBCFE500493D04 /* Main.storyboard */,
+				29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */,
+				29C14F931BFBCFE500493D04 /* Info.plist */,
+			);
+			name = "System Files";
+			path = SkiApp;
+			sourceTree = "<group>";
+		};
+		29C14F7B1BFBCFE500493D04 = {
+			isa = PBXGroup;
+			children = (
+				D13ED7591DFC7E1C00D33554 /* Testing/Notes */,
+				294CEF841C10ED690003771B /* System Files */,
+				29C14F861BFBCFE500493D04 /* SkiApp */,
+				29C14F851BFBCFE500493D04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29C14F851BFBCFE500493D04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29C14F841BFBCFE500493D04 /* SkiApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29C14F861BFBCFE500493D04 /* SkiApp */ = {
+			isa = PBXGroup;
+			children = (
+				294CEF811C10ECF50003771B /* Models */,
+				294CEF821C10ED140003771B /* Controllers */,
+				294CEF831C10ED2A0003771B /* View */,
+				29C14F8E1BFBCFE500493D04 /* Assets.xcassets */,
+				D13D4C241E02027600251B7D /* Resources */,
+			);
+			path = SkiApp;
+			sourceTree = "<group>";
+		};
+		D13D4C241E02027600251B7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D13D4C251E02028C00251B7D /* Constants.swift */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D13ED7591DFC7E1C00D33554 /* Testing/Notes */ = {
+			isa = PBXGroup;
+			children = (
+				D13ED75A1DFC7E4000D33554 /* TestingGround.playground */,
+				D13ED75B1DFC7E6000D33554 /* Notes-ToDo */,
+			);
+			name = Testing/Notes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29C14F831BFBCFE500493D04 /* SkiApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29C14F961BFBCFE500493D04 /* Build configuration list for PBXNativeTarget "SkiApp" */;
+			buildPhases = (
+				29C14F801BFBCFE500493D04 /* Sources */,
+				29C14F811BFBCFE500493D04 /* Frameworks */,
+				29C14F821BFBCFE500493D04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkiApp;
+			productName = SkiApp;
+			productReference = 29C14F841BFBCFE500493D04 /* SkiApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29C14F7C1BFBCFE500493D04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Josh Burt";
+				TargetAttributes = {
+					29C14F831BFBCFE500493D04 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = FHT9A47FG6;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 29C14F7F1BFBCFE500493D04 /* Build configuration list for PBXProject "SkiApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29C14F7B1BFBCFE500493D04;
+			productRefGroup = 29C14F851BFBCFE500493D04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29C14F831BFBCFE500493D04 /* SkiApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29C14F821BFBCFE500493D04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D13ED75C1DFC7E6000D33554 /* Notes-ToDo in Resources */,
+				29C14F921BFBCFE500493D04 /* LaunchScreen.storyboard in Resources */,
+				29C14F8F1BFBCFE500493D04 /* Assets.xcassets in Resources */,
+				D10FF58C1E0E2B3F00373325 /* food.tsv in Resources */,
+				29C14F8D1BFBCFE500493D04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29C14F801BFBCFE500493D04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */,
+				D1DF59681DDFC2BD003FB100 /* FoodCell.swift in Sources */,
+				294CEF561C0F8D650003771B /* RoadController.swift in Sources */,
+				29C14F9A1BFBEE7E00493D04 /* LiftTrailTableViewController.swift in Sources */,
+				D13D4C2A1E02266B00251B7D /* WebViewController.swift in Sources */,
+				29C14F8A1BFBCFE500493D04 /* ConditionsViewController.swift in Sources */,
+				299B8EE61C2321A100B0F0A4 /* LiftTableViewCell.swift in Sources */,
+				294CEF581C0F8D7E0003771B /* LiftController.swift in Sources */,
+				294CEF5C1C0F8DBF0003771B /* Road.swift in Sources */,
+				29DCF8661BFFE7CF002FF103 /* Trail.swift in Sources */,
+				D120A88C1DFB224100BF988F /* SnowbirdController.swift in Sources */,
+				294CEF5A1C0F8DB00003771B /* Lift.swift in Sources */,
+				D1DF596A1DDFC317003FB100 /* FoodTableViewController.swift in Sources */,
+				299B8EE41C231F3700B0F0A4 /* TrailTableViewCell.swift in Sources */,
+				294CF06F1C17D14C0003771B /* TrailController.swift in Sources */,
+				D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */,
+				D13D4C261E02028C00251B7D /* Constants.swift in Sources */,
+				298FD67C1C209F8B008034B4 /* TrailMapViewController.swift in Sources */,
+				29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */,
+				2965AF991C03AF56006C913D /* WeatherController.swift in Sources */,
+				29C14F881BFBCFE500493D04 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29C14F8B1BFBCFE500493D04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29C14F8C1BFBCFE500493D04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29C14F901BFBCFE500493D04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29C14F911BFBCFE500493D04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29C14F941BFBCFE500493D04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29C14F951BFBCFE500493D04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29C14F971BFBCFE500493D04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3;
+				INFOPLIST_FILE = SkiApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JB.SkiApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		29C14F981BFBCFE500493D04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3;
+				INFOPLIST_FILE = SkiApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JB.SkiApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29C14F7F1BFBCFE500493D04 /* Build configuration list for PBXProject "SkiApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29C14F941BFBCFE500493D04 /* Debug */,
+				29C14F951BFBCFE500493D04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29C14F961BFBCFE500493D04 /* Build configuration list for PBXNativeTarget "SkiApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29C14F971BFBCFE500493D04 /* Debug */,
+				29C14F981BFBCFE500493D04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29C14F7C1BFBCFE500493D04 /* Project object */;
+}
