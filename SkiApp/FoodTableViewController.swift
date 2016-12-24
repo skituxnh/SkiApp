@@ -32,7 +32,6 @@ class FoodTableViewController: UITableViewController {
                     dictFood["Location"] = "\(foodData[2])"
                     dictFood["Hours"] = "\(foodData[3])"
                     dictFood["Phone"] = "\(foodData[4])"
-                    dictFood["InHouse"] = "\(foodData[5])"
                     
                     arrayFood.add(dictFood)
                 }
@@ -60,12 +59,11 @@ class FoodTableViewController: UITableViewController {
         cell.summaryLabel.text = "\(food.object(forKey: "Summary")!)"
         cell.hoursLabel.text = "\(food.object(forKey: "Hours")!)"
         cell.phoneLabel.text = "\(food.object(forKey: "Phone")!)"
-        cell.inHouseLabel.text = "in-house \(food.object(forKey: "InHouse")!)"
         
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 135
+        return 115
     }
     
 //CALayer values

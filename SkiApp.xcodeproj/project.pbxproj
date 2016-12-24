@@ -25,12 +25,12 @@
 		29DCF8661BFFE7CF002FF103 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8651BFFE7CF002FF103 /* Trail.swift */; };
 		29DCF8681BFFEA8C002FF103 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8671BFFEA8C002FF103 /* NetworkController.swift */; };
 		29DCF86A1BFFEC83002FF103 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DCF8691BFFEC83002FF103 /* Weather.swift */; };
+		D10FF58C1E0E2B3F00373325 /* food.tsv in Resources */ = {isa = PBXBuildFile; fileRef = D10FF58B1E0E2B3F00373325 /* food.tsv */; };
 		D120A88C1DFB224100BF988F /* SnowbirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120A88B1DFB224100BF988F /* SnowbirdController.swift */; };
 		D13D4C261E02028C00251B7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D4C251E02028C00251B7D /* Constants.swift */; };
 		D13D4C2A1E02266B00251B7D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D4C291E02266B00251B7D /* WebViewController.swift */; };
 		D13ED75C1DFC7E6000D33554 /* Notes-ToDo in Resources */ = {isa = PBXBuildFile; fileRef = D13ED75B1DFC7E6000D33554 /* Notes-ToDo */; };
 		D1DB3EDE1DFB4B39006E1209 /* Snowbird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */; };
-		D1DF59661DDFC263003FB100 /* food.tsv in Resources */ = {isa = PBXBuildFile; fileRef = D1DF59651DDFC263003FB100 /* food.tsv */; };
 		D1DF59681DDFC2BD003FB100 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF59671DDFC2BD003FB100 /* FoodCell.swift */; };
 		D1DF596A1DDFC317003FB100 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,13 +56,13 @@
 		29DCF8651BFFE7CF002FF103 /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trail.swift; path = ../Trail.swift; sourceTree = "<group>"; };
 		29DCF8671BFFEA8C002FF103 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
 		29DCF8691BFFEC83002FF103 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../Weather.swift; sourceTree = "<group>"; };
+		D10FF58B1E0E2B3F00373325 /* food.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food.tsv; sourceTree = "<group>"; };
 		D120A88B1DFB224100BF988F /* SnowbirdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowbirdController.swift; sourceTree = "<group>"; };
 		D13D4C251E02028C00251B7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D13D4C291E02266B00251B7D /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D13ED75A1DFC7E4000D33554 /* TestingGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestingGround.playground; sourceTree = "<group>"; };
 		D13ED75B1DFC7E6000D33554 /* Notes-ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes-ToDo"; sourceTree = "<group>"; };
 		D1DB3EDD1DFB4B39006E1209 /* Snowbird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snowbird.swift; sourceTree = "<group>"; };
-		D1DF59651DDFC263003FB100 /* food.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = food.tsv; sourceTree = "<group>"; };
 		D1DF59671DDFC2BD003FB100 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		D1DF59691DDFC317003FB100 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +81,7 @@
 		294CEF811C10ECF50003771B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D1DF59651DDFC263003FB100 /* food.tsv */,
+				D10FF58B1E0E2B3F00373325 /* food.tsv */,
 				29DCF8691BFFEC83002FF103 /* Weather.swift */,
 				294CEF591C0F8DB00003771B /* Lift.swift */,
 				294CEF5B1C0F8DBF0003771B /* Road.swift */,
@@ -242,8 +242,8 @@
 				D13ED75C1DFC7E6000D33554 /* Notes-ToDo in Resources */,
 				29C14F921BFBCFE500493D04 /* LaunchScreen.storyboard in Resources */,
 				29C14F8F1BFBCFE500493D04 /* Assets.xcassets in Resources */,
+				D10FF58C1E0E2B3F00373325 /* food.tsv in Resources */,
 				29C14F8D1BFBCFE500493D04 /* Main.storyboard in Resources */,
-				D1DF59661DDFC263003FB100 /* food.tsv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

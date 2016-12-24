@@ -16,7 +16,6 @@ class FoodCell: UITableViewCell {
     @IBOutlet var hoursLabel: UILabel!
     @IBOutlet var callButton: UIButton!
     @IBOutlet var phoneLabel: UILabel!
-    @IBOutlet var inHouseLabel: UILabel!
     
 
     override func awakeFromNib() {
